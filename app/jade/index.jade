@@ -1,0 +1,92 @@
+html
+    title Главная
+    include ./blocks/head.jade
+
+    body.main-page
+        include ./blocks/header.jade
+
+        .left-panel
+            .wrap
+                .link-list
+                    a(href="#").link-list--item.icon-soccer-ball
+                    a(href="#").link-list--item.icon-basketball
+                    a(href="#").link-list--item.icon-hockey
+                    a(href="#").link-list--item.icon-boxing
+                    a(href="#").link-list--item.icon-tennis
+                    a(href="#").link-list--item.icon-rugby
+                    .link-list--item.more-btn
+                        span
+
+                .social-list
+                    a(href="#").social-list--item.icon-facebook-circle
+                    a(href="#").social-list--item.icon-vk-circle
+                        span.path1
+                            span.path2
+                    a(href="#").social-list--item.icon-instagram-circle
+
+        .wrapper
+            .first-image-bg
+                img(src="../images/assets/hero-image.jpg", alt="")
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .info
+                            h1.title Прогнозим
+
+                            .description
+                                p Уникальное сообщество для тех, кто живет спортом и хочет зарабатывать на этом. У нас вы можете:
+                            ul
+                                li
+                                    .icon.icon-soccer-ball-2
+                                    .text Читать бесплатные и платные прогнозы на спорт
+                                li
+                                    .icon.icon-mask
+                                    .text Писать аналитические материалы и 
+                                        a(href="#").dashed получать деньги
+
+                            a(href="#").btn.btn-red Новые прогнозы
+
+            .container-block
+                .best-forecasters-slider-wrap
+                    .title-wrap
+                        h2.title Топ лучших 
+                        .sub-title.h2 прогнозистов
+
+                    .best-forecasters-slider.slider-list
+                        .swiper-wrapper
+                            .swiper-slide.best-forecasters-slider--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .label Прогнозов
+                                            .value 20
+                                        td
+                                            .label W/L/D
+                                            .value 12/7/5
+                                        td
+                                            .label КФ
+                                            .value 22.38
+                                    tr
+                                        td
+                                            .label Прибыль
+                                            .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade
