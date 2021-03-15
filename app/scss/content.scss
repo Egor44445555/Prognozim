@@ -121,6 +121,28 @@
     position: relative;
     padding-left: 100px;
     z-index: 1;
+
+    .first-image-bg {
+        left: 100px;
+        max-width: calc(100% - 100px);
+    }
+}
+
+
+.column-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+
+    .column {
+        flex: 1;
+        max-width: 400px;
+        margin-left: 20px;
+
+        &:nth-of-type(2) {
+            max-width: 100%;
+        }
+    }
 }
 
 
@@ -182,39 +204,78 @@
 
 /***/
 
-.best-forecasters-slider-wrap {
-    padding: 130px 0;
-
-    .title-wrap {
-        max-width: 1480px;
-        margin: 0 auto;
-    }
-
-    .sub-title {
-        font-family: $textFont;
-    }
+.slider-list-wrap {
+    margin: 0 -20px -25px;
+    padding: 130px 20px 65px;
+    overflow: hidden;
 }
 
-.best-forecasters-slider {
-    margin-top: 116px;
+.slider-list {
+    position: relative;
+    margin: 86px 0 0;
 
     &:first-child {
         margin-top: 0;
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
     .swiper-wrapper {
         height: auto;
+        padding: 25px 0;
+    }
+
+    .pagination {
+        position: absolute;
+        top: -120px;
+        bottom: auto;
+        right: 0;
+        left: auto;
+        width: auto;
+        text-align: right;
+        z-index: 9;
+
+        .swiper-pagination-bullet {
+            width: 20px;
+            height: 10px;
+            margin: 0 7px;
+            background: $blueLighterBorder;
+            border-radius: 4px;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $red;
+        }
     }
 
     &--item {
         padding: 40px;
         background: $white;
         border-radius: 10px;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &--item.event {
+        padding: 50px 0 0;
+
+        table td {
+            width: 33.333%;
+        }
     }
 
     .person {
         display: flex;
+        align-items: center;
 
         .image {
             position: relative;
@@ -233,10 +294,187 @@
             position: absolute;
             right: 0;
             bottom: 0;
-            padding: 3px 10px;
+            padding: 4px 11px 1px;
             background-color: $themeColor;
+            font-family: $textFontBold;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            font-size: 14px;
             color: $white;
             border-radius: 50%;
         }
+
+        .name {
+            font-family: $textFontBold;
+            font-size: 20px;
+            line-height: 114.68%;
+            text-transform: capitalize;
+        }
+
+        .parameters {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 0 -10px;
+
+            &--item {
+                margin: 10px 0 0 10px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .time-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 40px 30px;
+
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            max-height: 100%;
+        }
+
+        .time {
+            padding: 0 10px;
+            font-family: $textFontBold;
+            line-height: 140%;
+            text-transform: capitalize;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            text-align: center;
+            z-index: 5;
+
+            span {
+                font-size: 21px;
+            }
+
+            .label {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .category {
+        padding: 0 20px;
+        font-family: $textFontBold;
+        color: $blueLight;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .title {
+        margin-top: 8px;
+        padding: 0 20px 14px;
+        font-family: $textFontBold;
+        font-size: 16px;
+        line-height: 140%;
+        color: $blue;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: center;
+
+        &.border-top {
+            border-top: 1px solid $grayLight;
+        }
+
+        tr {
+
+            &:first-child {
+                
+                td {
+                    border-top: 0;
+                }
+            }
+        }
+
+        td {
+            border-top: 1px solid $grayLight;
+            border-left: 1px solid $grayLight;
+            font-family: $textFontBold;
+            font-size: 14px;
+            line-height: 140%;
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+
+        .info {
+            padding: 20px 15px;
+        }
+
+        .label {
+            color: $blueLight;
+        }
+
+        .value {
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $red;
+        }
+        
+        .graph {
+            padding: 20px 5px;
+            background-image: linear-gradient(0deg, $grayLight 1.61%, $white 1.61%, $white 50%, $grayLight 50%, $grayLight 51.61%, $white 51.61%, $white 100%);
+            background-size: 61px 61px;
+        }
     }
 }
+
+
+/*** Statistic ***/
+
+.statistic-list-wrap {
+    position: relative;
+
+    .image-bg {
+        position: absolute;
+        top: -120px;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.statistic-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 65px auto 0;
+
+    &--item {
+        flex: 100%;
+        max-width: 20%;
+        padding-right: 20px;
+    }
+
+    .count {
+        font-family: $titleFontExtraBold;
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 140%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+    
+    .label {
+        max-width: 150px;
+        margin-top: 9px;
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+
+
+@import '_product.scss';

@@ -26,7 +26,7 @@ html
 
         .wrapper
             .first-image-bg
-                img(src="../images/assets/hero-image.jpg", alt="")
+                img(src="../images/hero-image.jpg", alt="")
 
             .hero-block
                 .container-block
@@ -48,14 +48,16 @@ html
                             a(href="#").btn.btn-red Новые прогнозы
 
             .container-block
-                .best-forecasters-slider-wrap
+                .slider-list-wrap
                     .title-wrap
                         h2.title Топ лучших 
                         .sub-title.h2 прогнозистов
 
-                    .best-forecasters-slider.slider-list
+                    .slider-list
+                        .pagination 
+
                         .swiper-wrapper
-                            .swiper-slide.best-forecasters-slider--item
+                            .swiper-slide.slider-list--item
                                 .person
                                     .image
                                         img(src="../images/assets/face.jpg", alt="")
@@ -70,23 +72,377 @@ html
                                 table
                                     tr
                                         td
-                                            .label Прогнозов
-                                            .value 20
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
                                         td
-                                            .label W/L/D
-                                            .value 12/7/5
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
                                         td
-                                            .label КФ
-                                            .value 22.38
+                                            .info
+                                                .label КФ
+                                                .value 22.38
                                     tr
                                         td
-                                            .label Прибыль
-                                            .value 440К ₽
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
                                         td(colspan="2")
                                             .graph
                                                 .icon
                                                     img(src="../images/graph-line.svg")
 
+                            .swiper-slide.slider-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face-2.jpg", alt="")
+                                        .num 1
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+                            .swiper-slide.slider-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face-3.jpg", alt="")
+                                        .num 3
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+                            .swiper-slide.slider-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face-4.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+                            .swiper-slide.slider-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face-2.jpg", alt="")
+                                        .num 1
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+                                            
+                            .swiper-slide.slider-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face-2.jpg", alt="")
+                                        .num 1
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+            .statistic-list-wrap
+                .image-bg
+                    img(src="../images/image-bg.png", alt="")
+
+                .container-block
+                    .statistic-list
+                        .statistic-list--item
+                            .count 202
+                            .label Актуальных прогнозов сегодня
+                        .statistic-list--item
+                            .count 753
+                            .label Аналитиков зарегистрировано
+                        .statistic-list--item
+                            .count 25К
+                            .label Заработано сообществом
+                        .statistic-list--item
+                            .count 1.7К
+                            .label Прогнозов написано
+                        .statistic-list--item
+                            .count 347.7
+                            .label Средний ROI
+
+            .container-block
+                .slider-list-wrap
+                    .title-wrap
+                        h2.title Топ
+                        .sub-title.h2 ставок
+
+                    .slider-list
+                        .pagination 
+
+                        .swiper-wrapper
+                            .swiper-slide.slider-list--item.event
+                                .time-wrap
+                                    .image.image-left
+                                        img(src="../images/assets/event.png", alt="")
+                                    .time
+                                        span 16:00
+                                        .label Начало
+                                    .image.image-right
+                                        img(src="../images/assets/event-2.png", alt="")
+                                
+                                .category футбол \ Групповой этап
+                                .title Краснодар - Спартак Москва
+
+                                table.border-top
+                                    tr 
+                                        td
+                                            .info
+                                                .label Ставка
+                                                .value 4.35
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 51
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 4.35
+
+                            .swiper-slide.slider-list--item.event
+                                .time-wrap
+                                    .image.image-left
+                                        img(src="../images/assets/event-3.png", alt="")
+                                    .time
+                                        span 16:00
+                                        .label Начало
+                                    .image.image-right
+                                        img(src="../images/assets/event-4.png", alt="")
+                                
+                                .category футбол \ Групповой этап
+                                .title Краснодар - Спартак Москва
+
+                                table.border-top
+                                    tr 
+                                        td
+                                            .info
+                                                .label Ставка
+                                                .value 4.35
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 51
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 4.35
+
+                            .swiper-slide.slider-list--item.event
+                                .time-wrap
+                                    .image.image-left
+                                        img(src="../images/assets/event-5.png", alt="")
+                                    .time
+                                        span 16:00
+                                        .label Начало
+                                    .image.image-right
+                                        img(src="../images/assets/event-6.png", alt="")
+                                
+                                .category футбол \ Групповой этап
+                                .title Краснодар - Спартак Москва
+
+                                table.border-top
+                                    tr 
+                                        td
+                                            .info
+                                                .label Ставка
+                                                .value 4.35
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 51
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 4.35
+
+                            .swiper-slide.slider-list--item.event
+                                .time-wrap
+                                    .image.image-left
+                                        img(src="../images/assets/event-7.png", alt="")
+                                    .time
+                                        span 16:00
+                                        .label Начало
+                                    .image.image-right
+                                        img(src="../images/assets/event-8.png", alt="")
+                                
+                                .category футбол \ Групповой этап
+                                .title Краснодар - Спартак Москва
+
+                                table.border-top
+                                    tr 
+                                        td
+                                            .info
+                                                .label Ставка
+                                                .value 4.35
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 51
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 4.35
+
+            .product-list-wrap
+                .container-block
+                    .top-image-bg
+                        img(src="../images/image-bg-3.png", alt="")
+
+                    .middle-image-bg
+                        img(src="../images/stripes-bg-3.png", alt="")
+                        img(src="../images/stripes-bg.png", alt="")
+
+                    .title-wrap
+                        h2.title Прогнозы
+                        .sub-title.h2 на спорт
+
+                    .column-wrap
+                        .column
+                            include ./blocks/filters.jade
+                                
+                        .column
+                            include ./blocks/product-list.jade
+
+                        .column
+                            include ./blocks/events.jade
+
+                .bottom-image-bg 
+                    img(src="../images/stripes-bg-2.png", alt="")
+                    img(src="../images/image-bg-2.png", alt="")
 
         include ./blocks/footer.jade
         include ./blocks/scripts.jade
