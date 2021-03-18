@@ -5,6 +5,24 @@ $(document).ready(function() {
         searchFormInput = $(".search-form input[type='text']"),
         searchFormClear = $(".search-form .remove");
 
+    window.onresize = function() {
+        if ($('.product-list').height() < 3900) {
+            $('.product-list-wrap').addClass('medium-content');
+        }
+
+        if ($('.product-list').height() < 2530) {
+            $('.product-list-wrap').addClass('small-content');
+        }
+    };
+
+    if ($('.product-list').height() < 3900) {
+        $('.product-list-wrap').addClass('medium-content');
+    }
+
+    if ($('.product-list').height() < 2530) {
+        $('.product-list-wrap').addClass('small-content');
+    }
+
     $(document).on('click', function(e) {
         if( $(e.target).closest('.cabinet-menu-btn').length ) {
             cabinetMenu.toggleClass('active');
@@ -45,6 +63,7 @@ $(document).ready(function() {
     $(searchFormClear).on('click', function(e) {
         searchFormInput.val('');
     });
+    
     
 
     /*** Tabs ***/
@@ -97,9 +116,5 @@ $(document).ready(function() {
               spaceBetween: 40
             }
         }
-    });
-
-    $('.slider-list').each(function() {
-        console.log($(this).find('.slider-list .pagination .swiper-pagination-bullet'))
     });
 });

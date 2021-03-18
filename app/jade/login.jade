@@ -1,0 +1,68 @@
+html
+    title Вход в личный кабинет
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header-not-authorized.jade
+
+        .left-panel
+            .wrap
+                .link-list
+                    a(href="#").link-list--item.icon-soccer-ball
+                    a(href="#").link-list--item.icon-basketball
+                    a(href="#").link-list--item.icon-hockey
+                    a(href="#").link-list--item.icon-boxing
+                    a(href="#").link-list--item.icon-tennis
+                    a(href="#").link-list--item.icon-rugby
+                    .link-list--item.more-btn
+                        span
+
+                .social-list
+                    a(href="#").social-list--item.icon-facebook-circle
+                    a(href="#").social-list--item.icon-vk-circle
+                        span.path1
+                            span.path2
+                    a(href="#").social-list--item.icon-instagram-circle
+
+        .wrapper
+            .first-image-bg.mobile-fill
+                img(src="../images/hero-image-2.jpg", alt="")
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .info
+                            .title-wrap
+                                h1.title Вход в
+                                .h1.sub-title личный кабинет
+
+                        form.form(action="#")
+                            .row 
+                                .col.wide 
+                                    .input-wrap 
+                                        input(type="text" placeholder="Email").input
+                                        .label 
+                                            span Ваш email
+                            .row 
+                                .col.wide
+                                    .input-wrap
+                                        input(type="password" placeholder="Ваш пароль").input
+                                        .label 
+                                            span Пароль
+                                        .eye.icon-eye
+
+                                    label.checkbox(for="check-17")
+                                        input(type="checkbox" id="check-17")
+                                        .icon
+                                            .icon-check
+                                        .label Запомнить меня
+
+                                    button(type="submit").btn.btn-red.btn-shadow Вход
+
+                                    a(href="/password-recovery.html").link
+                                        span Забыли пароль?
+                                    
+
+
+
+        include ./blocks/scripts.jade

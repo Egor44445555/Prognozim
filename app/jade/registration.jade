@@ -1,0 +1,80 @@
+html
+    title Регистрация
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header-not-authorized.jade
+
+        .left-panel
+            .wrap
+                .link-list
+                    a(href="#").link-list--item.icon-soccer-ball
+                    a(href="#").link-list--item.icon-basketball
+                    a(href="#").link-list--item.icon-hockey
+                    a(href="#").link-list--item.icon-boxing
+                    a(href="#").link-list--item.icon-tennis
+                    a(href="#").link-list--item.icon-rugby
+                    .link-list--item.more-btn
+                        span
+
+                .social-list
+                    a(href="#").social-list--item.icon-facebook-circle
+                    a(href="#").social-list--item.icon-vk-circle
+                        span.path1
+                            span.path2
+                    a(href="#").social-list--item.icon-instagram-circle
+
+        .wrapper
+            .first-image-bg.mobile-fill
+                img(src="../images/hero-image-2.jpg", alt="")
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .info
+                            .title-wrap
+                                h1.title Регистрация
+
+                        form.form(action="/success-form.html")
+                            .row 
+                                .col.wide 
+                                    .input-wrap 
+                                        input(type="text" placeholder="Имя*" require).input
+                                        .label 
+                                            span Ваше имя
+                            .row 
+                                .col.wide 
+                                    .input-wrap 
+                                        input(type="text" placeholder="Email").input
+                                        .label 
+                                            span E-mail
+                            .row 
+                                .col.wide
+                                    .input-wrap
+                                        input(type="password" placeholder="Ваш пароль" required).input.password
+                                        .label 
+                                            span Пароль*
+                                        .eye.icon-eye
+
+                             .row 
+                                .col.wide
+                                    .input-wrap
+                                        input(type="password" placeholder="Повторите ваш пароль" required).input.password-confirm
+                                        .label 
+                                            span Повторите пароль*
+                                        .eye.icon-eye
+
+                                    .checkbox
+                                        label(for="check-17")
+                                            input(type="checkbox" id="check-17").confidentiality
+                                            .icon
+                                                .icon-check
+                                        .label При регистрации вы соглашаетесь 
+                                            a(href="#").color-red с правилами сайта, политикой конфиденциальности 
+                                            | и подтверждаете свое
+                                            | согласие на обработку данных.
+
+                                    .btn.btn-red.btn-shadow.submit Зарегистрироваться
+
+
+        include ./blocks/scripts.jade

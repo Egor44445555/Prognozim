@@ -1,0 +1,87 @@
+.header
+    .wrap
+        .left-block
+            .search-wrap
+                .search-btn 
+                    .icon-search
+                
+                form(action="/search").search-form
+                    .wrap
+                        button(type="submit")
+                            span.icon-search
+                        input(type="text" placeholder="Ваш запрос. Например футбол...")
+                        span.remove
+
+            a(href="/").logo
+                img(src="images/logo.svg")
+
+            .menu-header
+                a(href="#").menu-header--item.active
+                    span.text Прогнозы
+                a(href="#").menu-header--item
+                    span.text Топ Ставок
+                a(href="#").menu-header--item
+                    span.text Эксперты
+                a(href="#").menu-header--item
+                    span.text Заработок
+                a(href="/faq.html").menu-header--item
+                    span.text FAQ
+                a(href="/blog.html").menu-header--item
+                    span.text Блог
+
+        .right-block
+            .icon-list
+                a(href="#").icon-list--item
+                    span.icon.icon-plus
+                    span.text Мой Прогноз
+
+            .btn-wrap
+                a(href="/login.html").btn.btn-red Вход
+                a(href="/registration.html").btn Регистрация
+
+            .menu-btn
+                span
+                span
+                span
+
+    .mobile-panel
+        a(href="/").logo
+            img(src="images/logo.svg")
+
+        .icons
+            .search-wrap
+                .search-btn 
+                    .icon-search
+                
+                form(action="/search").search-form
+                    .wrap
+                        button(type="submit")
+                            span.icon-search
+                        input(type="text" placeholder="Ваш запрос. Например футбол...")
+                        span.remove
+
+            .menu-btn
+                span
+                span
+                span
+
+.modal-menu-wrap
+    .close
+
+    .modal-menu
+        .menu-header-wrap
+            .menu-header
+                a(href="#").menu-header--item.active
+                    span.text Прогнозы
+                a(href="#").menu-header--item
+                    span.text Топ Ставок
+                a(href="#").menu-header--item
+                    span.text Эксперты
+                a(href="#").menu-header--item
+                    span.text Заработок
+                a(href="#").menu-header--item
+                    span.text FAQ
+                a(href="#").menu-header--item
+                    span.text Блог
+                a(href="#").menu-header--item
+                    span.btn.btn-red Мой прогноз

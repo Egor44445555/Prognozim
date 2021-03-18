@@ -686,7 +686,7 @@ $RalewayBold: "Raleway Bold", sans-serif;
 
 $titleFont: $montserratBlack;
 $titleFontMedium: $montserratMedium;
-$titleFontBold: $montserratBlack;
+$titleFontBold: $montserratBold;
 $titleFontExtraBold: $montserratExtraBold;
 
 $textFont: $Raleway;
@@ -716,6 +716,13 @@ $linkColorHover: #7ba1c5;
 $textColor: $black;
 $textGray: #acacac;
 $checkboxBg: #F3F4F7;
+$bulletBg: #CDD3D9;
 $inputPlaceholder: #b8c9d9;
+$borderColor: #CDD3D9;
 $error: $red;
 $themeColor: #154d80;
+
+
+.color-red {
+	color: $red;
+}
