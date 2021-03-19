@@ -140,12 +140,15 @@
         margin-top: 26px !important;
     }
 
-
     h1, 
     .h1, 
     h2, 
     .h2 {
         font-size: 24px;
+    }
+
+    .wrapper {
+        padding-bottom: 0;
     }
 
     .title-wrap {
@@ -238,7 +241,7 @@
             justify-content: center;
             flex: 100%;
             max-width: calc(50% - 13px);
-            padding: 12px 10px;
+            padding: 12px 0;
             font-family: $textFontSemibold;
             font-size: 14px;
             text-align: center;
@@ -329,7 +332,6 @@
     }
 
 
-
     /*** 768 ***/
 
     .statistic-list-wrap {
@@ -346,6 +348,29 @@
         .label {
             margin: 0 auto;
             font-size: 12px;
+        }
+    }
+
+
+    /*** 768 ***/
+
+    .question-block {
+        align-items: flex-start;
+        margin-top: 30px;
+        padding: 20px 15px;
+
+        .icon {            
+            min-width: 20px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 14px;
         }
     }
 }
@@ -393,7 +418,7 @@
 
 
     .wrapper {
-        padding-bottom: 80px;
+        padding-bottom: 0;
     }
 
     .main-page {
@@ -418,6 +443,7 @@
     /*** 560 ***/
 
     .first-image-bg {
+        top: 20px;
         overflow: hidden;
 
         img {

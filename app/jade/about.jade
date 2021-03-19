@@ -1,0 +1,59 @@
+html
+    title О нас
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        .left-panel
+            .wrap
+                .link-list
+                    a(href="#").link-list--item.icon-soccer-ball
+                    a(href="#").link-list--item.icon-basketball
+                    a(href="#").link-list--item.icon-hockey
+                    a(href="#").link-list--item.icon-boxing
+                    a(href="#").link-list--item.icon-tennis
+                    a(href="#").link-list--item.icon-rugby
+                    .link-list--item.more-btn
+                        span
+
+                .social-list
+                    a(href="#").social-list--item.icon-facebook-circle
+                    a(href="#").social-list--item.icon-vk-circle
+                        span.path1
+                            span.path2
+                    a(href="#").social-list--item.icon-instagram-circle
+
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-5.jpg", alt="")
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .title-wrap
+                            h1.title О нас
+
+                        .max-880
+                            .description 
+                                p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.Данный вид ставок требует особой внимательности и просмотра прямой трансляции без задержек. Наш сайт транслирует все спортивные соревнования и турниры.В числе видов спорта, на которые мы предоставляем трансляции, не только футбол, баскетбол, хоккей, волейбол, бейсбол и многое другое в режиме онлайн. Сайт Bet Project является площадкой для общения между прогнозистами, которые могут не только составлять ежедневные прогнозы на спорт, но и общаться друг с другом в онлайн чате. Также, на сайте всегда можно задать вопрос службе поддержки, которая оперативно рассматривает поступающие сообщения.
+
+                            .statistic-list
+                                .statistic-list--item
+                                    .count 202
+                                    .label Актуальных прогнозов сегодня
+                                .statistic-list--item
+                                    .count 753
+                                    .label Аналитиков зарегистрировано
+                                .statistic-list--item
+                                    .count 25К
+                                    .label Заработано сообществом
+                                .statistic-list--item
+                                    .count 1.7К
+                                    .label Прогнозов написано
+                                .statistic-list--item
+                                    .count 347.7
+                                    .label Средний ROI
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

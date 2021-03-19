@@ -151,10 +151,11 @@
     top: -2px;
     left: 0;
     width: 100%;
+    text-align: right;
     z-index: -1;
 
     img {
-        width: 100%;
+        // width: 100%;
         min-height: 100vh;
         object-fit: cover;
     }
@@ -167,6 +168,12 @@
 
     .hero-block {
 
+        .wrap {
+            max-width: 1480px;
+            margin: 0 auto;
+            padding-bottom: 140px;
+        }
+
        .title {
             font-size: 64px;
             line-height: 140%;
@@ -174,6 +181,7 @@
         }
 
         .description {
+            margin-top: 20px;
             font-family: $textFontMedium;
         }
     }
@@ -185,7 +193,7 @@
     .wrap {
         max-width: 1480px;
         margin: 0 auto;
-        padding: 90px 0 140px;
+        padding-top: 90px;
     }
 
     .info {
@@ -198,7 +206,8 @@
     }
 
     .description {
-        margin-top: 20px;
+        max-width: 880px;
+        margin-top: 55px;
     }
 
     .btn {
@@ -259,6 +268,31 @@
 
     .question-block {
         max-width: 880px;
+    }
+
+
+    .statistic-list {
+        justify-content: flex-start;
+        margin-top: 40px;
+        overflow: hidden;
+
+        &--item {
+            max-width: 33.333%;
+            padding: 50px 50px 50px 70px;
+            border-bottom: 1px solid $grayLight;
+            border-left: 1px solid $grayLight;
+
+            &:first-child {
+                padding-left: 0;
+                border-top: 0;
+                border-left: 0;
+            }
+
+            &:nth-child(3n + 4) {
+                padding-left: 0;
+                border-left: 0;
+            }
+        }
     }
 }
 
@@ -541,6 +575,7 @@
 
 .question-block {
     display: flex;
+    align-items: center;
     margin-top: 50px;
     padding: 35px;
     background: $blueLighterOther;
@@ -558,6 +593,13 @@
 
     .title {
         color: $themeColor;
+    }
+
+    p {
+        margin-top: 0;
+        font-size: 18px;
+        line-height: 200%;
+        color: $linkColor;
     }
 }
 
