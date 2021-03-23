@@ -129,11 +129,13 @@ $(document).ready(function() {
             1281: {
                 slidesPerView: 3,
                 slidesPerGroup: 1,
+                spaceBetween: 20,
                 centeredSlides: false,
             },
             1601: {
               slidesPerView: 4,
               slidesPerGroup: 4,
+              spaceBetween: 20,
               centeredSlides: false,
             }
         }

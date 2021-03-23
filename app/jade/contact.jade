@@ -1,0 +1,84 @@
+html
+    title Контакты
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-7.jpg", alt="")
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .title-wrap
+                            h1.title Контакты
+
+                        .max-880
+                            .description.text-center-t
+                                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                            .contact-list
+                                a(href="https://telegram.im/@prognozim" target="_blank").contact-list--item
+                                    span.icon.icon-telegram
+                                    span.info 
+                                        span.title Telegram
+                                        span.link @prognozim
+                                a(href="https://vk.com/prognozim" target="_blank").contact-list--item
+                                    span.icon.icon-vk
+                                    span.info 
+                                        span.title Vkontakte
+                                        span.link vk.com/prognozim
+                                a(href="https://www.facebook.com/prognozi.m/" target="_blank").contact-list--item
+                                    span.icon.icon-facebook
+                                    span.info 
+                                        span.title Facebook
+                                        span.link facebook.com/prognozim
+                                a(href="https://www.instagram.com/prognozim/" target="_blank").contact-list--item
+                                    span.icon.icon-instagram
+                                    span.info 
+                                        span.title Instagram
+                                        span.link @prognozim
+                                a(href="mailto:info@prognozim.ru").contact-list--item
+                                    span.icon.icon-mail
+                                    span.info 
+                                        span.title Email
+                                        span.link info@prognozim.ru
+
+                            .form-wrap
+                                h2.h1.title Обратная связь
+
+                                form.form
+                                    .row 
+                                        .col 
+                                            .input-wrap
+                                                input(type="text" placeholder="Пётр").input
+                                                .label
+                                                    span Имя*
+                                    .row 
+                                        .col 
+                                            .input-wrap
+                                                input(type="text" placeholder="+7 (000) 000 - 00 - 00").input.phone-field
+                                                .label
+                                                    span Телефон*
+                                    .row 
+                                        .col 
+                                            .input-wrap
+                                                input(type="text" placeholder="Email*").input
+                                                .label
+                                                    span Email*
+                                    .row 
+                                        .col.wide
+                                            .input-wrap
+                                                textarea(name="" placeholder="Текст сообщения*").textarea
+                                                .label
+                                                    span Текст сообщения*
+                                    .row 
+                                        .col.wide
+                                            button(type="submit").btn.btn-red.btn-shadow Написать
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

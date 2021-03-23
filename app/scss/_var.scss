@@ -413,6 +413,19 @@
 }
 
 @font-face {
+	font-family: "Montserrat Regular";
+	src: url("../fonts/montserrat/Montserrat-Regular.eot");
+	src: url("../fonts/montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
+		url("../fonts/montserrat/Montserrat-Regular.woff") format("woff"),
+		url("../fonts/montserrat/Montserrat-Regular.ttf") format("truetype"),
+		url("../fonts/montserrat/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: "Montserrat Medium";
 	src: url("../fonts/montserrat/Montserrat-Medium.eot");
 	src: url("../fonts/montserrat/Montserrat-Medium.eot?#iefix") format("embedded-opentype"),
@@ -672,6 +685,7 @@
 }
 
 $montserratLight: "Montserrat Light", sans-serif;
+$montserratRegular: "Montserrat Regular", sans-serif;
 $montserratMedium: "Montserrat Medium", sans-serif;
 $montserratSemiBold: "Montserrat SemiBold", sans-serif;
 $montserratBold: "Montserrat Bold", sans-serif;
@@ -685,6 +699,7 @@ $RalewaySemibold: "Raleway Semibold", sans-serif;
 $RalewayBold: "Raleway Bold", sans-serif;
 
 $titleFont: $montserratBlack;
+$titleFontRegular: $montserratRegular;
 $titleFontMedium: $montserratMedium;
 $titleFontBold: $montserratBold;
 $titleFontExtraBold: $montserratExtraBold;
@@ -711,6 +726,7 @@ $blueLighterOther: #F3F4F7;
 $blueLighterBorder: #d6dae8;
 $greenDark: #0b4d49;
 
+$bgBlock: #F6F7FA;
 $linkColor: #154d80;
 $linkColorHover: #7ba1c5;
 $textColor: $black;
@@ -725,4 +741,8 @@ $themeColor: #154d80;
 
 .color-red {
 	color: $red;
+}
+
+.color-white {
+	color: $white;
 }

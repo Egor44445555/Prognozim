@@ -61,6 +61,10 @@ body {
     margin-top: 40px !important;
 }
 
+.mt-50 {
+    margin-top: 50px !important;
+}
+
 ol {
     margin: 34px 0 0;
     padding: 0;
@@ -86,7 +90,7 @@ ol {
 }
 
 ul {
-    margin: 34px 0 0;
+    margin: 30px 0 0;
     padding: 0;
     list-style: none;
 
@@ -96,7 +100,7 @@ ul {
 }
 
 li {
-    margin-top: 15px;
+    margin-top: 10px;
 
     &:first-child {
         margin-top: 0;
@@ -162,16 +166,20 @@ h4,
 }
 
 h1,
-.h1,
-h2,
-.h2 {
+.h1 {
     font-size: 42px;
     line-height: 58px;
 }
 
+h2,
+.h2 {
+    font-size: 36px;
+    line-height: 140%;
+}
+
 h3,
 .h3 {
-    font-size: 34px;
+    font-size: 24px;
     line-height: 140%;
 
     &.sub-title {
@@ -181,7 +189,7 @@ h3,
 
 h4,
 .h4 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     font-family: $textFontBold;
 }
@@ -192,7 +200,15 @@ h4,
 
 .title-wrap {
     max-width: 1480px;
-    margin: 0 auto;
+    margin: 50px auto 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &.mobile {
+        display: none;
+    }
 
     .sub-title {
         font-family: $titleFontMedium;
@@ -287,7 +303,20 @@ a {
 
 /*** Form elements ***/
 
+.form-wrap {
+    margin-top: 70px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
 .form {
+    margin: 40px 0 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
 
     .row {
         margin-top: 30px;
@@ -303,6 +332,13 @@ a {
         &:first-child {
             margin-top: 0;
         }
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 238px;
+        margin-top: 40px;
+        font-size: 16px;
     }
 }
 
@@ -358,10 +394,11 @@ a {
 .textarea {
     width: 100%;
     height: 60px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-family: $textFont;
     font-size: 16px;
-    color: $blueLight;
+    color: $blueDark;
+    font-feature-settings: 'pnum' on, 'lnum' on;
     border-radius: 10px;
     border: 1px solid $borderColor;
 
@@ -369,9 +406,17 @@ a {
         border-color: $red;
     }
 }
+.input,
+.select {
+    max-width: 425px;
+}
 
 input[type="password"] {
     padding-right: 50px;
+}
+
+.textarea {
+    height: 170px;
 }
 
 .checkbox {

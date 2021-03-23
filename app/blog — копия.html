@@ -1,0 +1,171 @@
+
+<html>
+  <title>Блог</title>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/content.css"/>
+    <link rel="stylesheet" href="./css/media.css"/>
+  </head>
+  <body class="blog-page">
+    <div class="header">
+      <div class="wrap">
+        <div class="left-block">
+          <div class="search-wrap">
+            <div class="search-btn"> 
+              <div class="icon-search"></div>
+            </div>
+            <form action="/search" class="search-form">
+              <div class="wrap">
+                <button type="submit"><span class="icon-search"></span></button>
+                <input type="text" placeholder="Ваш запрос. Например футбол..."/><span class="remove"></span>
+              </div>
+            </form>
+          </div><a href="/" class="logo"><img src="images/logo.svg"/></a>
+          <div class="menu-header"><a href="#" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="#" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="#" class="menu-header--item"><span class="text">Эксперты</span></a><a href="#" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a></div>
+        </div>
+        <div class="right-block">
+          <div class="icon-list"><a href="#" class="icon-list--item"><span class="icon icon-plus"></span><span class="text">Мой Прогноз</span></a><a href="#" class="icon-list--item"><span class="icon icon-bell-red"></span></a></div>
+          <div class="mobile-balance">
+            <div class="image"><img src="../images/assets/avatar.jpg" alt=""/></div>
+            <div class="balance">800.000₽</div>
+          </div>
+          <div class="cabinet-menu-wrap">
+            <div class="cabinet-menu-btn">
+              <div class="image"><img src="../images/assets/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="label">Личный кабинет</div>
+                <div class="balance-wrap">
+                  <div class="balance">800.000₽</div>
+                  <div class="sum">443.699 VRUR</div>
+                </div>
+              </div>
+            </div>
+            <div class="cabinet-menu">
+              <div class="cabinet-menu--row"><a href="#" class="cabinet-menu--item"><span class="icon icon-plus"> </span><span class="text">Мой прогноз</span></a></div>
+              <div class="cabinet-menu--row"><a href="#" class="cabinet-menu--item"><span class="icon icon-pie-chart"></span><span class="text">Статистика</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-soccer-ball"></span><span class="text">Актуальные прогнозы</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-analysts"></span><span class="text">Мои аналитики</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-cup"></span><span class="text">Прогнозы моих аналитиков</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-cart-empty"></span><span class="text">Мои покупки</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-arms"></span><span class="text">Партнёрам</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-bonus"></span><span class="text">Бонусы (3000)</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-comment-empty"></span><span class="text">Чат с администрацией</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-stars-group"></span><span class="text">Ранг</span></a></div>
+              <div class="cabinet-menu--row"><a href="#" class="cabinet-menu--item"><span class="icon icon-gear-empty"></span><span class="text">Настройки</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-history-list"></span><span class="text">История пополнений</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-bell-empty"></span><span class="text">Оповещения</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-coin-hand"></span><span class="text">Вывод средств</span></a></div>
+              <div class="button-wrap"><a href="#" class="btn btn-red logout">Выйти</a></div>
+            </div>
+          </div>
+          <div class="menu-btn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="mobile-panel"><a href="/" class="logo"><img src="images/logo.svg"/></a>
+        <div class="icons">
+          <div class="search-wrap">
+            <div class="search-btn"> 
+              <div class="icon-search"></div>
+            </div>
+            <form action="/search" class="search-form">
+              <div class="wrap">
+                <button type="submit"><span class="icon-search"></span></button>
+                <input type="text" placeholder="Ваш запрос. Например футбол..."/><span class="remove"></span>
+              </div>
+            </form>
+          </div>
+          <div class="menu-btn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-menu-wrap">
+      <div class="close"></div>
+      <div class="modal-menu">
+        <div class="menu-header-wrap">
+          <div class="menu-header"><a href="#" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="#" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="#" class="menu-header--item"><span class="text">Эксперты</span></a><a href="#" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a><a href="#" class="menu-header--item"><span class="btn btn-red">Мой прогноз</span></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="left-panel">
+      <div class="wrap">
+        <div class="link-list"><a href="#" class="link-list--item icon-soccer-ball"></a><a href="#" class="link-list--item icon-basketball"></a><a href="#" class="link-list--item icon-hockey"></a><a href="#" class="link-list--item icon-boxing"></a><a href="#" class="link-list--item icon-tennis"></a><a href="#" class="link-list--item icon-rugby"></a>
+          <div class="link-list--item more-btn"><span></span></div>
+        </div>
+        <div class="social-list"><a href="#" class="social-list--item icon-facebook-circle"></a><a href="#" class="social-list--item icon-vk-circle"><span class="path1"><span class="path2"></span></span></a><a href="#" class="social-list--item icon-instagram-circle"></a></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="first-image-bg"><img src="../images/hero-image-8.jpg" alt=""/></div>
+      <div class="hero-block">
+        <div class="container-block">
+          <div class="wrap">
+            <div class="title-wrap">
+              <h1 class="title">Блог</h1>
+            </div>
+            <div class="max-880">
+              <div class="description text-center-t">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-block">
+        <div class="slider-list-wrap">
+          <div class="title-wrap">
+            <h2 class="h1 title">Главные</h2>
+            <div class="sub-title h1">Новости</div>
+          </div>
+          <div class="slider-list">
+            <div class="pagination"></div>
+            <div class="swiper-wrapper"><a href="blog-detail.html" class="swiper-slide slider-list--item post--item"><span class="image"><img src="/images/assets/post.jpg" alt=""/></span><span class="info">
+                  <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="swiper-slide slider-list--item post--item"><span class="image"><img src="/images/assets/post-2.jpg" alt=""/></span><span class="info">
+                  <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="swiper-slide slider-list--item post--item"><span class="image"><img src="/images/assets/post-3.jpg" alt=""/></span><span class="info">
+                  <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="swiper-slide slider-list--item post--item"><span class="image"><img src="/images/assets/post-4.jpg" alt=""/></span><span class="info">
+                  <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="swiper-slide slider-list--item post--item"><span class="image"><img src="/images/assets/post-5.jpg" alt=""/></span><span class="info">
+                  <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a></div>
+          </div>
+        </div>
+        <div class="post-list-wrap">
+          <div class="title-wrap">
+            <h2 class="h1 title">Последние</h2>
+            <div class="sub-title h1">Новости</div>
+          </div>
+          <div class="post-list"><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-2.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-3.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-4.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-5.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-6.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-7.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a><a href="blog-detail.html" class="post--item"><span class="image"><img src="/images/assets/post-8.jpg" alt=""/></span><span class="info">
+                <p>Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.</p><span class="date">11 ноября 2020</span></span></a></div>
+          <div class="pagination"><a href="#" class="pagination--item prev"></a><a href="#" class="pagination--item active">1</a><a href="#" class="pagination--item">2</a><a href="#" class="pagination--item">3</a>
+            <div class="pagination--item">...</div><a href="#" class="pagination--item">25</a><a href="#" class="pagination--item next"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrap bg-empty">
+      <div class="footer">
+        <div class="wrap">
+          <div class="content-block">
+            <div class="bottom-block">
+              <div class="column"> 
+                <div class="footer-menu"><a href="#" class="footer-menu--item">Все прогнозы</a><a href="#" class="footer-menu--item">Платные прогнозы</a><a href="#" class="footer-menu--item">Бесплатные прогнозы</a><a href="#" class="footer-menu--item">Ординар</a><a href="#" class="footer-menu--item">Экспресс</a></div>
+              </div>
+              <div class="column"> 
+                <div class="footer-menu"><a href="#" class="footer-menu--item">FAQ</a><a href="#" class="footer-menu--item">Правила Сообщества</a><a href="#" class="footer-menu--item">Заработок</a><a href="/about.html" class="footer-menu--item">О нас</a><a href="/blog.html" class="footer-menu--item">Блог</a></div>
+              </div>
+              <div class="column"> 
+                <div class="footer-menu"><a href="#" class="footer-menu--item">Топ Ставок</a><a href="#" class="footer-menu--item">Эксперты</a><a href="#" class="footer-menu--item">Добавить прогноз</a></div>
+              </div>
+              <div class="column"> 
+                <div class="copyright"> <span>© 2020 Prognozim</span><span>Все права защищены</span></div>
+                <div class="social-list"><a href="#" target="_blank" class="social-list--item icon-instagram-circle"></a><a href="#" target="_blank" class="social-list--item icon-vk-circle"><span class="path1"><span class="path2"></span></span></a><a href="#" target="_blank" class="social-list--item icon-facebook-circle"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

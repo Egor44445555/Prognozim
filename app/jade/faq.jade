@@ -5,24 +5,7 @@ html
     body
         include ./blocks/header.jade
 
-        .left-panel
-            .wrap
-                .link-list
-                    a(href="#").link-list--item.icon-soccer-ball
-                    a(href="#").link-list--item.icon-basketball
-                    a(href="#").link-list--item.icon-hockey
-                    a(href="#").link-list--item.icon-boxing
-                    a(href="#").link-list--item.icon-tennis
-                    a(href="#").link-list--item.icon-rugby
-                    .link-list--item.more-btn
-                        span
-
-                .social-list
-                    a(href="#").social-list--item.icon-facebook-circle
-                    a(href="#").social-list--item.icon-vk-circle
-                        span.path1
-                            span.path2
-                    a(href="#").social-list--item.icon-instagram-circle
+        include ./blocks/left-panel.jade
 
         .wrapper
             .first-image-bg
@@ -144,7 +127,7 @@ html
                             .question-block
                                 .icon.icon-question 
                                 .text
-                                    h4.title Не нашли ответ на свой вопрос?
+                                    .title Не нашли ответ на свой вопрос?
                                     p Задайте его службе поддержки через "
                                         a(href="#").color-red.dashed Обратную связь
                                         | " и получите ответ.

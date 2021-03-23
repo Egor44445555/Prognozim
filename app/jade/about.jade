@@ -5,24 +5,7 @@ html
     body
         include ./blocks/header.jade
 
-        .left-panel
-            .wrap
-                .link-list
-                    a(href="#").link-list--item.icon-soccer-ball
-                    a(href="#").link-list--item.icon-basketball
-                    a(href="#").link-list--item.icon-hockey
-                    a(href="#").link-list--item.icon-boxing
-                    a(href="#").link-list--item.icon-tennis
-                    a(href="#").link-list--item.icon-rugby
-                    .link-list--item.more-btn
-                        span
-
-                .social-list
-                    a(href="#").social-list--item.icon-facebook-circle
-                    a(href="#").social-list--item.icon-vk-circle
-                        span.path1
-                            span.path2
-                    a(href="#").social-list--item.icon-instagram-circle
+        include ./blocks/left-panel.jade
 
         .wrapper
             .first-image-bg
@@ -54,6 +37,35 @@ html
                                 .statistic-list--item
                                     .count 347.7
                                     .label Средний ROI
+                                .statistic-list--item.empty
+
+                            .title-wrap
+                                h2.h1 Важные преимущества
+                                .h1.sub-title Прогнозим
+                            
+                            .mt-40.mt-t-30
+                                p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.Данный вид ставок требует особой внимательности и просмотра прямой трансляции без задержек. Наш сайт транслирует все спортивные соревнования и турниры.В числе видов спорта, на которые мы предоставляем трансляции, не только футбол, баскетбол, хоккей, волейбол, бейсбол и многое другое в режиме онлайн. Сайт Bet Project является площадкой для общения между прогнозистами, которые могут не только составлять ежедневные прогнозы на спорт, но и общаться друг с другом в онлайн чате. Также, на сайте всегда можно задать вопрос службе поддержки, которая оперативно рассматривает поступающие сообщения.
+
+                            .blocks-list
+                                .blocks-list--item
+                                    .icon.icon-tennis
+                                    .title Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .blocks-list--item
+                                    .icon.icon-hockey
+                                    .title Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .blocks-list--item
+                                    .icon.icon-boxing
+                                    .title Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                .blocks-list--item
+                                    .icon.icon-rugby
+                                    .title Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid ut labore et dolore magna aliqua. Ut enim ad mini veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                            .mt-50.mt-t-40
+                                p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт для того, чтобы делать live-ставки.Данный вид ставок требует особой внимательности и просмотра прямой трансляции без задержек. Наш сайт транслирует все спортивные соревнования и турниры.В числе видов спорта, на которые мы предоставляем трансляции, не только футбол, баскетбол, хоккей, волейбол, бейсбол и многое другое в режиме онлайн. Сайт Bet Project является площадкой для общения между прогнозистами, которые могут не только составлять ежедневные прогнозы на спорт, но и общаться друг с другом в онлайн чате. Также, на сайте всегда можно задать вопрос службе поддержки, которая оперативно рассматривает поступающие сообщения.
 
         include ./blocks/footer.jade
         include ./blocks/scripts.jade

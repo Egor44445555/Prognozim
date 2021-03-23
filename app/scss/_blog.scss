@@ -1,0 +1,278 @@
+.blog-page {
+
+    .first-image-bg {
+        overflow: hidden;
+    }
+
+    .hero-block {
+
+        .wrap {
+            padding-top: 210px;
+            padding-bottom: 50px;
+        }
+
+        .title {
+            font-size: 64px;
+            line-height: 140%;
+        }
+
+        .description {
+            max-width: 570px;
+        }
+    }
+}
+
+.blog-detail-page {
+
+    .first-image-bg {
+        
+        img {
+            min-height: 0;
+        }
+    }
+
+    .hero-block {
+
+        .wrap {
+            padding: 170px 0 150px;
+        }
+
+        .title {
+            max-width: 760px;
+        }
+    }    
+}
+
+.post-list-wrap {
+    margin-top: 45px;
+
+    .pagination {
+        padding-left: 90px;
+    }
+}
+
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 75px 0 0 -20px;
+
+    .post--item {
+        flex: 100%;
+        max-width: calc(25% - 20px);
+        margin: 20px 0 0 20px;
+    }
+}
+
+.post--item {
+    display: block;
+    padding: 0;
+    background: $white;
+    color: $blueDark;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+
+    span {
+        display: block;
+    }
+
+    .info {
+        padding: 40px;
+        background: $white;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .date {
+        margin-top: 34px;
+        font-family: $textFontBold;
+        font-size: 16px;
+        line-height: 150%;
+        color: $linkColor;
+    }
+}
+
+
+/*** Media ***/
+
+@media (max-width: 1441px) {
+
+    .blog-page {
+
+        .first-image-bg {
+
+            img {
+                margin-right: -20%;
+            }
+        }
+    }
+
+    .blog-page {
+
+        .hero-block {
+    
+            .wrap {
+                padding-top: 100px;
+            }
+        }
+    }
+
+    .post-list-wrap {
+
+        .pagination {
+            padding-left: 0;
+        }
+    }
+
+    .post-list {
+
+        .post--item {
+            max-width: calc(33.333% - 20px);
+        }
+    }
+}
+
+@media (max-width: 1281px) {
+
+    .blog-detail-page {
+
+        .hero-block {
+    
+            .wrap {
+                padding: 80px 0 27px;
+            }
+        }    
+    }
+}
+
+@media (max-width: 1025px) {
+
+    .blog-page {
+
+        .first-image-bg {
+
+            img {
+                margin-right: -30%;
+            }
+        }
+
+        .hero-block {
+    
+            .wrap {
+                padding-top: 33px;
+            }
+        }
+    }
+
+    .post-list {
+
+        .post--item {
+            max-width: calc(50% - 20px);
+        }
+    }
+}
+
+@media (max-width: 769px) {
+
+    .blog-detail-page {
+
+        .wrapper {
+            padding-bottom: 50px;
+        }
+    }
+
+    .blog-page {
+
+        .first-image-bg {
+
+            img {
+                width: auto;
+                max-width: 600px;
+                min-height: 0;
+                float: right;
+                margin: 30px -150px 0 0;
+            }
+        }
+
+        .hero-block {
+
+            .title {
+                font-size: 24px;
+            }
+
+            .description {
+                margin: 340px auto 0;
+            }
+        }
+    }
+
+    .post-list-wrap {
+        padding-bottom: 56px;
+    }
+
+    .post-list {
+        margin: 30px 0 0;
+
+        .post--item {
+            max-width: 100%;
+            margin: 10px 0 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .post--item {
+
+        .info {
+            padding: 20px 25px 30px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 150%;
+        }
+
+        .date {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
+}
+
+@media (max-width: 561px) {
+
+    .blog-page {
+
+        .first-image-bg {
+            top: 0;
+        }
+    }
+
+    .blog-detail-page {
+
+        .first-image-bg {
+            top: 0;
+
+            img {
+                height: 440px;
+            }
+        }
+
+        .hero-block {
+
+            .title-wrap {
+                margin-top: 117px;
+            }
+        }
+    }
+}

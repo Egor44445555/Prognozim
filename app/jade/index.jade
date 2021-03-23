@@ -5,24 +5,7 @@ html
     body.main-page
         include ./blocks/header.jade
 
-        .left-panel
-            .wrap
-                .link-list
-                    a(href="#").link-list--item.icon-soccer-ball
-                    a(href="#").link-list--item.icon-basketball
-                    a(href="#").link-list--item.icon-hockey
-                    a(href="#").link-list--item.icon-boxing
-                    a(href="#").link-list--item.icon-tennis
-                    a(href="#").link-list--item.icon-rugby
-                    .link-list--item.more-btn
-                        span
-
-                .social-list
-                    a(href="#").social-list--item.icon-facebook-circle
-                    a(href="#").social-list--item.icon-vk-circle
-                        span.path1
-                            span.path2
-                    a(href="#").social-list--item.icon-instagram-circle
+        include ./blocks/left-panel.jade
 
         .wrapper
             .first-image-bg
@@ -51,8 +34,8 @@ html
             .container-block
                 .slider-list-wrap
                     .title-wrap
-                        h2.title Топ лучших 
-                        .sub-title.h2 прогнозистов
+                        h2.h1.title Топ лучших 
+                        .sub-title.h1 прогнозистов
 
                     .slider-list
                         .pagination 
@@ -299,8 +282,8 @@ html
             .container-block
                 .slider-list-wrap
                     .title-wrap
-                        h2.title Топ
-                        .sub-title.h2 ставок
+                        h2.h1.title Топ
+                        .sub-title.h1 ставок
 
                     .slider-list
                         .pagination 
@@ -428,8 +411,8 @@ html
                         img(src="../images/stripes-bg.png", alt="")
 
                     .title-wrap
-                        h2.title Прогнозы
-                        .sub-title.h2 на спорт
+                        h2.h1.title Прогнозы
+                        .sub-title.h1 на спорт
 
                     .column-wrap
                         .column
