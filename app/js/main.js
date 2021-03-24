@@ -108,7 +108,7 @@ $(document).ready(function() {
 
     /*** Sliders ***/
 
-    var swiper = new Swiper('.slider-list', {
+    new Swiper('.slider-list', {
         spaceBetween: 10,
         slidesPerGroup: 1,
         simulateTouch: false,
@@ -141,7 +141,7 @@ $(document).ready(function() {
         }
     });
 
-    var eventsSlider = new Swiper('.events-list', {
+    new Swiper('.events-list', {
         spaceBetween: 10,
         slidesPerGroup: 1,
         simulateTouch: false,
@@ -160,6 +160,20 @@ $(document).ready(function() {
             1025: {
                 allowTouchMove: false
             }
+        }
+    });
+
+    new Swiper('.slider-sidebar', {
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        simulateTouch: false,
+        slidesPerView: 1,
+        centeredSlides: true,
+        allowTouchMove: true,
+        pagination: {
+            el: '.slider-sidebar .pagination',
+            type: 'bullets',
+            clickable: true,
         }
     });
 

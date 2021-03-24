@@ -35,7 +35,7 @@ body {
 .wrapper {
     position: relative;
     min-height: calc(100vh - 100px);
-    margin-top: 100px;    
+    margin-top: 100px;
     z-index: 9;
 }
 
@@ -63,6 +63,10 @@ body {
 
 .mt-50 {
     margin-top: 50px !important;
+}
+
+.mt-160 {
+    margin-top: 160px !important;
 }
 
 ol {
@@ -194,6 +198,11 @@ h4,
     font-family: $textFontBold;
 }
 
+.big-title {
+    font-size: 64px;
+    line-height: 140%;
+}
+
 .text-center {
     text-align: center;
 }
@@ -224,12 +233,12 @@ a {
 }
 
 .btn {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     min-height: 40px;
-    width: 100%;
-    padding: 6px 20px;
+    width: auto;
+    padding: 6px 36px;
     background: $themeColor;
     color: $white;
     font-family: $textFontBold;
@@ -511,8 +520,10 @@ input[type="password"] {
     }
 
     .btn {
+        width: 100%;
         margin: 10px 0 0 10px;
         font-size: 13px;
+        text-align: center;
         cursor: pointer;
     }
 }
