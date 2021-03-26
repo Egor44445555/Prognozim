@@ -1,0 +1,845 @@
+
+<html>
+  <title>Поик </title>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/content.css"/>
+    <link rel="stylesheet" href="./css/media.css"/>
+  </head>
+  <body>
+    <div class="header">
+      <div class="wrap">
+        <div class="left-block">
+          <div class="search-wrap">
+            <div class="search-btn"> 
+              <div class="icon-search"></div>
+            </div>
+            <form action="/search.html" class="search-form">
+              <div class="wrap">
+                <button type="submit"><span class="icon-search"></span></button>
+                <input type="text" placeholder="Ваш запрос. Например футбол..."/><span class="remove"></span>
+              </div>
+            </form>
+          </div><a href="/" class="logo"><img src="images/logo.svg"/></a>
+          <div class="menu-header"><a href="/forecasts.html" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="#" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="#" class="menu-header--item"><span class="text">Эксперты</span></a><a href="#" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a></div>
+        </div>
+        <div class="right-block">
+          <div class="icon-list"><a href="#" class="icon-list--item"><span class="icon icon-plus"></span><span class="text">Мой Прогноз</span></a><a href="#" class="icon-list--item"><span class="icon icon-bell-red"></span></a></div>
+          <div class="mobile-balance">
+            <div class="image"><img src="../images/assets/avatar.jpg" alt=""/></div>
+            <div class="balance">800.000₽</div>
+          </div>
+          <div class="cabinet-menu-wrap">
+            <div class="cabinet-menu-btn">
+              <div class="image"><img src="../images/assets/avatar.jpg" alt=""/></div>
+              <div class="info">
+                <div class="label">Личный кабинет</div>
+                <div class="balance-wrap">
+                  <div class="balance">800.000₽</div>
+                  <div class="sum">443.699 VRUR</div>
+                </div>
+              </div>
+            </div>
+            <div class="cabinet-menu">
+              <div class="cabinet-menu--row"><a href="#" class="cabinet-menu--item"><span class="icon icon-plus"> </span><span class="text">Мой прогноз</span></a></div>
+              <div class="cabinet-menu--row"><a href="#" class="cabinet-menu--item"><span class="icon icon-pie-chart"></span><span class="text">Статистика</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-soccer-ball"></span><span class="text">Актуальные прогнозы</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-analysts"></span><span class="text">Мои аналитики</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-cup"></span><span class="text">Прогнозы моих аналитиков</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-cart-empty"></span><span class="text">Мои покупки</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-arms"></span><span class="text">Партнёрам</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-bonus"></span><span class="text">Бонусы (3000)</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-comment-empty"></span><span class="text">Чат с администрацией</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-stars-group"></span><span class="text">Ранг</span></a></div>
+              <div class="cabinet-menu--row"><a href="#" class="cabinet-menu--item"><span class="icon icon-gear-empty"></span><span class="text">Настройки</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-history-list"></span><span class="text">История пополнений</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-bell-empty"></span><span class="text">Оповещения</span></a><a href="#" class="cabinet-menu--item"><span class="icon icon-coin-hand"></span><span class="text">Вывод средств</span></a></div>
+              <div class="button-wrap"><a href="#" class="btn btn-red logout">Выйти</a></div>
+            </div>
+          </div>
+          <div class="menu-btn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="mobile-panel"><a href="/" class="logo"><img src="images/logo.svg"/></a>
+        <div class="icons">
+          <div class="search-wrap">
+            <div class="search-btn"> 
+              <div class="icon-search"></div>
+            </div>
+            <form action="/search.html" class="search-form">
+              <div class="wrap">
+                <button type="submit"><span class="icon-search"></span></button>
+                <input type="text" placeholder="Ваш запрос. Например футбол..."/><span class="remove"></span>
+              </div>
+            </form>
+          </div>
+          <div class="menu-btn"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-menu-wrap">
+      <div class="close"></div>
+      <div class="modal-menu">
+        <div class="menu-header-wrap">
+          <div class="menu-header"><a href="/forecasts.html" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="#" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="#" class="menu-header--item"><span class="text">Эксперты</span></a><a href="#" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a><a href="#" class="menu-header--item"><span class="btn btn-red">Мой прогноз</span></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="left-panel">
+      <div class="wrap">
+        <div class="link-list"><a href="#" class="link-list--item icon-soccer-ball"></a><a href="#" class="link-list--item icon-basketball"></a><a href="#" class="link-list--item icon-hockey"></a><a href="#" class="link-list--item icon-boxing"></a><a href="#" class="link-list--item icon-tennis"></a><a href="#" class="link-list--item icon-rugby"></a>
+          <div class="link-list--item more-btn"><span></span></div>
+        </div>
+        <div class="social-list"><a href="#" class="social-list--item icon-facebook-circle"></a><a href="#" class="social-list--item icon-vk-circle"><span class="path1"><span class="path2"></span></span></a><a href="#" class="social-list--item icon-instagram-circle"></a></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="first-image-bg right-mobile"><img src="../images/hero-image-10.jpg" alt=""/></div>
+      <div class="hero-block">
+        <div class="container-block">
+          <div class="wrap">
+            <div class="title-wrap">
+              <h1 class="title">Результаты поиска по запросу:</h1>
+              <div class="sub-title h1">“Хоккей”
+                <div class="count">23</div>
+              </div>
+            </div>
+            <form class="search">
+              <input type="text" placeholder="Поиск" value="Хоккей" class="input"/>
+              <button type="submit" class="icon icon-search"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container-block">
+        <div class="mt-40 mt-t-0">
+          <div class="column-wrap">
+            <div class="column wide">
+              <div class="product-list">
+                <div class="product-list--item">
+                  <div class="wrap">
+                    <div class="top-panel">
+                      <div class="sticker">Прогноз</div>
+                      <div class="comment-btn"> 
+                        <div class="icon icon-comment"> </div>
+                        <div class="text"> <span>Комментарии <span class="count">45</span></span></div>
+                      </div>
+                      <div class="date">21 окт. 13:08 2020</div>
+                    </div>
+                    <table>
+                      <tr>
+                        <th>Спорт</th>
+                        <th class="text-center">Игра</th>
+                        <th>Начало</th>
+                        <th>Ставка</th>
+                        <th>КФ</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="image">
+                            <div class="icon icon-soccer-ball"></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="title-wrap"> 
+                            <div class="image"> 
+                              <div class="icon icon-t-shirt-2"></div>
+                            </div>
+                            <div class="title"><span>Бавария - Атлетико Мадрид</span><span class="sub-title">Групповой этап</span></div>
+                            <div class="image"> 
+                              <div class="icon icon-t-shirt-2"></div>
+                            </div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="date">20/10/20 16:30</div>
+                        </td>
+                        <td>
+                          <div class="rate">1.45</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">1.45</div>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="table-block"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">20/10/20</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Краснодар - Спартак Москва</div>
+                      <div class="bottom-block"><span class="rate">ставка 1.45</span><span class="coefficient">КФ 1.45</span></div>
+                    </div>
+                    <div class="person">
+                      <div class="image"><img src="../images/assets/face.jpg" alt=""/>
+                        <div class="num">2</div>
+                      </div>
+                      <div class="name"> <span>Иван Иванов</span></div>
+                      <div class="parameters">
+                        <div class="parameters--item icon-t-shirt"></div>
+                        <div class="parameters--item icon-target"></div>
+                        <div class="parameters--item icon-star"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-panel">
+                    <div class="description">Селтик пока что не показывает уровень команды, которая достойна выйти из группы. Но против Спарты есть шанс зацепиться за свой шанс. Селтик хотя бы забивает. А учитывая, что играет дома, то шансы на голы точно будут. Реал тоже. Команда дома должна брать победу... </div>
+                    <div class="button-wrap"> 
+                      <div class="cost">Ставка 44 000 ₽</div><a href="#" class="btn btn-red">Полный прогноз</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-list--item">
+                  <div class="wrap">
+                    <div class="top-panel">
+                      <div class="sticker">Экспресс</div>
+                      <div class="comment-btn"> 
+                        <div class="icon icon-comment"> </div>
+                        <div class="text"> <span>Комментарии <span class="count">45</span></span></div>
+                      </div>
+                      <div class="date">21 окт. 13:08 2020</div>
+                    </div>
+                    <table>
+                      <tr> 
+                        <th>Спорт</th>
+                        <th class="text-center">Игра</th>
+                        <th>Начало</th>
+                        <th>Ставка</th>
+                        <th>КФ</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="image">
+                            <div class="icon icon-soccer-ball"></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="title-wrap"> 
+                            <div class="image"> <img src="../images/assets/event-3.png" alt=""/></div>
+                            <div class="title"><span>Бавария - Атлетико Мадрид</span><span class="sub-title">Групповой этап</span></div>
+                            <div class="image"> <img src="../images/assets/event-4.png" alt=""/></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="date">20/10/20 16:30</div>
+                        </td>
+                        <td>
+                          <div class="rate">1.45</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">1.45</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="image">
+                            <div class="icon icon-soccer-ball"></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="title-wrap"> 
+                            <div class="image"> <img src="../images/assets/event-5.png" alt=""/></div>
+                            <div class="title"><span>Краснодар - Спартак Москва</span><span class="sub-title">Премьер-лига</span></div>
+                            <div class="image"> <img src="../images/assets/event-6.png" alt=""/></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="date">20/10/20 16:30</div>
+                        </td>
+                        <td>
+                          <div class="rate">1.45</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">1.45</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <div class="label">Общий КФ</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">2.90</div>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="table-block">
+                      <div class="table-block--row">
+                        <div class="time-wrap">
+                          <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                          <div class="time"><span>16:00</span>
+                            <div class="label">20/10/20</div>
+                          </div>
+                          <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                        </div>
+                        <div class="category">Групповой этап</div>
+                        <div class="title">Бавария - Атлетико Мадрид</div>
+                        <div class="bottom-block"><span class="rate">1.45</span><span class="coefficient">1.45</span></div>
+                      </div>
+                      <div class="table-block--row">
+                        <div class="time-wrap">
+                          <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                          <div class="time"><span>16:00</span>
+                            <div class="label">20/10/20</div>
+                          </div>
+                          <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                        </div>
+                        <div class="category">Премьер-лига</div>
+                        <div class="title">Краснодар - Спартак Москва</div>
+                        <div class="bottom-block"><span class="rate">1.45</span><span class="coefficient">1.45</span></div>
+                      </div>
+                      <div class="table-block--row">
+                        <div class="label">Общий КФ 2.90</div>
+                      </div>
+                    </div>
+                    <div class="person">
+                      <div class="image"><img src="../images/assets/face.jpg" alt=""/>
+                        <div class="num">2</div>
+                      </div>
+                      <div class="name"> <span>Иван Иванов</span></div>
+                      <div class="parameters">
+                        <div class="parameters--item icon-t-shirt"></div>
+                        <div class="parameters--item icon-target"></div>
+                        <div class="parameters--item icon-star"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-panel">
+                    <div class="description">Селтик пока что не показывает уровень команды, которая достойна выйти из группы. Но против Спарты есть шанс зацепиться за свой шанс. Селтик хотя бы забивает. А учитывая, что играет дома, то шансы на голы точно будут. Реал тоже. Команда дома должна брать победу... </div>
+                    <div class="button-wrap"> 
+                      <div class="cost">Ставка 44 000 ₽</div><a href="#" class="btn btn-red">Полный прогноз</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-list--item">
+                  <div class="wrap">
+                    <div class="top-panel">
+                      <div class="sticker">Прогноз</div>
+                      <div class="comment-btn"> 
+                        <div class="icon icon-comment"> </div>
+                        <div class="text"> <span>Комментарии <span class="count">45</span></span></div>
+                      </div>
+                      <div class="date">21 окт. 13:08 2020</div>
+                    </div>
+                    <table>
+                      <tr>
+                        <th>Спорт</th>
+                        <th class="text-center">Игра</th>
+                        <th>Начало</th>
+                        <th>Ставка</th>
+                        <th>КФ</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="image">
+                            <div class="icon icon-soccer-ball"></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="title-wrap"> 
+                            <div class="image"> 
+                              <div class="icon icon-t-shirt-2"></div>
+                            </div>
+                            <div class="title"><span>Бавария - Атлетико Мадрид</span><span class="sub-title">Групповой этап</span></div>
+                            <div class="image"> 
+                              <div class="icon icon-t-shirt-2"></div>
+                            </div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="date">20/10/20 16:30</div>
+                        </td>
+                        <td>
+                          <div class="rate">1.45</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">1.45</div>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="table-block"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">20/10/20</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Краснодар - Спартак Москва</div>
+                      <div class="bottom-block"><span class="rate">ставка 1.45</span><span class="coefficient">КФ 1.45</span></div>
+                    </div>
+                    <div class="person">
+                      <div class="image"><img src="../images/assets/face.jpg" alt=""/>
+                        <div class="num">2</div>
+                      </div>
+                      <div class="name"> <span>Иван Иванов</span></div>
+                      <div class="parameters">
+                        <div class="parameters--item icon-t-shirt"></div>
+                        <div class="parameters--item icon-target"></div>
+                        <div class="parameters--item icon-star"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-panel">
+                    <div class="description">Селтик пока что не показывает уровень команды, которая достойна выйти из группы. Но против Спарты есть шанс зацепиться за свой шанс. Селтик хотя бы забивает. А учитывая, что играет дома, то шансы на голы точно будут. Реал тоже. Команда дома должна брать победу... </div>
+                    <div class="button-wrap"> 
+                      <div class="cost">Ставка 44 000 ₽</div><a href="#" class="btn btn-red">Полный прогноз</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-list--item">
+                  <div class="wrap">
+                    <div class="top-panel">
+                      <div class="sticker">Экспресс</div>
+                      <div class="comment-btn"> 
+                        <div class="icon icon-comment"> </div>
+                        <div class="text"> <span>Комментарии <span class="count">45</span></span></div>
+                      </div>
+                      <div class="date">21 окт. 13:08 2020</div>
+                    </div>
+                    <table>
+                      <tr> 
+                        <th>Спорт</th>
+                        <th class="text-center">Игра</th>
+                        <th>Начало</th>
+                        <th>Ставка</th>
+                        <th>КФ</th>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="image">
+                            <div class="icon icon-soccer-ball"></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="title-wrap"> 
+                            <div class="image"> <img src="../images/assets/event-3.png" alt=""/></div>
+                            <div class="title"><span>Бавария - Атлетико Мадрид</span><span class="sub-title">Групповой этап</span></div>
+                            <div class="image"> <img src="../images/assets/event-4.png" alt=""/></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="date">20/10/20 16:30</div>
+                        </td>
+                        <td>
+                          <div class="rate">1.45</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">1.45</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="image">
+                            <div class="icon icon-soccer-ball"></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="title-wrap"> 
+                            <div class="image"> <img src="../images/assets/event-5.png" alt=""/></div>
+                            <div class="title"><span>Краснодар - Спартак Москва</span><span class="sub-title">Премьер-лига</span></div>
+                            <div class="image"> <img src="../images/assets/event-6.png" alt=""/></div>
+                          </div>
+                        </td>
+                        <td> 
+                          <div class="date">20/10/20 16:30</div>
+                        </td>
+                        <td>
+                          <div class="rate">1.45</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">1.45</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="4">
+                          <div class="label">Общий КФ</div>
+                        </td>
+                        <td>
+                          <div class="coefficient">2.90</div>
+                        </td>
+                      </tr>
+                    </table>
+                    <div class="table-block">
+                      <div class="table-block--row">
+                        <div class="time-wrap">
+                          <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                          <div class="time"><span>16:00</span>
+                            <div class="label">20/10/20</div>
+                          </div>
+                          <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                        </div>
+                        <div class="category">Групповой этап</div>
+                        <div class="title">Бавария - Атлетико Мадрид</div>
+                        <div class="bottom-block"><span class="rate">1.45</span><span class="coefficient">1.45</span></div>
+                      </div>
+                      <div class="table-block--row">
+                        <div class="time-wrap">
+                          <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                          <div class="time"><span>16:00</span>
+                            <div class="label">20/10/20</div>
+                          </div>
+                          <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                        </div>
+                        <div class="category">Премьер-лига</div>
+                        <div class="title">Краснодар - Спартак Москва</div>
+                        <div class="bottom-block"><span class="rate">1.45</span><span class="coefficient">1.45</span></div>
+                      </div>
+                      <div class="table-block--row">
+                        <div class="label">Общий КФ 2.90</div>
+                      </div>
+                    </div>
+                    <div class="person">
+                      <div class="image"><img src="../images/assets/face.jpg" alt=""/>
+                        <div class="num">2</div>
+                      </div>
+                      <div class="name"> <span>Иван Иванов</span></div>
+                      <div class="parameters">
+                        <div class="parameters--item icon-t-shirt"></div>
+                        <div class="parameters--item icon-target"></div>
+                        <div class="parameters--item icon-star"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-panel">
+                    <div class="description">Селтик пока что не показывает уровень команды, которая достойна выйти из группы. Но против Спарты есть шанс зацепиться за свой шанс. Селтик хотя бы забивает. А учитывая, что играет дома, то шансы на голы точно будут. Реал тоже. Команда дома должна брать победу... </div>
+                    <div class="button-wrap"> 
+                      <div class="cost">Ставка 44 000 ₽</div><a href="#" class="btn btn-red">Полный прогноз</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="pagination"><a href="#" class="pagination--item prev"></a><a href="#" class="pagination--item active">1</a><a href="#" class="pagination--item">2</a><a href="#" class="pagination--item">3</a>
+                  <div class="pagination--item">...</div><a href="#" class="pagination--item">25</a><a href="#" class="pagination--item next"></a>
+                </div>
+              </div>
+            </div>
+            <div class="column narrow">
+              <div class="slider-sidebar-wrap">
+                <div class="title-wrap">
+                  <h3 class="title">Топ</h3><span class="sub-title h3">ставок</span>
+                </div>
+                <div class="slider-sidebar slider-list top-rates">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-list--item slider-sidebar--item event">
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-2.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Краснодар - Спартак Москва</div>
+                      <table class="border-top">
+                        <tr> 
+                          <td>
+                            <div class="info">
+                              <div class="label">Ставка</div>
+                              <div class="value">4.35</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прогнозов</div>
+                              <div class="value">51</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">КФ</div>
+                              <div class="value">4.35</div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="swiper-slide slider-list--item slider-sidebar--item event">
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-2.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Краснодар - Спартак Москва</div>
+                      <table class="border-top">
+                        <tr> 
+                          <td>
+                            <div class="info">
+                              <div class="label">Ставка</div>
+                              <div class="value">4.35</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прогнозов</div>
+                              <div class="value">51</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">КФ</div>
+                              <div class="value">4.35</div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="swiper-slide slider-list--item slider-sidebar--item event">
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-2.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Краснодар - Спартак Москва</div>
+                      <table class="border-top">
+                        <tr> 
+                          <td>
+                            <div class="info">
+                              <div class="label">Ставка</div>
+                              <div class="value">4.35</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прогнозов</div>
+                              <div class="value">51</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">КФ</div>
+                              <div class="value">4.35</div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="pagination"></div>
+                </div>
+              </div>
+              <div class="slider-sidebar-wrap">
+                <div class="title-wrap">
+                  <h3 class="title">Лучшие</h3><span class="sub-title h3">Прогнозисты </span>
+                </div>
+                <div class="slider-sidebar slider-list forecasters-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide slider-sidebar--item slider-list--item">
+                      <div class="person">
+                        <div class="image"><img src="../images/assets/face.jpg" alt=""/>
+                          <div class="num">2</div>
+                        </div>
+                        <div class="info"> 
+                          <div class="name">Иван Иванов</div>
+                          <div class="parameters">
+                            <div class="parameters--item icon-t-shirt"></div>
+                            <div class="parameters--item icon-target"></div>
+                            <div class="parameters--item icon-star"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прогнозов</div>
+                              <div class="value">20</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">W/L/D</div>
+                              <div class="value">12/7/5</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">КФ</div>
+                              <div class="value">22.38</div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прибыль</div>
+                              <div class="value">440К ₽</div>
+                            </div>
+                          </td>
+                          <td colspan="2">
+                            <div class="graph">
+                              <div class="icon"><img src="../images/graph-line.svg"/></div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="swiper-slide slider-sidebar--item slider-list--item">
+                      <div class="person">
+                        <div class="image"><img src="../images/assets/face.jpg" alt=""/>
+                          <div class="num">2</div>
+                        </div>
+                        <div class="info"> 
+                          <div class="name">Иван Иванов</div>
+                          <div class="parameters">
+                            <div class="parameters--item icon-t-shirt"></div>
+                            <div class="parameters--item icon-target"></div>
+                            <div class="parameters--item icon-star"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прогнозов</div>
+                              <div class="value">20</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">W/L/D</div>
+                              <div class="value">12/7/5</div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="info">
+                              <div class="label">КФ</div>
+                              <div class="value">22.38</div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="info">
+                              <div class="label">Прибыль</div>
+                              <div class="value">440К ₽</div>
+                            </div>
+                          </td>
+                          <td colspan="2">
+                            <div class="graph">
+                              <div class="icon"><img src="../images/graph-line.svg"/></div>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="pagination"></div>
+                </div>
+              </div>
+              <div class="events-wrap">
+                <div class="title-wrap text-center">
+                  <h3 class="title">Ближайшие</h3>
+                  <div class="sub-title h3">матчи</div>
+                </div>
+                <div class="events-list">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide events-list--item"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Бавария - Атлетико Мадрид</div><a href="#" class="add-btn"><span>Добавить прогноз</span></a>
+                    </div>
+                    <div class="swiper-slide events-list--item"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Бавария - Атлетико Мадрид</div><a href="#" class="add-btn"> <span>Добавить прогноз</span></a>
+                    </div>
+                    <div class="swiper-slide events-list--item"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Бавария - Атлетико Мадрид</div><a href="#" class="add-btn"><span>Добавить прогноз</span></a>
+                    </div>
+                    <div class="swiper-slide events-list--item"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Бавария - Атлетико Мадрид</div><a href="#" class="add-btn"> <span>Добавить прогноз</span></a>
+                    </div>
+                    <div class="swiper-slide events-list--item"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Бавария - Атлетико Мадрид</div><a href="#" class="add-btn"><span>Добавить прогноз</span></a>
+                    </div>
+                    <div class="swiper-slide events-list--item"> 
+                      <div class="time-wrap">
+                        <div class="image image-left"><img src="../images/assets/event-3.png" alt=""/></div>
+                        <div class="time"><span>16:00</span>
+                          <div class="label">Начало</div>
+                        </div>
+                        <div class="image image-right"><img src="../images/assets/event-4.png" alt=""/></div>
+                      </div>
+                      <div class="category">футбол \ Групповой этап</div>
+                      <div class="title">Бавария - Атлетико Мадрид</div><a href="#" class="add-btn"> <span>Добавить прогноз</span></a>
+                    </div>
+                  </div>
+                  <div class="pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrap bg-empty">
+      <div class="footer">
+        <div class="wrap">
+          <div class="content-block">
+            <div class="bottom-block">
+              <div class="column"> 
+                <div class="footer-menu"><a href="/forecasts.html" class="footer-menu--item">Все прогнозы</a><a href="#" class="footer-menu--item">Платные прогнозы</a><a href="#" class="footer-menu--item">Бесплатные прогнозы</a><a href="#" class="footer-menu--item">Ординар</a><a href="#" class="footer-menu--item">Экспресс</a></div>
+              </div>
+              <div class="column"> 
+                <div class="footer-menu"><a href="#" class="footer-menu--item">FAQ</a><a href="#" class="footer-menu--item">Правила Сообщества</a><a href="#" class="footer-menu--item">Заработок</a><a href="/about.html" class="footer-menu--item">О нас</a><a href="/blog.html" class="footer-menu--item">Блог</a></div>
+              </div>
+              <div class="column"> 
+                <div class="footer-menu"><a href="#" class="footer-menu--item">Топ Ставок</a><a href="#" class="footer-menu--item">Эксперты</a><a href="#" class="footer-menu--item">Добавить прогноз</a></div>
+              </div>
+              <div class="column"> 
+                <div class="copyright"> <span>© 2020 Prognozim</span><span>Все права защищены</span></div>
+                <div class="social-list"><a href="#" target="_blank" class="social-list--item icon-instagram-circle"></a><a href="#" target="_blank" class="social-list--item icon-vk-circle"><span class="path1"><span class="path2"></span></span></a><a href="#" target="_blank" class="social-list--item icon-facebook-circle"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

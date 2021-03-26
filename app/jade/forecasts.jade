@@ -20,7 +20,7 @@ html
                             a(href="#").btn.btn-red Добавить прогноз
 
             .container-block
-                .mt-160
+                .mt-160.mt-t-0
                     .column-wrap
                             .column
                                 include ./blocks/filters.jade
@@ -34,7 +34,7 @@ html
                                         h3.title Топ
                                         span.sub-title.h3 ставок
 
-                                    .slider-sidebar.slider-list
+                                    .slider-sidebar.slider-list.top-rates
                                         .swiper-wrapper
                                             .swiper-slide.slider-list--item.slider-sidebar--item.event
                                                 .time-wrap
@@ -90,6 +90,115 @@ html
                                                             .info
                                                                 .label КФ
                                                                 .value 4.35
+
+                                            .swiper-slide.slider-list--item.slider-sidebar--item.event
+                                                .time-wrap
+                                                    .image.image-left
+                                                        img(src="../images/assets/event.png", alt="")
+                                                    .time
+                                                        span 16:00
+                                                        .label Начало
+                                                    .image.image-right
+                                                        img(src="../images/assets/event-2.png", alt="")
+                                                
+                                                .category футбол \ Групповой этап
+                                                .title Краснодар - Спартак Москва
+
+                                                table.border-top
+                                                    tr 
+                                                        td
+                                                            .info
+                                                                .label Ставка
+                                                                .value 4.35
+                                                        td
+                                                            .info
+                                                                .label Прогнозов
+                                                                .value 51
+                                                        td
+                                                            .info
+                                                                .label КФ
+                                                                .value 4.35
+
+                                        .pagination
+
+                                .slider-sidebar-wrap
+                                    .title-wrap
+                                        h3.title Лучшие
+                                        span.sub-title.h3 Прогнозисты 
+
+                                    .slider-sidebar.slider-list.forecasters-slider
+                                        .swiper-wrapper
+                                            .swiper-slide.slider-sidebar--item.slider-list--item
+                                                .person
+                                                    .image
+                                                        img(src="../images/assets/face.jpg", alt="")
+                                                        .num 2
+                                                    .info 
+                                                        .name Иван Иванов
+                                                        .parameters
+                                                            .parameters--item.icon-t-shirt
+                                                            .parameters--item.icon-target
+                                                            .parameters--item.icon-star
+
+                                                table
+                                                    tr
+                                                        td
+                                                            .info
+                                                                .label Прогнозов
+                                                                .value 20
+                                                        td
+                                                            .info
+                                                                .label W/L/D
+                                                                .value 12/7/5
+                                                        td
+                                                            .info
+                                                                .label КФ
+                                                                .value 22.38
+                                                    tr
+                                                        td
+                                                            .info
+                                                                .label Прибыль
+                                                                .value 440К ₽
+                                                        td(colspan="2")
+                                                            .graph
+                                                                .icon
+                                                                    img(src="../images/graph-line.svg")
+
+                                            .swiper-slide.slider-sidebar--item.slider-list--item
+                                                .person
+                                                    .image
+                                                        img(src="../images/assets/face.jpg", alt="")
+                                                        .num 2
+                                                    .info 
+                                                        .name Иван Иванов
+                                                        .parameters
+                                                            .parameters--item.icon-t-shirt
+                                                            .parameters--item.icon-target
+                                                            .parameters--item.icon-star
+
+                                                table
+                                                    tr
+                                                        td
+                                                            .info
+                                                                .label Прогнозов
+                                                                .value 20
+                                                        td
+                                                            .info
+                                                                .label W/L/D
+                                                                .value 12/7/5
+                                                        td
+                                                            .info
+                                                                .label КФ
+                                                                .value 22.38
+                                                    tr
+                                                        td
+                                                            .info
+                                                                .label Прибыль
+                                                                .value 440К ₽
+                                                        td(colspan="2")
+                                                            .graph
+                                                                .icon
+                                                                    img(src="../images/graph-line.svg")
 
                                         .pagination
 

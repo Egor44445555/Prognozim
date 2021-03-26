@@ -14,6 +14,30 @@
 
 /******************************************************************/
 
+@media (max-width: 1441px) {
+
+    table {
+        display: none;
+    }
+
+    .table-block {
+        display: block;
+        margin-left: -15px;
+        margin-right: -15px;
+
+        &--row {
+            padding-top: 15px;
+        }
+
+        .label {
+            font-size: 14px;
+            line-height: 140%;
+        }
+    }
+}
+
+/******************************************************************/
+
 @media (max-width: 1281px) {
 
     .column-wrap {
@@ -38,6 +62,11 @@
             padding: 40px;
         }
     }
+
+    .table-block {
+        margin: 15px -15px 0;
+        padding: 10px 15px 0;
+    }
 }
 
 /******************************************************************/
@@ -49,12 +78,21 @@
         &.mobile {
             display: block;
         }
+
+        .count {
+            min-height: 0;
+            font-size: 18px;
+            line-height: 28px;
+        }
     }
 
     h1, 
-    .h1, 
-    h2, 
-    .h2 {
+    .h1 {
+        font-size: 34px;
+        line-height: 120%;
+    }
+
+    .big-title {
         font-size: 34px;
         line-height: 120%;
     }
@@ -141,6 +179,10 @@
                     margin: 20px 0 0 20px;
                 }
             }
+
+            &.narrow {
+                max-width: 100%;
+            }
         }
     }
 
@@ -157,6 +199,13 @@
 
         .pagination {
             top: -80px;
+        }
+    }
+
+    .slider-sidebar-wrap {
+
+        .pagination {
+            top: 0;
         }
     }
 
@@ -188,6 +237,10 @@
 
     body {
         font-size: 14px;
+    }
+
+    .mt-t-0 {
+        margin-top: 0 !important;
     }
 
     .mt-t-26 {
@@ -300,7 +353,7 @@
         }
 
         .wrap {
-            padding: 30px 0 35px;
+            padding: 30px 0 20px;
         }
 
         .info {
@@ -315,6 +368,10 @@
 
         .btn {
             margin: 25px auto 0;
+        }
+
+        .title + .btn {
+            margin-top: 160px;
         }
 
         .tabs {
@@ -343,6 +400,10 @@
                     display: none;
                 }
             }
+        }
+
+        .search {
+            margin: 130px auto 0;
         }
     }
 
@@ -578,6 +639,24 @@
         font-size: 14px;
     }
 
+
+    .table-block {
+        padding-top: 0;
+
+        &--row:first-child {
+            margin-top: 0;
+        }
+
+        .bottom-block {
+
+            span {
+                font-size: 12px;
+                line-height: 140%;
+            }
+        }
+    }
+    
+
     .form {
 
         .row {
@@ -647,7 +726,15 @@
 
     .first-image-bg {
         top: 20px;
-        overflow: hidden;
+        overflow: hidden;        
+
+        &.right-mobile {
+            top: 40px;
+
+            img {
+                margin-right: -50%;
+            }
+        }
 
         img {
             width: auto;
@@ -659,6 +746,11 @@
     }
 
     .hero-block {
+
+        .btn {
+            width: 100%;
+            max-width: 290px;
+        }
 
         .description {
             margin-top: 356px;

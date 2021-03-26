@@ -144,8 +144,7 @@
         }
 
         &.wide {
-            max-width: 100%;
-            padding-right: 40px;
+            max-width: 816px;
         }
 
         &.sidebar {
@@ -158,6 +157,10 @@
             &:first-child {
                 margin-top: 0;
             }
+        }
+
+        &.narrow {
+            max-width: 400px;
         }
     }
 }
@@ -347,6 +350,49 @@
 
     .btn {
         margin-top: 46px;
+    }
+
+    .search {
+        position: relative;
+        max-width: 425px;
+        margin: 45px 0 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $white;
+            border-radius: 10px;
+            opacity: .8;
+            z-index: 1;
+        }
+
+        input {
+            position: relative;
+            padding-right: 60px;
+            background: none;
+            color: $linkColor;
+            z-index: 5;
+        }
+        
+        button {
+            position: absolute;
+            top: 50%;
+            right: 18;
+            transform: translateY(-50%);
+            background: none;
+            font-size: 24px;            
+            border: 0;
+            cursor: pointer;
+            z-index: 5;
+
+            &::before {
+                color: $red;
+            }
+        }
     }
 }
 
@@ -641,6 +687,7 @@
         margin-top: 20px;
         border-collapse: collapse;
         text-align: center;
+        border: 0;
 
         &.border-top {
             border-top: 1px solid $grayLight;
@@ -704,11 +751,20 @@
     
     .title-wrap {
         padding: 0 40px;
+        text-align: center;
 
         .title {
-            display: inline;
+            display: inline-block;
             margin-right: 10px;
         }
+
+        .sub-title {
+            display: inline-block;
+        }
+    }
+
+    .person {
+        padding: 0 40px;
     }
 
     .pagination {
@@ -905,6 +961,207 @@
         color: $red;
     }
 }
+
+
+/*** Forcast block ***/
+
+.forcast-block {
+    padding: 40px;
+    background: $white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    .main-cost {
+        margin-top: 30px;
+        padding: 24px 20px;
+        background: $blueLighterOther;
+        font-family: $textFontBold;
+        font-size: 24px;
+        line-height: 140%;
+        color: $linkColor;
+        text-transform: capitalize;
+        text-align: center;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        border-radius: 5px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    
+    .description {
+        margin-top: 30px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.person-block {
+    padding: 35px 40px 40px;
+    background: $white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    .title {
+        margin-top: 8px;
+        padding: 0 20px 40px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .person {
+        display: flex;
+        align-items: center;
+
+        .image {
+            position: relative;
+            display: flex;
+            width: 80px;
+            height: 80px;
+            margin-right: 24px;
+
+            img {
+                margin: auto;
+                border-radius: 50%;
+            }
+        }
+
+        .num {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 4px 11px 1px;
+            background-color: $themeColor;
+            font-family: $textFontBold;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            font-size: 14px;
+            color: $white;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-family: $textFontBold;
+            font-size: 20px;
+            line-height: 114.68%;
+            text-transform: capitalize;
+        }
+
+        .parameters {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 0 -10px;
+
+            &--item {
+                margin: 10px 0 0 10px;
+                font-size: 20px;
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        margin: 20px 0 0;
+        border-collapse: collapse;
+        text-align: center;
+        border: 0;
+
+        &.border-top {
+            border-top: 1px solid $grayLight;
+        }
+
+        tr {
+
+            &:first-child {
+                
+                td {
+                    border-top: 0;
+                }
+            }
+        }
+
+        td {
+            border-top: 1px solid $grayLight;
+            border-left: 1px solid $grayLight;
+            font-family: $textFontBold;
+            font-size: 14px;
+            line-height: 140%;
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+
+        .info {
+            padding: 20px 15px;
+        }
+
+        .label {
+            font-size: 14px;
+            color: $blueLight;
+        }
+
+        .value {
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $red;
+        }
+        
+        .graph {
+            padding: 20px 5px;
+            background-image: linear-gradient(0deg, $grayLight 1.61%, $white 1.61%, $white 50%, $grayLight 50%, $grayLight 51.61%, $white 51.61%, $white 100%);
+            background-size: 61px 61px;
+        }
+    }
+
+    .link {
+        display: inline-block;
+        margin: 40px auto 0;
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 120%;
+    }
+
+    .subscribe {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60px;
+        margin: 40px 0 0;
+        font-family: $textFontSemibold;
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+
+.more-forcasts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+    padding: 22px 40px 22px 50px;
+    background: $themeColor;
+    color: $white;
+    font-family: $textFontSemibold;
+    font-size: 18px;
+    line-height: 21px;
+    border-radius: 10px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .label {
+        padding-right: 7px;
+    }
+
+    .count {
+        padding: 1px 9px 4px;
+        background: $red;
+        border-radius: 20px;
+    }
+}
+
 
 
 @import '_product.scss',

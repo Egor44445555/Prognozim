@@ -163,7 +163,7 @@ $(document).ready(function() {
         }
     });
 
-    new Swiper('.slider-sidebar', {
+    new Swiper('.top-rates', {
         spaceBetween: 10,
         slidesPerGroup: 1,
         simulateTouch: false,
@@ -171,7 +171,21 @@ $(document).ready(function() {
         centeredSlides: true,
         allowTouchMove: true,
         pagination: {
-            el: '.slider-sidebar .pagination',
+            el: '.top-rates .pagination',
+            type: 'bullets',
+            clickable: true,
+        }
+    });
+
+    new Swiper('.forecasters-slider', {
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        simulateTouch: false,
+        slidesPerView: 1,
+        centeredSlides: true,
+        allowTouchMove: true,
+        pagination: {
+            el: '.forecasters-slider .pagination',
             type: 'bullets',
             clickable: true,
         }

@@ -40,7 +40,15 @@
         .title {
             max-width: 760px;
         }
-    }    
+    }
+
+    .column-wrap {
+
+        .wide {
+            max-width: 1060px;
+            padding-right: 40px;
+        }
+    }
 }
 
 .post-list-wrap {
@@ -148,7 +156,17 @@
             .wrap {
                 padding: 80px 0 27px;
             }
-        }    
+        }
+
+        .column-wrap {
+        
+            .column {
+        
+                &.wide {
+                    padding-right: 0;
+                }
+            }
+        }
     }
 }
 
@@ -271,7 +289,7 @@
         .hero-block {
 
             .title-wrap {
-                margin-top: 117px;
+                margin-top: 83px;
             }
         }
     }
