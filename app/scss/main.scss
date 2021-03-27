@@ -229,14 +229,25 @@ h4,
 
     .count {
         display: inline-block;
-        min-height: 35px;
         padding: 0 10px;
         background: $red;
-        font-size: 28px;
-        line-height: 35px;
         color: $white;
         vertical-align: middle;
         border-radius: 20px;
+    }
+
+    h1 .count,
+    .h1 .count {
+        font-family: $titleFontMedium;
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    h2 .count,
+    .h2 .count {
+        font-family: $titleFontMedium;
+        font-size: 20px;
+        line-height: 140%;
     }
 }
 
@@ -826,6 +837,26 @@ table {
 
     .label {
         text-align: center;
+    }
+
+    .total {
+        margin-top: 20px;
+
+        .label {
+            display: block;
+            padding: 15px 0;
+            font-family: $textFontBold;
+            font-size: 14px;
+            line-height: 140%;
+            color: $blueDark;
+            text-transform: capitalize;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            border-bottom: 1px solid $blueLighterOther;
+
+            &:first-child {
+                border-top: 1px solid $blueLighterOther;
+            }
+        }
     }
 }
 

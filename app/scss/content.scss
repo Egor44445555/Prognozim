@@ -1163,6 +1163,119 @@
 }
 
 
+.comments-block-wrap {
+    margin-top: 107px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.comments-list {
+    margin-top: 64px;
+
+    &--item {
+        display: flex;
+        margin-top: 20px;
+        padding-left: 37px;
+        padding-right: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &--item.answer {
+        padding-right: 0;
+        padding-left: 57px;
+
+        .top-panel {
+            color: $red;
+        }
+    }
+
+    .wrap {
+        display: flex;
+        width: 100%;
+        padding: 20px 20px 36px 0;
+        background: $blueLighterOther;
+        border-radius: 10px;
+    }
+
+    .image {
+        position: relative;
+        margin: -20px 0 0 -37px;
+
+        img {
+            border-radius: 50%;
+        }
+
+        .count {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: $blue;
+            font-family: $textFontBold;
+            font-size: 14px;
+            line-height: 114.68%;
+            color: $white;
+            text-transform: capitalize;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            border-radius: 50%;
+        }
+    }
+
+    .info {
+        flex: 1;
+        padding-left: 30px;
+    }
+
+    .top-panel {
+        display: flex;
+        justify-content: space-between;
+        font-family: $textFontBold;
+        color: $linkColor;
+        font-size: 14px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+
+        .name {
+            font-size: 16px;
+        }
+    }
+    
+    .text {
+        margin-top: 15px;
+    }
+
+    .more-btn {
+        width: 100%;
+        margin-top: 20px;
+        padding: 19px 20px;
+        background: $blueLighterOther;
+        font-family: $textFontBold;
+        color: $linkColor;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+.comment-form {
+    margin-top: 47px;
+
+    .btn {
+        margin-top: 0;
+    }
+}
+
 
 @import '_product.scss',
         '_blog.scss';
