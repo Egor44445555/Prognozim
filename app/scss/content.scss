@@ -209,6 +209,10 @@
         min-height: 100vh;
         object-fit: cover;
     }
+
+    .mobile {
+        display: none;
+    }
 }
 
 
@@ -394,6 +398,7 @@
             }
         }
     }
+    
 }
 
 
@@ -996,6 +1001,14 @@
             margin-top: 0;
         }
     }
+
+    .mobile-block {
+        display: none;
+    }
+
+    .table-block {
+        margin-top: 0;
+    }
 }
 
 .person-block {
@@ -1061,6 +1074,7 @@
     }
 
     table {
+        display: block;
         width: 100%;
         margin: 20px 0 0;
         border-collapse: collapse;
@@ -1138,6 +1152,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     margin-top: 20px;
     padding: 22px 40px 22px 50px;
     background: $themeColor;
@@ -1145,6 +1160,7 @@
     font-family: $textFontSemibold;
     font-size: 18px;
     line-height: 21px;
+    text-align: center;
     border-radius: 10px;
 
     &:first-child {
@@ -1196,6 +1212,7 @@
 
     .wrap {
         display: flex;
+        align-items: flex-start;
         width: 100%;
         padding: 20px 20px 36px 0;
         background: $blueLighterOther;
@@ -1273,6 +1290,62 @@
 
     .btn {
         margin-top: 0;
+    }
+}
+
+.paid-forecast {
+    margin-top: 35px;
+    text-align: center;
+
+    .title {
+        color: $linkColor;
+    }
+
+    .label {
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 140%;
+        color: $blueDark;
+    }
+
+    .statistic-wrap {
+        margin-top: 15px;
+    }
+
+    .statistic {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        
+        &--item {
+            flex: 50%;
+            padding-right: 35px;
+            font-family: $textFontBold;
+            font-size: 20px;
+            line-height: 130%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            text-align: right;
+
+            &:nth-child(2n) {
+                padding: 0 0 0 35px;
+                border-left: 1px solid $borderColor;
+                text-align: left;
+            }
+
+            span {
+                display: block;
+                font-size: 24px
+            }
+        }
+    }
+
+
+    .period-block {
+        margin: 30px 0 0;
+    }
+
+    .radio-group {
+        justify-content: center;
     }
 }
 

@@ -1,0 +1,220 @@
+html
+    title Прогноз #265 от Иван Иванов 21 октября 13:08 2020 
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg.mt-n-m-40
+                img(src="../images/hero-image-11.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-11.jpg", alt="").mobile
+
+            .hero-block
+                .container-block
+                    .wrap
+                        a(href="/blog.html").back-link.icon-arrow-back
+                        .title-wrap
+                            .max-550
+                                h1.title.mt-m-300 Прогноз #265 от Иван Иванов 21 октября 13:08 2020
+
+            .container-block
+                .mt-50.mt-t-0
+                    .column-wrap
+                        .column.wide
+                            .forcast-block
+                                table
+                                    tr
+                                        th Спорт
+                                        th.text-center Игра
+                                        th Начало
+                                        th Ставка
+                                        th КФ
+                                    tr
+                                        td
+                                            .image
+                                                .icon.icon-soccer-ball
+                                        td 
+                                            .title-wrap 
+                                                .image 
+                                                    .icon.icon-t-shirt-2
+                                                .title
+                                                    span Бавария - Атлетико Мадрид
+                                                    span.sub-title Групповой этап
+                                                .image 
+                                                    .icon.icon-t-shirt-2
+
+                                        td 
+                                            .date 20/10/20 16:30
+                                        td
+                                            .rate 1.45
+                                        td
+                                            .coefficient 1.45
+                                    tr
+                                        td(colspan="4")
+                                            .label Общий КФ
+                                        td
+                                            .coefficient 2.90
+                                    tr
+                                        td(colspan="4")
+                                            .label Результат матча
+                                        td.border-left-none
+                                            .coefficient.color-red Возврат
+
+                                .table-block 
+                                    .time-wrap
+                                        .image.image-left
+                                            img(src="../images/assets/event-3.png", alt="")
+                                        .time
+                                            span 16:00
+                                            .label 20/10/20
+                                        .image.image-right
+                                            img(src="../images/assets/event-4.png", alt="")
+                                    
+                                    .category футбол \ Групповой этап
+                                    .title Краснодар - Спартак Москва
+                                    
+                                    .total
+                                        .label Общий КФ 1.45
+                                        .label Результат матча - 
+                                            span.color-red Возврат
+
+                                .main-cost Ставка 44 000 ₽
+
+                                form.paid-forecast
+                                    .title.h2.text-center Платный прогноз
+                                    
+                                    .statistic-wrap
+                                        .label Купить доступ к платным прогнозам автора:
+
+                                        .statistic 
+                                            .statistic--item Точных ставок 
+                                                span 20
+                                            .statistic--item Доходность 
+                                                span 56%
+
+                                    .period-block
+                                        .label Выберите желаемый период подписки
+                                        .radio-group
+                                            label.checkbox(for="radio")
+                                                input(type="radio" id="radio")
+                                                .label 1 день
+                                            label.checkbox(for="radio-2")
+                                                input(type="radio" id="radio-2")
+                                                .label 7 дней
+                                            label.checkbox(for="radio-3")
+                                                input(type="radio" id="radio-3")
+                                                .label 14 дней
+                                            label.checkbox(for="radio-4")
+                                                input(type="radio" id="radio-4")
+                                                .label 21 день
+                                            label.checkbox(for="radio-5")
+                                                input(type="radio" id="radio-5")
+                                                .label 30 дней
+
+                                    .cost-wrap 
+                                        .label Стоимость подписки
+                                        .cost 250 ₽
+
+                                    button(type="submit").btn.btn-red.btn-medium
+                                        span.icon.icon-cart 
+                                        span.text Купить подписку
+                                            
+                                .mobile-block
+                                    .person-block
+                                        .title-wrap
+                                            h3.title Эксперт
+                                        .person
+                                            .image
+                                                img(src="../images/assets/face.jpg", alt="")
+                                                .num 2
+                                            .info
+                                                .name Иван Иванов
+                                                .parameters
+                                                    .parameters--item.icon-t-shirt
+                                                    .parameters--item.icon-target
+                                                    .parameters--item.icon-star
+
+                                        table
+                                            tr
+                                                td
+                                                    .info
+                                                        .label Прогнозов
+                                                        .value 20
+                                                td
+                                                    .info
+                                                        .label W/L/D
+                                                        .value 12/7/5
+                                                td
+                                                    .info
+                                                        .label КФ
+                                                        .value 22.38
+                                            tr
+                                                td
+                                                    .info
+                                                        .label Прибыль
+                                                        .value 440К ₽
+                                                td(colspan="2")
+                                                    .graph
+                                                        .icon
+                                                            img(src="../images/graph-line.svg")
+
+                                        .text-center
+                                            a(href="#").link.dashed Прогнозы эксперта 27
+
+                                    a(href="#").more-forcasts
+                                        span.label Другие прогнозы на этот матч
+                                        span.count 12
+
+
+                        .column.narrow.desktop
+                            .person-block
+                                .title-wrap
+                                    h3.title Эксперт
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .label 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .label 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .label 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .label 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+                                .text-center
+                                    a(href="#").link.dashed Прогнозы эксперта 27
+
+                            a(href="#").more-forcasts
+                                span.label Другие прогнозы на этот матч
+                                span.count 12
+
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

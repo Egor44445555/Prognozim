@@ -318,6 +318,17 @@
         max-width: 100%;
     }
 
+
+    /*** 768 ***/
+
+    .column-wrap {
+
+        .column.desktop {
+            display: none;
+        }
+    }
+
+
     /*** 768 ***/
 
     .main-page {
@@ -369,6 +380,10 @@
 
         .wrap {
             padding: 30px 0 20px;
+        }
+
+        .title-wrap .max-550 {
+            margin: 0 auto;
         }
 
         .info {
@@ -644,16 +659,53 @@
             }
         }
     }
+
+    
+    /*** 768 ***/
+
+    .forcast-block {
+        box-shadow: none;
+        border-radius: 0;
+
+        .mobile-block {
+            display: block;
+            margin-top: 30px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .person-block {
+            margin-left: -40px;
+            margin-right: -40px;
+        }
+    }
 }
 
 /******************************************************************/
 
 @media (max-width: 561px) {
 
+    .mt-m-300 {
+        margin-top: 300px !important;
+    }
+
+    .mt-n-m-40 {
+        margin-top: -40px !important;
+    }
+
     p {
         font-size: 14px;
     }
 
+
+    .title-wrap h2 .count, 
+    .title-wrap .h2 .count {
+        padding: 4px 7px;
+        font-size: 14px;
+        line-height: 16px;
+    }
 
     .table-block {
         padding-top: 0;
@@ -741,7 +793,7 @@
 
     .first-image-bg {
         top: 20px;
-        overflow: hidden;        
+        overflow: hidden;
 
         &.right-mobile {
             top: 40px;
@@ -757,6 +809,15 @@
             min-height: 0;
             float: right;
             margin: 30px 0 0;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: block;
+            margin: 0;
         }
     }
 
@@ -922,6 +983,126 @@
         .link {
             font-size: 12px;
             line-height: 160%;
+        }
+    }
+
+
+    /*** 560 ***/
+    
+    .forcast-block {
+        padding: 0;
+        background: none;
+
+        .table-block {
+            border-top: 0;
+        }
+
+        .person-block {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .title {
+                padding-bottom: 26px;
+            }
+
+            .person {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                .image {
+                    margin: 0 0 10px;
+                }
+
+                .parameters {
+                    justify-content: center;
+                }
+            }
+
+            .subscribe {
+                min-height: 40px;
+                margin: 30px 5px 0;
+                font-size: 14px;
+            }
+
+            table .info {
+                padding: 20px 5px;
+            }
+        }
+    }
+
+    .more-forcasts {
+        padding: 20px 5px;
+        font-size: 14px;
+    }
+
+    .comments-block-wrap {
+        margin-top: 40px;
+    }
+
+    .comments-list {
+        margin-top: 22px;
+
+        &--item {
+            margin-top: 3px;
+            padding-left: 17px;
+            padding-right: 0;
+
+            &.answer {
+                padding-left: 17px;
+            }
+        }
+
+        .image {
+            margin: 0 0 0 -17px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .count {
+                width: 15px;
+                height: 15px;
+                padding-top: 1px;
+                font-size: 12px;
+            }
+        }
+
+        .wrap {
+            padding: 10px 15px 30px 0;
+        }
+
+        .info {
+            padding-left: 10px;
+        }
+
+        .top-panel {
+            display: block;
+        }
+
+        .date {
+            font-size: 12px;
+        }
+
+        .text {
+            margin-top: 10px;
+        }
+
+        .more-btn {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+    }
+
+    .comment-form {
+        margin-top: 30px;
+
+        .btn {
+            max-width: 290px;
         }
     }
 }

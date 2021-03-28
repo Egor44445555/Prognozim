@@ -286,6 +286,15 @@ a {
         min-height: 54px;
         box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
     }
+
+    &-medium {
+        padding: 15px 24px;
+        font-size: 18px;
+
+        .icon {
+            font-size: 24px;
+        }
+    }
 }
 
 
@@ -557,6 +566,107 @@ input[type="password"] {
 }
 
 
+.radio {
+    display: flex;
+    margin-top: 16px;
+    cursor: pointer;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    label {
+        min-width: 34px;
+    }
+    
+    input {
+        display: none;
+    }
+
+    input:checked + .icon {
+        background: $red;
+        border-color: $red;
+
+        &::before,
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    .icon {
+        position: relative;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        border: 1px solid $white;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 3px);
+            transform: translate(-50%, -50%) rotate(-60deg);
+            width: 12px;
+            height: 2px;
+            background: $white;
+            border-radius: 3px;
+            opacity: 0;
+        }
+
+        &::after {
+            left: calc(50% - 3px);
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+    }
+
+    .label {
+        font-family: $textFontBold;
+        font-size: 13px;
+        color: $white;
+    }
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 0 0 -10px;
+
+    &:first-child {
+        margin-top: -10px;
+    }
+
+    .radio {
+        flex: 100%;
+        max-width: calc(50% - 10px);
+        margin: 10px 0 0 10px;
+        padding: 8px 15px;
+        background: $checkboxBg;
+        border-radius: 5px;
+
+        input:checked + .label {
+            color: $red;
+        }
+
+        .label {
+            color: $blueLight;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+    }
+
+    .btn {
+        width: 100%;
+        margin: 10px 0 0 10px;
+        font-size: 13px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+
 /*** Spoiler ***/
 
 .spoiler-list {
@@ -642,6 +752,10 @@ table {
     border: 1px solid $blueLighterOther;
     border-radius: 10px;
 
+    &:first-child {
+        margin-top: 0;
+    }
+
     th {
         padding: 10px;
         font-family: $textFontBold;
@@ -670,6 +784,10 @@ table {
 
         &:nth-of-type(2) {
             width: 60%;
+        }
+
+        &.border-left-none {
+            border-left: 0;
         }
     }
 
@@ -750,6 +868,10 @@ table {
     margin: 15px -30px 0;
     padding: 20px 30px 0;
     border-top: 1px solid $blueLighterOther;
+
+    &:first-child {
+        margin-top: 0;
+    }
 
     &--row {
         margin: 20px -15px 0;
