@@ -1,0 +1,49 @@
+html
+    title Прогноз #265 от Иван Иванов 21 октября 13:08 2020 
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg.mt-n-m-40
+                img(src="../images/hero-image-13.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-13.jpg", alt="").mobile
+
+            .hero-block
+                .container-block
+                    .wrap
+                        a(href="/blog.html").back-link.icon-arrow-back
+                        .title-wrap
+                            .max-550
+                                h1.title Прогнозы на событие Бавария - Атлетико Мадрид
+
+                        .mt-m-200.text-center-t
+                            a(href="#").btn.btn-red Добавить прогноз 
+
+            .container-block
+                .mt-190.mt-t-0
+                    .column-wrap
+                        .column
+                            include ./blocks/filters.jade
+                                
+                        .column
+                            include ./blocks/product-list.jade
+
+                        .column
+                            include ./blocks/events.jade
+
+            .content-block
+                .title-wrap.mt-100.mt-t-40
+                    h2.title В чем плюс ТОП ставок на сегодня?
+
+                .description.mt-50.mt-t-40.text-center-t
+                    p ТОП ставки не имеют ограничений по видам спорта или чемпионатам, здесь учитываются и локальные события, и чемпионаты Европы, и мероприятия отдельных стран. Также для вашего удобства рядом с каждым событием указано время начало матча, чтобы можно было следить за развитием событий.
+                    p Еще одно достоинство ТОПа – отсеиваются малопопулярные события, которые в основном интересны новичками или тем, кто не любит ставки на масштабные события. В список попадают события, на которые прогнозы на спорт написали сразу несколько прогнозистов. Так что в рейтинге отображаются исключительно матчи, заслуживающие максимального внимания со стороны игроков.
+
+                .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

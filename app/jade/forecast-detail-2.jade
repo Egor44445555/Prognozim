@@ -98,20 +98,20 @@ html
                                     .period-block
                                         .label Выберите желаемый период подписки
                                         .radio-group
-                                            label.checkbox(for="radio")
-                                                input(type="radio" id="radio")
+                                            label.radio(for="radio")
+                                                input(type="radio" name="radio" id="radio")
                                                 .label 1 день
-                                            label.checkbox(for="radio-2")
-                                                input(type="radio" id="radio-2")
+                                            label.radio(for="radio-2")
+                                                input(type="radio" name="radio" id="radio-2")
                                                 .label 7 дней
-                                            label.checkbox(for="radio-3")
-                                                input(type="radio" id="radio-3")
+                                            label.radio(for="radio-3")
+                                                input(type="radio" name="radio" id="radio-3")
                                                 .label 14 дней
-                                            label.checkbox(for="radio-4")
-                                                input(type="radio" id="radio-4")
+                                            label.radio(for="radio-4")
+                                                input(type="radio" name="radio" id="radio-4")
                                                 .label 21 день
-                                            label.checkbox(for="radio-5")
-                                                input(type="radio" id="radio-5")
+                                            label.radio(for="radio-5")
+                                                input(type="radio" name="radio" id="radio-5")
                                                 .label 30 дней
 
                                     .cost-wrap 
@@ -119,7 +119,7 @@ html
                                         .cost 250 ₽
 
                                     button(type="submit").btn.btn-red.btn-medium
-                                        span.icon.icon-cart 
+                                        span.icon.icon-cart
                                         span.text Купить подписку
                                             
                                 .mobile-block

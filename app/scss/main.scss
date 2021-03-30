@@ -69,8 +69,20 @@ body {
     margin-top: 50px !important;
 }
 
+.mt-100 {
+    margin-top: 100px !important;
+}
+
+.mt-150 {
+    margin-top: 150px !important;
+}
+
 .mt-160 {
     margin-top: 160px !important;
+}
+
+.mt-190 {
+    margin-top: 190px !important;
 }
 
 ol {
@@ -225,6 +237,10 @@ h4,
 
     .sub-title {
         font-family: $titleFontMedium;
+
+        b {
+            font-family: $titleFont;
+        }
     }
 
     .count {
@@ -294,6 +310,11 @@ a {
         .icon {
             font-size: 24px;
         }
+    }
+
+    .icon {
+        margin-right: 14px;
+        vertical-align: text-bottom;
     }
 }
 
@@ -583,50 +604,20 @@ input[type="password"] {
         display: none;
     }
 
-    input:checked + .icon {
-        background: $red;
-        border-color: $red;
-
-        &::before,
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    .icon {
-        position: relative;
-        width: 24px;
-        min-width: 24px;
-        height: 24px;
-        margin-right: 10px;
-        border: 1px solid $white;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: calc(50% + 3px);
-            transform: translate(-50%, -50%) rotate(-60deg);
-            width: 12px;
-            height: 2px;
-            background: $white;
-            border-radius: 3px;
-            opacity: 0;
-        }
-
-        &::after {
-            left: calc(50% - 3px);
-            transform: translate(-50%, -50%) rotate(60deg);
-        }
+    input:checked + .label {
+        background: $themeColor;
+        color: $white;
     }
 
     .label {
+        width: 100%;
+        padding: 10px 15px;
+        background: $checkboxBg;
         font-family: $textFontBold;
         font-size: 13px;
-        color: $white;
+        color: $blueLight;
+        border-radius: 5px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
     }
 }
 
@@ -641,29 +632,13 @@ input[type="password"] {
 
     .radio {
         flex: 100%;
-        max-width: calc(50% - 10px);
+        max-width: 90px;
         margin: 10px 0 0 10px;
-        padding: 8px 15px;
-        background: $checkboxBg;
-        border-radius: 5px;
-
-        input:checked + .label {
-            color: $red;
-        }
 
         .label {
             color: $blueLight;
-            font-feature-settings: 'pnum' on, 'lnum' on;
         }
-    }
-
-    .btn {
-        width: 100%;
-        margin: 10px 0 0 10px;
-        font-size: 13px;
-        text-align: center;
-        cursor: pointer;
-    }
+    }   
 }
 
 

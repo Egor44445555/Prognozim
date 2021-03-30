@@ -1018,7 +1018,6 @@
     border-radius: 10px;
 
     .title {
-        margin-top: 8px;
         padding: 0 20px 40px;
         text-align: center;
         text-transform: capitalize;
@@ -1346,6 +1345,162 @@
 
     .radio-group {
         justify-content: center;
+    }
+
+    .cost-wrap {
+        margin-top: 35px;
+
+        .cost {
+            margin-top: 20px;
+            font-family: $titleFont;
+            font-size: 32px;
+            line-height: 140%;
+            color: $themeColor;
+        }
+    }
+
+    .btn {
+        margin-top: 30px;
+    }
+}
+
+
+/***/
+
+.event-list-wrap {
+    margin-top: 152px;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px;
+
+    &--item {
+        flex: 100%;
+        max-width: calc(25% - 20px);
+        margin: 20px 0 0 20px;
+        padding: 40px 0 0;
+        background: $white;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .time-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 40px 30px;
+
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+        }
+
+        img {
+            max-height: 100%;
+        }
+
+        .time {
+            padding: 0 10px;
+            font-family: $textFontBold;
+            line-height: 140%;
+            text-transform: capitalize;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            text-align: center;
+            z-index: 5;
+
+            span {
+                font-size: 21px;
+            }
+
+            .label {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .category {
+        padding: 0 20px;
+        font-family: $textFontBold;
+        color: $blueLight;
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .title {
+        margin-top: 8px;
+        padding: 0 20px 14px;
+        font-family: $textFontBold;
+        font-size: 16px;
+        line-height: 140%;
+        color: $blue;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: center;
+        border: 0;
+
+        &.border-top {
+            border-top: 1px solid $grayLight;
+        }
+
+        tr {
+
+            &:first-child {
+                
+                td {
+                    border-top: 0;
+                }
+            }
+        }
+
+        td {
+            width: 28%;
+            border-top: 1px solid $grayLight;
+            border-left: 1px solid $grayLight;
+            font-family: $textFontBold;
+            font-size: 14px;
+            line-height: 140%;
+
+            &:first-child {
+                border-left: 0;
+            }
+
+            &:nth-of-type(2) {
+                width: 28%;
+            }
+        }
+
+        .info {
+            padding: 20px 15px;
+        }
+
+        .label {
+            color: $blueLight;
+        }
+
+        .value {
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: $red;
+        }
+        
+        .graph {
+            padding: 20px 5px;
+            background-image: linear-gradient(0deg, $grayLight 1.61%, $white 1.61%, $white 50%, $grayLight 50%, $grayLight 51.61%, $white 51.61%, $white 100%);
+            background-size: 61px 61px;
+        }
     }
 }
 

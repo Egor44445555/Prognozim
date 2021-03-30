@@ -53,6 +53,18 @@
 
 /******************************************************************/
 
+@media (max-width: 1361px) {
+
+    .event-list {
+    
+        &--item {
+            max-width: calc(33.333% - 20px);
+        }
+    }
+}
+
+/******************************************************************/
+
 @media (max-width: 1281px) {
 
     .column-wrap {
@@ -244,6 +256,16 @@
             margin-right: auto;
         }
     }
+
+
+    /*** 1024 ***/
+
+    .event-list {
+    
+        &--item {
+            max-width: calc(50% - 20px);
+        }
+    }
 }
 
 /******************************************************************/
@@ -258,6 +280,10 @@
         margin-top: 0 !important;
     }
 
+    .mt-t-20 {
+        margin-top: 20px !important;
+    }
+
     .mt-t-26 {
         margin-top: 26px !important;
     }
@@ -268,6 +294,10 @@
 
     .mt-t-40 {
         margin-top: 40px !important;
+    }
+
+    .mt-t-60 {
+        margin-top: 60px !important;
     }
 
     .text-center-t {
@@ -681,11 +711,26 @@
             margin-right: -40px;
         }
     }
+
+
+    /*** 768 ***/
+
+    .event-list-wrap {
+        margin-top: 0;
+    }
 }
 
 /******************************************************************/
 
 @media (max-width: 561px) {
+
+    .mt-m-200 {
+        margin-top: 200px !important;
+    }
+
+    .mt-m-290 {
+        margin-top: 290px !important;
+    }
 
     .mt-m-300 {
         margin-top: 300px !important;
@@ -695,10 +740,25 @@
         margin-top: -40px !important;
     }
 
-    p {
-        font-size: 14px;
+    .text-center-m {
+        text-align: center;
     }
 
+    .btn-medium {
+        width: 100%;
+        max-width: 290px;
+        font-size: 16px;
+        line-height: 20px;
+
+        .icon {
+            font-size: 18px;
+            vertical-align: baseline;
+        }
+    }
+
+    p {
+        font-size: 14px;
+    }    
 
     .title-wrap h2 .count, 
     .title-wrap .h2 .count {
@@ -1103,6 +1163,48 @@
 
         .btn {
             max-width: 290px;
+        }
+    }
+
+
+    .paid-forecast {
+
+        .statistic {
+
+            &--item {
+                flex: 100%;
+                padding: 15px 0 0;
+                font-size: 16px;
+                text-align: center;
+
+                span {
+                    font-size: 18px;
+                }
+            }
+
+            &--item:first-child {
+                padding-top: 0;
+            }
+
+            &--item:nth-child(2n) {
+                padding: 15px 0 0;
+                text-align: center;
+                border: 0;
+            }
+        }
+
+        .radio-group {
+            justify-content: flex-start;
+        }
+    }
+
+
+    /*** 560 ***/
+
+    .event-list {
+    
+        &--item {
+            max-width: calc(100% - 20px);
         }
     }
 }
