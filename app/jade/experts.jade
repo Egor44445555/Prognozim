@@ -1,0 +1,427 @@
+html
+    title Статистика прибыльных экспертов 
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-14.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-14.jpg", alt="").mobile
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .max-550
+                            .title-wrap.mt-100.mt-t-40
+                                h1.title Статистика 
+                                .sub-title.h1 прибыльных экспертов
+
+                            .description.mt-40.mt-m-290.text-center-m
+                                p Рейтинг обновляется каждые 3 часа
+
+            
+            .statistic-table-wrap
+                .content-block
+                    .radio-group
+                        label.radio(for="radio")
+                            input(type="radio" name="radio" id="radio")
+                            .label За неделю
+                        label.radio(for="radio-2")
+                            input(type="radio" name="radio" id="radio-2")
+                            .label За месяц
+                        label.radio(for="radio-3")
+                            input(type="radio" name="radio" id="radio-3")
+                            .label За 3 месяца
+                        label.radio(for="radio-4")
+                            input(type="radio" name="radio" id="radio-4")
+                            .label За все время
+
+                .container-block
+                    table.statistic-table
+                        tr
+                            th
+                                .sort Эксперт
+                            th
+                                .sort.active Ранг&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы. 
+                            th
+                                .sort Акт. Прогнозы&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort Прибыль&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort Всего&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort W/L/D&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort Кф&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort Сумма&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort % win&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort ROI&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort Win серия&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                            th
+                                .sort µ Кол-во&nbsp;
+                                    .tooltip-wrap
+                                        .label.dashed (?)
+                                        .tooltip 
+                                            span.color-blue % Win 
+                                            | - это пока что не показывает уровень команды, которая достойна выйти из группы.
+                        tr
+                            td 
+                                .person
+                                    .image
+                                        img(src="../images/assets/avatar-4.png", alt="")
+                                    .name Петр
+                            td 4
+                            td 0
+                            td 879521
+                            td 2
+                            td 2/2/2
+                            td 3,15
+                            td 1000
+                            td 1000
+                            td 100
+                            td 1
+                            td 0,03
+                        tr
+                            td 
+                                .person
+                                    .image
+                                        img(src="../images/assets/avatar-4.png", alt="")
+                                    .name Петр
+                            td 4
+                            td 0
+                            td 879521
+                            td 2
+                            td 2/2/2
+                            td 3,15
+                            td 1000
+                            td 1000
+                            td 100
+                            td 1
+                            td 0,03
+                        tr
+                            td 
+                                .person
+                                    .image
+                                        img(src="../images/assets/avatar-4.png", alt="")
+                                    .name Петр
+                            td 4
+                            td 0
+                            td 879521
+                            td 2
+                            td 2/2/2
+                            td 3,15
+                            td 1000
+                            td 1000
+                            td 100
+                            td 1
+                            td 0,03
+                    
+                .content-block
+                    .pagination
+                        a(href="#").pagination--item.prev
+                        a(href="#").pagination--item.active 1
+                        a(href="#").pagination--item 2
+                        a(href="#").pagination--item 3
+                        .pagination--item ...
+                        a(href="#").pagination--item 25
+                        a(href="#").pagination--item.next
+
+                .experts-list-wrap
+                    .container-block
+                        .title-wrap
+                            .h2 Все эксперты
+                            .sub-title.h2 сообщества
+
+                        .experts-list
+                            .experts-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+                            .experts-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+                            .experts-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+                            .experts-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+                            .experts-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+                            .experts-list--item
+                                .person
+                                    .image
+                                        img(src="../images/assets/face.jpg", alt="")
+                                        .num 2
+                                    .info 
+                                        .name Иван Иванов
+                                        .parameters
+                                            .parameters--item.icon-t-shirt
+                                            .parameters--item.icon-target
+                                            .parameters--item.icon-star
+
+                                table
+                                    tr
+                                        td
+                                            .info
+                                                .label Прогнозов
+                                                .value 20
+                                        td
+                                            .info
+                                                .label W/L/D
+                                                .value 12/7/5
+                                        td
+                                            .info
+                                                .label КФ
+                                                .value 22.38
+                                    tr
+                                        td
+                                            .info
+                                                .label Прибыль
+                                                .value 440К ₽
+                                        td(colspan="2")
+                                            .graph
+                                                .icon
+                                                    img(src="../images/graph-line.svg")
+
+                    .content-block
+                        .pagination
+                            a(href="#").pagination--item.prev
+                            a(href="#").pagination--item.active 1
+                            a(href="#").pagination--item 2
+                            a(href="#").pagination--item 3
+                            .pagination--item ...
+                            a(href="#").pagination--item 25
+                            a(href="#").pagination--item.next
+
+            .content-block
+                .title-wrap.mt-100.mt-t-40
+                    h2.title Lorem ipsum
+                    .h2.sub-title dolor
+
+                .description.mt-50.mt-t-40.text-center-t
+                    p ТОП ставки не имеют ограничений по видам спорта или чемпионатам, здесь учитываются и локальные события, и чемпионаты Европы, и мероприятия отдельных стран. Также для вашего удобства рядом с каждым событием указано время начало матча, чтобы можно было следить за развитием событий.
+                    p Еще одно достоинство ТОПа – отсеиваются малопопулярные события, которые в основном интересны новичками или тем, кто не любит ставки на масштабные события. В список попадают события, на которые прогнозы на спорт написали сразу несколько прогнозистов. Так что в рейтинге отображаются исключительно матчи, заслуживающие максимального внимания со стороны игроков.
+
+                .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

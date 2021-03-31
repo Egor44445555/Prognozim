@@ -69,6 +69,10 @@ body {
     margin-top: 50px !important;
 }
 
+.mt-90 {
+    margin-top: 90px !important;
+}
+
 .mt-100 {
     margin-top: 100px !important;
 }
@@ -610,14 +614,19 @@ input[type="password"] {
     }
 
     .label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
-        padding: 10px 15px;
+        padding: 12px 15px;
         background: $checkboxBg;
         font-family: $textFontBold;
         font-size: 13px;
+        line-height: 16px;
         color: $blueLight;
         border-radius: 5px;
         font-feature-settings: 'pnum' on, 'lnum' on;
+        text-align: center;
     }
 }
 
@@ -717,7 +726,54 @@ input[type="password"] {
 }
 
 
-/*** Spoiler ***/
+/*** Tooltip ***/
+
+.tooltip-wrap {
+    position: relative;
+
+    &:hover {
+
+        .tooltip {
+            opacity: 1;
+        }
+    }
+}
+
+.tooltip {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 256px;
+    margin-left: -2px;
+    padding: 20px;
+    background: $white;
+    font-family: $textFontMedium;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+    color: $blueDark;
+    text-align: left;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    pointer-events: none;
+    transition: .3s;
+    opacity: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: rotate(45deg) translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: $white;
+    }
+}
+
+
+/*** Table ***/
 
 table {
     display: block;
@@ -726,10 +782,6 @@ table {
     border-collapse: collapse;
     border: 1px solid $blueLighterOther;
     border-radius: 10px;
-
-    &:first-child {
-        margin-top: 0;
-    }
 
     th {
         padding: 10px;

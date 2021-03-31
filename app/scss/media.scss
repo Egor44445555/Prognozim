@@ -10,13 +10,17 @@
             max-width: 300px;
         }
     }
+
+    .experts-list--item {
+        max-width: calc(33.333% - 20px);
+    }
 }
 
 /******************************************************************/
 
 @media (max-width: 1441px) {
 
-    table {
+    table.desktop {
         display: none;
     }
 

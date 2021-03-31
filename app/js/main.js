@@ -82,6 +82,10 @@ $(document).ready(function() {
             $(this).addClass('active');
         }
     });
+
+    $('.statistic-table .sort').on("click", function() {
+        $(this).toggleClass('active');
+    });
     
 
     /*** Tabs ***/
