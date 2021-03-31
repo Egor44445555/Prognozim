@@ -61,6 +61,14 @@ body {
     max-width: 880px;
 }
 
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
 .mt-40 {
     margin-top: 40px !important;
 }
@@ -308,7 +316,7 @@ a {
     }
 
     &-medium {
-        padding: 15px 24px;
+        padding: 16px 24px;
         font-size: 18px;
 
         .icon {
@@ -406,15 +414,42 @@ a {
     }
     
     .btn {
+        display: flex;
         width: 100%;
         max-width: 238px;
         margin-top: 40px;
         font-size: 16px;
     }
+
+    .remember {
+
+        .icon {
+            border-color: $borderColor;
+        }
+
+        .label {
+            color: $blueDark;
+        }
+    }
+
+    .confidentiality-wrap {
+        max-width: 425px;
+
+        .icon {
+            border-color: $borderColor;
+        }
+
+        .label {
+            font-size: 12px;
+            line-height: 140%;
+            color: $blueDark;
+        }
+    }
 }
 
 .input-wrap {
     position: relative;
+    max-width: 425px;
 
     .label {
         position: absolute;
@@ -1007,6 +1042,13 @@ table {
             }
         }
     }
+}
+
+
+/*** Sliders ***/
+
+.swiper-wrapper {
+    height: auto;
 }
 
 

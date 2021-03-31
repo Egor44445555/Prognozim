@@ -195,6 +195,29 @@ $(document).ready(function() {
         }
     });
 
+    new Swiper('.statistic-table-slider', {
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        simulateTouch: false,
+        // slidesPerView: 'auto',
+        centeredSlides: true,
+        pagination: {
+            el: '.statistic-table-slider .pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        breakpoints: {
+            561: {
+                slidesPerView: 2,
+                centeredSlides: false,
+            },
+            769: {
+                slidesPerView: 3,
+                centeredSlides: false,
+            }
+        }
+    });
+
 
     /*** Forms ***/
 

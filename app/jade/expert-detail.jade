@@ -1,0 +1,78 @@
+html
+    title Петр Петров
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-15.jpg", alt="")
+
+            .hero-block
+                .container-block
+                    .wrap
+                        .person-card
+                            .card
+                                .image
+                                    .count 3
+                                    img(src="../images/assets/avatar-5.jpg", alt="")
+                                
+                                .button-wrap
+                                    a(href="#").btn.btn-medium Бесплатная подписка
+                                    a(href="#").btn.btn-red.btn-medium
+                                        span.icon.icon-cart
+                                        span.text Купить подписку
+
+                                .cost от 250 ₽
+
+                                a(href="#").link
+                                    span.dashed Что даёт подписка? 
+                            
+                            .person-card-info
+                                a(href="/experts.html").back-link.icon-arrow-back
+                                
+                                .title Петр Петров
+
+                                .advantages
+                                    .advantages--item
+                                        .icon.icon-t-shirt
+                                        .text 6 месяцев на сайте
+                                    .advantages--item
+                                        .icon.icon-target
+                                        .text 100 точных прогнозов
+                                    .advantages--item
+                                        .icon.icon-star
+                                        .text Лучший за месяц
+
+                                .statistics
+                                    .statistics--item
+                                        .label Всего ставок
+                                        .value 20
+                                    .statistics--item
+                                        .label Прибыль
+                                        .value 551%
+                                    .statistics--item
+                                        .label Процент
+                                        .value 67%
+                                    .statistics--item
+                                        .label ВС
+                                        .value 0
+                                    .statistics--item
+                                        .label КФ
+                                        .value 22.38
+                                    .statistics--item
+                                        .label Сумма
+                                        .value 54 515.52 ₽
+                                    .statistics--item
+                                        .label СКП
+                                        .value 0.83
+                                    .statistics--item
+                                        .label W/L/D
+                                        .value 12/7/5
+
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

@@ -65,6 +65,33 @@
             max-width: calc(33.333% - 20px);
         }
     }
+
+
+    /*** 1360 ***/
+
+    .statistic-table {
+
+        th,
+        td {
+            padding: 10px 5px;
+
+            &:first-child {
+                width: 8%;
+                padding-left: 20px;
+            }
+        }
+
+        td {
+            font-size: 13px;
+        }
+
+        .person {
+
+            .name {
+                font-size: 13px;
+            }
+        }
+    }
 }
 
 /******************************************************************/
@@ -97,6 +124,27 @@
     .table-block {
         margin: 15px -15px 0;
         padding: 10px 15px 0;
+    }
+
+
+    /*** 1280 ***/
+
+    .experts-list {
+
+        &--item {
+            max-width: calc(50% - 20px);
+        }
+    }
+
+
+    /*** 1280 ***/
+
+    .statistic-table {
+        display: none;
+    }
+
+    .statistic-table-slider {
+        display: block;
     }
 }
 
@@ -655,6 +703,13 @@
     }
 
 
+    .statistic-table-slider {
+        margin-left: -15px;
+        margin-right: -15px;
+        padding: 0 15px;
+    }
+
+
     /*** 768 ***/
 
     .question-block {
@@ -722,11 +777,53 @@
     .event-list-wrap {
         margin-top: 0;
     }
+
+
+    /*** 768 ***/
+
+    .experts-list-wrap {
+        margin-top: 40px;
+    }
+
+    .experts-list {
+        margin: 30px 0 0;
+
+        &--item {
+            max-width: 500px;
+            margin: 10px auto 0;
+            padding: 30px 0 0;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        .person {
+            display: block;
+            text-align: center;
+
+            .image {
+                margin: 0 auto;
+            }
+
+            .info {
+                margin-top: 10px;
+            }
+
+            .parameters {
+                justify-content: center;
+            }
+        }
+    }
 }
 
 /******************************************************************/
 
 @media (max-width: 561px) {
+
+    .mt-m-0 {
+        margin-top: 0 !important;
+    }
 
     .mt-m-200 {
         margin-top: 200px !important;
@@ -970,6 +1067,18 @@
                 top: -60px;
                 right: -80px;
                 max-width: 500px;
+            }
+        }
+    }
+
+
+    .statistic-table-wrap {
+        margin-top: 10px;
+
+        .radio-group {
+            
+            .radio {
+                max-width: calc(50% - 10px);
             }
         }
     }

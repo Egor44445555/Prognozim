@@ -19,7 +19,7 @@ html
                                 h1.title Вход в
                                 .h1.sub-title личный кабинет
 
-                        form.form(action="#")
+                        form.form(action="/success-form.html")
                             .row 
                                 .col.wide 
                                     .input-wrap 
@@ -34,16 +34,13 @@ html
                                             span Пароль
                                         .eye.icon-eye
 
-                                    label.checkbox(for="check-17")
+                                    label.checkbox(for="check-17").remember
                                         input(type="checkbox" id="check-17")
                                         .icon
                                             .icon-check
                                         .label Запомнить меня
 
-                                    button(type="submit").btn.btn-red.btn-shadow Вход
-
-                                    a(href="/password-recovery.html").link
-                                        span Забыли пароль?
+                                    button(type="submit").btn.btn-red.btn-shadow.mt-20 Вход
                                     
 
 

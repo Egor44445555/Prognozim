@@ -1642,6 +1642,120 @@
     }
 }
 
+.statistic-table-slider {
+    display: none;
+    margin: 20px -40px 0;
+    padding: 0 40px;
+    overflow: hidden;
+
+    &--item {
+        padding: 30px 30px 36px;
+        background: $white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .person {
+        text-align: center;
+
+        .image {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: contain;
+            }
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            background-color: $themeColor;
+            font-family: $textFontBold;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            font-size: 14px;
+            color: $white;
+            border-radius: 50%;
+        }
+
+        .name {
+            padding-top: 10px;
+            font-family: $textFontBold;
+            font-size: 20px;
+            line-height: 114.68%;
+        }
+
+        .status {
+            margin-top: 10px;
+            font-family: $textFontBold;
+            font-size: 16px;
+            line-height: 114.68%;
+            color: $red;
+        }
+    }
+
+    .list {
+        margin-top: 20px;
+        font-family: $textFontBold;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .label {
+            flex: 1;
+
+            span {
+                border-bottom: 1px dashed $borderBlueColor;
+            }
+        }
+
+        .value {
+            flex: 1;
+            text-align: right;
+        }
+    }
+
+    .pagination {
+        position: relative;
+        width: auto;
+        margin-top: 40px;
+        text-align: right;
+        z-index: 9;
+
+        .swiper-pagination-bullet {
+            width: 4px;
+            height: 4px;
+            margin: 0 7px;
+            background: $bulletBg;
+            border-radius: 50%;
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: $red;
+        }
+    }
+}
+
 
 /*** Experts ***/
 
@@ -1682,10 +1796,14 @@
         }
 
         .num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: absolute;
             right: 0;
             bottom: 0;
-            padding: 4px 11px 1px;
+            width: 30px;
+            height: 30px;
             background-color: $themeColor;
             font-family: $textFontBold;
             font-feature-settings: 'pnum' on, 'lnum' on;
@@ -1746,6 +1864,7 @@
         }
 
         td {
+            padding: 0;
             border-top: 1px solid $grayLight;
             border-left: 1px solid $grayLight;
             font-family: $textFontBold;
@@ -1771,10 +1890,79 @@
         }
         
         .graph {
-            padding: 20px 5px;
+            padding: 23px 5px;
             background-image: linear-gradient(0deg, $grayLight 1.61%, $white 1.61%, $white 50%, $grayLight 50%, $grayLight 51.61%, $white 51.61%, $white 100%);
             background-size: 61px 61px;
         }
+    }
+}
+
+
+/*** Expert detail ***/
+
+.person-card {
+    display: flex;
+
+    .card {
+        flex: 1;
+        max-width: 320px;
+        padding: 45px 45px 40px;
+        background: $white;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        .image {
+            position: relative;
+            margin: 0 auto;
+            padding-top: 25px;
+            text-align: center;
+
+            img {
+                width: 170px;
+                height: 170px;
+                object-fit: contain;
+            }
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            padding: 0 0 5px;
+            background: $blue;
+            font-family: $textFontBold;
+            font-size: 20px;
+            line-height: 114.68%;
+            color: $white;
+            border-radius: 50%;
+        }
+
+        .button-wrap {
+            margin-top: 40px;
+        }
+        
+        .btn {
+            width: 100%;
+            margin-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .person-card-info {
+        flex: 1;
+        padding-left: 60px;
     }
 }
 
