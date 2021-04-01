@@ -73,6 +73,53 @@ html
                                         .label W/L/D
                                         .value 12/7/5
 
+                        .stattable
+                            .graph-block
+                                .top-panel
+                                    .title График прибыли
+                                    
+                                    .controls
+                                        .controls--item
+                                            .datepicker
+                                                input(type="text" placeholder="01/01/20")
+                                                .icon.icon-calendar
+                                        .controls--item
+                                            .datepicker
+                                                input(type="text" placeholder="31/12/20")
+                                                .icon.icon-calendar
+                                        .controls--item
+                                            label(for="check").checkbox
+                                                input(type="checkbox" id="check")
+                                                .label За все время
+                                #chartdiv
+
+                            .latest-predictions
+                                .h3 Последние прогнозы
+
+                                table
+                                    tr
+                                        th
+                                            span Дата
+                                        th
+                                            span Ставка
+                                        th
+                                            span Доход
+                                    tr
+                                        td
+                                            span 03.11.2020
+                                        td
+                                            span 5.456
+                                        td 
+                                            span 5.456
+                                            span.icon-arrow-top
+                                    tr
+                                        td
+                                            span 25.10.2020
+                                        td
+                                            span 12.312
+                                        td
+                                            span 12.312
+                                            span.icon-arrow-bottom
 
         include ./blocks/footer.jade
         include ./blocks/scripts.jade

@@ -1902,6 +1902,7 @@
 
 .person-card {
     display: flex;
+    align-items: flex-start;
 
     .card {
         flex: 1;
@@ -1952,20 +1953,127 @@
             margin-top: 10px;
             padding-left: 10px;
             padding-right: 10px;
+            font-size: 15px;
             border-radius: 10px;
 
             &:first-child {
                 margin-top: 0;
             }
         }
+
+        .cost {
+            margin-top: 22px;
+            font-family: $textFontBold;
+            font-size: 24px;
+            line-height: 34px;
+            font-variant: small-caps;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+
+        .link {
+            font-family: $textFontBold;
+            font-size: 12px;
+            line-height: 180%;
+        }
     }
 
     .person-card-info {
         flex: 1;
         padding-left: 60px;
+
+        .title {
+            margin-top: 30px;
+            font-family: $titleFont;
+            font-size: 64px;
+            line-height: 140%;
+        }
+
+        .advantages {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 15px 0 0 -20px;
+
+            &--item {
+                display: flex;
+                align-items: center;
+                flex: 100%;
+                max-width: 216px;
+                margin: 20px 0 0 20px;
+                padding: 16px;
+                background: $blueLighterOther;
+                border-radius: 5px;
+            }
+
+            .icon {
+                margin-right: 10px;
+                font-size: 18px;
+                
+                &::before {
+                    color: $red;
+                }
+            }
+
+            .text {
+                font-family: $textFontBold;
+                font-size: 14px;
+                line-height: 110%;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+            }
+        }
+
+        .statistics {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 30px 0 0 -20px;
+
+            &--item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 100%;
+                max-width: calc(25% - 20px);
+                margin: 20px 0 0 20px;
+                padding: 30px;
+                background: $white;
+                font-family: $textFontBold;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            .label {
+                font-size: 14px;
+                line-height: 150%;
+                text-transform: capitalize;
+            }
+
+            .value {
+                font-size: 24px;
+                line-height: 150%;
+                color: $red;
+            }
+        }
     }
 }
 
+/***/
+
+.stattable {
+    display: flex;
+}
+
+.graph-block {
+    flex: 1;
+
+    #chartdiv {
+        height: 556px;
+    }
+}
+
+.latest-predictions {
+    flex: 1;
+    max-width: 360px;
+}
 
 @import '_product.scss',
         '_blog.scss';

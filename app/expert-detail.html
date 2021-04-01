@@ -154,6 +154,54 @@
                 </div>
               </div>
             </div>
+            <div class="stattable">
+              <div class="graph-block">
+                <div class="top-panel">
+                  <div class="title">График прибыли</div>
+                  <div class="controls">
+                    <div class="controls--item">
+                      <div class="datepicker">
+                        <input type="text" placeholder="01/01/20"/>
+                        <div class="icon icon-calendar"></div>
+                      </div>
+                    </div>
+                    <div class="controls--item">
+                      <div class="datepicker">
+                        <input type="text" placeholder="31/12/20"/>
+                        <div class="icon icon-calendar"></div>
+                      </div>
+                    </div>
+                    <div class="controls--item">
+                      <label for="check" class="checkbox">
+                        <input type="checkbox" id="check"/>
+                        <div class="label">За все время</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div id="chartdiv"></div>
+              </div>
+              <div class="latest-predictions">
+                <div class="h3">Последние прогнозы</div>
+                <table>
+                  <tr>
+                    <th><span>Дата</span></th>
+                    <th><span>Ставка</span></th>
+                    <th><span>Доход</span></th>
+                  </tr>
+                  <tr>
+                    <td><span>03.11.2020</span></td>
+                    <td><span>5.456</span></td>
+                    <td> <span>5.456</span><span class="icon-arrow-top"></span></td>
+                  </tr>
+                  <tr>
+                    <td><span>25.10.2020</span></td>
+                    <td><span>12.312</span></td>
+                    <td><span>12.312</span><span class="icon-arrow-bottom"></span></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -183,6 +231,12 @@
     </div>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script type="text/javascript" src="js/animated.js"></script>
+    <script type="text/javascript" src="js/ru.js"></script>
+    <script type="text/javascript" src="js/dataloader.min.js"></script>
+    <script type="text/javascript" src="js/graph.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
