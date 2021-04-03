@@ -32,7 +32,8 @@
         align-items: center;
 
         &--item {
-            display: block;
+            display: flex;
+            align-items: center;
             padding: 10px 20px;
             border-right: 1px solid $grayLight;
         }

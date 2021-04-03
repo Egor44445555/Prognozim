@@ -15,17 +15,16 @@
         max-width: calc(33.333% - 20px);
     }
 
+    .statistics-list--item {
+        max-width: calc(33.333% - 20px);
+    }
 
     .person-card {
 
         .person-card-info {
 
-            .statistics {
+            .statistics-list {
                 margin-top: 0;
-            }
-
-            .statistics--item {
-                max-width: calc(33.333% - 20px);
             }
         }
     }
@@ -174,11 +173,11 @@
                 margin-top: 10px;
                 font-size: 45px;
             }
-
-            .statistics--item {
-                max-width: calc(50% - 20px);
-            }
         }
+    }
+
+    .statistics-list--item {
+        max-width: calc(50% - 20px);
     }
 
 
@@ -943,19 +942,19 @@
             .advantages {
                 justify-content: center;
             }
+        }
+    }
 
-            .statistics {
+    .statistics-list {
 
-                &--item {
-                    display: block;
-                    padding: 40px 24px 24px;
-                }
+        &--item {
+            display: block;
+            padding: 40px 24px 24px;
+        }
 
-                .value {
-                    font-size: 17px;
-                    line-height: 150%;
-                }
-            }
+        .value {
+            font-size: 17px;
+            line-height: 150%;
         }
     }
 
@@ -1498,15 +1497,15 @@
                     }
                 }
             }
+        }
+    }
 
-            .statistics {
-                margin: 20px 0 0 -10px;
+    .statistics-list {
+        margin: 20px 0 0 -10px;
 
-                &--item {
-                    max-width: calc(50% - 10px);
-                    margin: 10px 0 0 10px;
-                }
-            }
+        &--item {
+            max-width: calc(50% - 10px);
+            margin: 10px 0 0 10px;
         }
     }
 

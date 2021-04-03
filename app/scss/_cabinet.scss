@@ -1,0 +1,42 @@
+.cabinet-block-wrap {
+    display: flex;
+    margin-top: 70px;
+
+    .sidebar {
+        flex: 1;
+        max-width: 240px;
+    }
+
+    .cabinet-info {
+        flex: 1;
+        padding-left: 90px;
+    }
+
+    .cabinet-menu {
+        position: relative;
+        top: 0;
+        background: none;
+        opacity: 1;
+        pointer-events: all;
+
+        &--item {
+            color: $blueLight;
+
+            &:hover,
+            &.active {
+                color: $red;
+
+                .icon::before {
+                    color: $red;
+                }
+            }
+        }
+
+        .icon {
+
+            &::before {
+                color: $blueLight;
+            }
+        }
+    }
+}
