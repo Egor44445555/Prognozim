@@ -197,6 +197,12 @@
         }
     }
 
+    table {
+
+        td:nth-of-type(2) {
+            width: 60%;
+        }
+    }
 
     .person {
         display: flex;
@@ -683,16 +689,6 @@
 
         .column-wrap {
             margin-top: 243px;
-        }
-
-        .bottom-image-bg {
-
-            img {
-
-                &:nth-child(2) {
-
-                }
-            }
         }
     }
 

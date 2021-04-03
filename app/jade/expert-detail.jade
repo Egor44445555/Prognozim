@@ -13,113 +13,180 @@ html
 
             .hero-block
                 .container-block
-                    .wrap
-                        .person-card
-                            .card
-                                .image
-                                    .count 3
-                                    img(src="../images/assets/avatar-5.jpg", alt="")
-                                
-                                .button-wrap
-                                    a(href="#").btn.btn-medium Бесплатная подписка
-                                    a(href="#").btn.btn-red.btn-medium
-                                        span.icon.icon-cart
-                                        span.text Купить подписку
-
-                                .cost от 250 ₽
-
-                                a(href="#").link
-                                    span.dashed Что даёт подписка? 
-                            
-                            .person-card-info
+                    .person-card
+                        .card
+                            .title-wrap
                                 a(href="/experts.html").back-link.icon-arrow-back
-                                
                                 .title Петр Петров
 
-                                .advantages
-                                    .advantages--item
-                                        .icon.icon-t-shirt
-                                        .text 6 месяцев на сайте
-                                    .advantages--item
-                                        .icon.icon-target
-                                        .text 100 точных прогнозов
-                                    .advantages--item
-                                        .icon.icon-star
-                                        .text Лучший за месяц
+                            .image
+                                .count 3
+                                img(src="../images/assets/avatar-5.jpg", alt="")
+                            
+                            .button-wrap
+                                a(href="#").btn.btn-medium Бесплатная подписка
+                                a(href="#").btn.btn-red.btn-medium
+                                    span.icon.icon-cart
+                                    span.text Купить подписку
 
-                                .statistics
-                                    .statistics--item
-                                        .label Всего ставок
-                                        .value 20
-                                    .statistics--item
-                                        .label Прибыль
-                                        .value 551%
-                                    .statistics--item
-                                        .label Процент
-                                        .value 67%
-                                    .statistics--item
-                                        .label ВС
-                                        .value 0
-                                    .statistics--item
-                                        .label КФ
-                                        .value 22.38
-                                    .statistics--item
-                                        .label Сумма
-                                        .value 54 515.52 ₽
-                                    .statistics--item
-                                        .label СКП
-                                        .value 0.83
-                                    .statistics--item
-                                        .label W/L/D
-                                        .value 12/7/5
+                            .cost от 250 ₽
 
-                        .stattable
-                            .graph-block
-                                .top-panel
-                                    .title График прибыли
-                                    
-                                    .controls
-                                        .controls--item
-                                            .datepicker
-                                                input(type="text" placeholder="01/01/20")
-                                                .icon.icon-calendar
-                                        .controls--item
-                                            .datepicker
-                                                input(type="text" placeholder="31/12/20")
-                                                .icon.icon-calendar
-                                        .controls--item
-                                            label(for="check").checkbox
-                                                input(type="checkbox" id="check")
-                                                .label За все время
-                                #chartdiv
+                            a(href="#").link
+                                span.dashed Что даёт подписка? 
+                        
+                        .person-card-info
+                            a(href="/experts.html").back-link.icon-arrow-back
+                            .title Петр Петров
 
-                            .latest-predictions
-                                .h3 Последние прогнозы
+                            .advantages
+                                .advantages--item
+                                    .icon.icon-t-shirt
+                                    .text 6 месяцев на сайте
+                                .advantages--item
+                                    .icon.icon-target
+                                    .text 100 точных прогнозов
+                                .advantages--item
+                                    .icon.icon-star
+                                    .text Лучший за месяц
 
-                                table
-                                    tr
-                                        th
-                                            span Дата
-                                        th
-                                            span Ставка
-                                        th
-                                            span Доход
-                                    tr
-                                        td
-                                            span 03.11.2020
-                                        td
+                            .statistics
+                                .statistics--item
+                                    .label Всего ставок
+                                    .value 20
+                                .statistics--item
+                                    .label Прибыль
+                                    .value 551%
+                                .statistics--item
+                                    .label Процент
+                                    .value 67%
+                                .statistics--item
+                                    .label ВС
+                                    .value 0
+                                .statistics--item
+                                    .label КФ
+                                    .value 22.38
+                                .statistics--item
+                                    .label Сумма
+                                    .value 54 515.52 ₽
+                                .statistics--item
+                                    .label СКП
+                                    .value 0.83
+                                .statistics--item
+                                    .label W/L/D
+                                    .value 12/7/5
+
+                    .stattable
+                        .graph-block
+                            .top-panel
+                                .title График 
+                                    span прибыли
+                                
+                                .controls
+                                    .controls--item
+                                        .datepicker-wrap
+                                            input(type="text" placeholder="01/01/20").datepicker
+                                            .icon.icon-calendar
+                                    .controls--item
+                                        .datepicker-wrap
+                                            input(type="text" placeholder="31/12/20").datepicker
+                                            .icon.icon-calendar
+                                    .controls--item
+                                        .btn За все время
+                            #chartdiv
+
+                        .latest-predictions
+                            .title Последние прогнозы
+
+                            table
+                                tr
+                                    th
+                                        span Дата
+                                    th
+                                        span Ставка
+                                    th
+                                        span Доход
+                                tr
+                                    td
+                                        span 03.11.2020
+                                    td
+                                        span 5.456
+                                    td 
+                                        .up
                                             span 5.456
-                                        td 
-                                            span 5.456
-                                            span.icon-arrow-top
-                                    tr
-                                        td
-                                            span 25.10.2020
-                                        td
+                                            span.icon.icon-arrow-top
+                                tr
+                                    td
+                                        span 25.10.2020
+                                    td
+                                        span 12.312
+                                    td
+                                        .up
                                             span 12.312
-                                        td
+                                            span.icon.icon-arrow-top
+                                tr
+                                    td
+                                        span 25.10.2020
+                                    td
+                                        span 12.312
+                                    td
+                                        .up
                                             span 12.312
-                                            span.icon-arrow-bottom
+                                            span.icon.icon-arrow-top
+                                tr
+                                    td
+                                        span 25.10.2020
+                                    td
+                                        span 12.312
+                                    td
+                                        .up
+                                            span 12.312
+                                            span.icon.icon-arrow-top
+                                tr
+                                    td
+                                        span 25.10.2020
+                                    td
+                                        span 12.312
+                                    td
+                                        .down
+                                            span 12.312
+                                            span.icon.icon-arrow-bottom
+                                tr
+                                    td
+                                        span 25.10.2020
+                                    td
+                                        span 12.312
+                                    td
+                                        .up
+                                            span 12.312
+                                            span.icon.icon-arrow-top
+                                tr
+                                    td
+                                        span 25.10.2020
+                                    td
+                                        span 12.312
+                                    td
+                                        .down
+                                            span 12.312
+                                            span.icon.icon-arrow-bottom
+
+            .product-list-wrap
+                .container-block
+                    .top-image-bg
+                        img(src="../images/image-bg-4.jpg", alt="")
+
+                    .title-wrap
+                        h2.h1.title Прогнозы
+                        .sub-title.h1 Эксперта
+
+                    .column-wrap.mt-60
+                        .column
+                            include ./blocks/filters.jade
+                                
+                        .column
+                            include ./blocks/product-list.jade
+
+                        .column
+                            include ./blocks/events.jade
 
         include ./blocks/footer.jade
         include ./blocks/scripts.jade

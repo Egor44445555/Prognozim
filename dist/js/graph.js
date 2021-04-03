@@ -43,7 +43,6 @@ am4core.ready(function() {
     series.dataFields.valueY = "value";
     series.dataFields.dateX = "date";
     series.tooltipText = "{value}"
-    series.stroke = am4core.color("#CE091D");
     series.strokeWidth = 14;
     series.minBulletDistance = 14;
     series.tooltipText = `value: {valueY}`;

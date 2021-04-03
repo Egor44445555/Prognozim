@@ -1903,6 +1903,7 @@
 .person-card {
     display: flex;
     align-items: flex-start;
+    margin-top: 90px;
 
     .card {
         flex: 1;
@@ -1913,8 +1914,13 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
 
+        .title-wrap {
+            display: none;
+        }
+
         .image {
             position: relative;
+            max-width: 230px;
             margin: 0 auto;
             padding-top: 25px;
             text-align: center;
@@ -1950,6 +1956,7 @@
         
         .btn {
             width: 100%;
+            max-width: 400px;
             margin-top: 10px;
             padding-left: 10px;
             padding-right: 10px;
@@ -2060,19 +2067,108 @@
 
 .stattable {
     display: flex;
+    margin: 60px 0 0;
+    padding: 70px 80px 80px;
+    background: $white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .graph-block {
     flex: 1;
+    padding-right: 40px;
+
+    .top-panel {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        margin: -10px 0 0 -10px;
+
+        &--item {
+            margin: 10px 0 0 10px;
+        }
+    }
+
+    .title {
+        padding-right: 20px;
+        font-family: $titleFont;
+        font-size: 28px;
+        line-height: 140%;
+    }
+
+    .datepicker-wrap {
+        max-width: 140px;
+    }
+
+    .btn {
+        margin: 0;
+        padding: 12px 26px;
+        line-height: normal;
+    }
 
     #chartdiv {
         height: 556px;
+        margin-top: 50px;
     }
 }
 
 .latest-predictions {
     flex: 1;
     max-width: 360px;
+
+    .title {
+        font-family: $titleFont;
+        font-size: 28px;
+        line-height: 140%;
+    }
+
+    table {
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 130%;
+        text-align: center;
+        text-transform: capitalize;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        border: 0;
+        border-bottom: 1px;
+
+        th:nth-of-type(2),
+        td:nth-of-type(2) {
+            width: 33.333%;
+        }
+
+        th {
+            width: 33.333%;
+            color: $blueLight;
+            text-align: center;
+        }
+
+        td {
+            width: 33.333%;
+            font-family: $textFontSemibold;
+            font-size: 16px;
+            line-height: 130%;
+        }
+
+        .icon {
+            margin-left: 20px;
+            font-size: 17px;
+        }
+
+        .up {
+            font-family: $textFontBold;
+            color: $themeColor;
+        }
+
+        .down {
+            font-family: $textFontBold;
+            color: $red;
+        }
+    }
 }
 
 @import '_product.scss',

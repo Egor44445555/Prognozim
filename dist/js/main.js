@@ -199,7 +199,6 @@ $(document).ready(function() {
         spaceBetween: 10,
         slidesPerGroup: 1,
         simulateTouch: false,
-        // slidesPerView: 'auto',
         centeredSlides: true,
         pagination: {
             el: '.statistic-table-slider .pagination',

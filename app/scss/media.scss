@@ -14,6 +14,21 @@
     .experts-list--item {
         max-width: calc(33.333% - 20px);
     }
+
+
+    .person-card {
+
+        .person-card-info {
+
+            .statistics {
+                margin-top: 0;
+            }
+
+            .statistics--item {
+                max-width: calc(33.333% - 20px);
+            }
+        }
+    }
 }
 
 /******************************************************************/
@@ -145,6 +160,66 @@
 
     .statistic-table-slider {
         display: block;
+    }
+
+
+    /*** 1280 ***/
+
+    .person-card {
+
+        .person-card-info {
+            padding-left: 20px;
+
+            .title {
+                margin-top: 10px;
+                font-size: 45px;
+            }
+
+            .statistics--item {
+                max-width: calc(50% - 20px);
+            }
+        }
+    }
+
+
+    /*** 1280 ***/
+
+    .stattable {
+        display: block;
+    }
+
+    .graph-block {
+        padding: 0;
+
+        .top-panel {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            padding: 0;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        #chartdiv {
+            margin-top: 20px;
+        }
+    }
+
+    .latest-predictions {
+        margin-top: 30px;
+        max-width: 100%;
+
+        .title {
+            text-align: center;
+        }
+
+        table {
+            margin-top: 12px;
+        }
     }
 }
 
@@ -316,6 +391,44 @@
     
         &--item {
             max-width: calc(50% - 20px);
+        }
+    }
+
+
+    /*** 1024 ***/
+
+    .person-card {
+        display: block;
+        margin-top: 0;
+
+        .card {
+            max-width: none;
+            padding: 30px;
+            box-shadow: none;
+
+            .title-wrap {
+                display: block;
+            }
+
+            .title {
+                margin-top: 20px;
+                font-family: $titleFontExtraBold;
+                font-size: 24px;
+                line-height: 120%;
+            }
+
+            .image {
+                margin-top: 20px;
+            }
+        }
+
+        .person-card-info {
+            padding: 0;
+    
+            .back-link,
+            .title {
+                display: none;
+            }
         }
     }
 }
@@ -813,6 +926,46 @@
             .parameters {
                 justify-content: center;
             }
+        }
+    }
+
+
+    /*** 768 ***/
+
+    .person-card {
+
+        .card {
+            margin: 0 -15px;
+        }
+
+        .person-card-info {
+
+            .advantages {
+                justify-content: center;
+            }
+
+            .statistics {
+
+                &--item {
+                    display: block;
+                    padding: 40px 24px 24px;
+                }
+
+                .value {
+                    font-size: 17px;
+                    line-height: 150%;
+                }
+            }
+        }
+    }
+
+    .stattable {
+        margin-top: 0;
+        padding: 30px 40px 40px;
+        box-shadow: none;
+
+        .btn {
+            margin-top: 0;
         }
     }
 }
@@ -1318,6 +1471,98 @@
     
         &--item {
             max-width: calc(100% - 20px);
+        }
+    }
+
+
+    /*** 560 ***/
+
+    .person-card {
+
+        .card {
+            margin: 0 -15px;
+        }
+
+        .person-card-info {
+
+            .advantages {
+                margin: 10px 0 0;
+
+                &--item {
+                    max-width: 100%;
+                    justify-content: center;
+                    margin: 10px 0 0;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .statistics {
+                margin: 20px 0 0 -10px;
+
+                &--item {
+                    max-width: calc(50% - 10px);
+                    margin: 10px 0 0 10px;
+                }
+            }
+        }
+    }
+
+    .stattable {
+        padding: 30px 0 0;
+    }
+
+    .graph-block {
+
+        .title {
+            max-width: 200px;
+            font-size: 24px;
+            text-align: center;
+
+            span {
+                font-family: $titleFontMedium;
+            }
+        }
+
+        #chartdiv {
+            height: 370px;
+            margin: 20px -15px 0;
+        }
+
+        .controls {
+            flex-wrap: wrap;
+
+            &--item {
+                flex: calc(50% - 10px);
+                text-align: center;
+            }
+        }
+
+        .datepicker-wrap {
+            margin: 0 auto;
+        }
+    }
+
+    .latest-predictions {
+
+        .title {
+            font-size: 24px;
+            line-height: 120%;
+        }
+
+        table {
+
+            td {
+                font-size: 12px;
+                line-height: 130%;
+            }
+
+            .icon {
+                margin-left: 15px;
+                font-size: 14px;
+            }
         }
     }
 }
