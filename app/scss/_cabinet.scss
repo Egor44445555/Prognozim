@@ -1,10 +1,51 @@
 .cabinet-block-wrap {
     display: flex;
+    float: left;
+    width: 100%;
     margin-top: 70px;
 
     .sidebar {
         flex: 1;
         max-width: 240px;
+
+        .person {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+
+            .chart {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .image {
+                width: 150px;
+                height: 150px;
+                margin: 30px auto 0;
+
+                img {
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+            }
+            
+            .name {
+                margin-top: 25px;
+                font-family: $titleFont;
+                font-size: 16px;
+                line-height: 114.68%;
+            }
+
+            .rank {
+                margin-top: 8px;
+                font-family: $textFontBold;
+                font-size: 12px;
+                line-height: 114.68%;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+            }
+        }
     }
 
     .cabinet-info {

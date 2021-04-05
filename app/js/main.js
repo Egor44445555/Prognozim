@@ -283,3 +283,41 @@ $(document).ready(function() {
         }
     });
 });
+
+
+var el = document.getElementById('rank');
+var options = {
+    percent:  el.getAttribute('data-percent') || 25,
+    size: el.getAttribute('data-size') || 220,
+    lineWidth: el.getAttribute('data-line') || 15,
+    rotate: el.getAttribute('data-rotate') || 0
+}
+
+var canvas = document.createElement('canvas');
+    
+if (typeof(G_vmlCanvasManager) !== 'undefined') {
+    G_vmlCanvasManager.initElement(canvas);
+}
+
+var context = canvas.getContext('2d');
+canvas.width = canvas.height = options.size;
+
+el.appendChild(canvas);
+
+context.translate(options.size / 2, options.size / 2);
+context.rotate((-1 / 2 + options.rotate / 180) * Math.PI);
+
+var radius = (options.size - options.lineWidth) / 2;
+
+var drawCircle = function(color, lineWidth, percent) {
+    percent = Math.min(Math.max(0, percent || 1), 1);
+    context.beginPath();
+    context.arc(0, 0, radius, 0, Math.PI * percent, false);
+    context.strokeStyle = color;
+    context.lineCap = 'round';
+    context.lineWidth = lineWidth;
+    context.stroke();
+};
+
+drawCircle('#F3F4F7', options.lineWidth, 100 / 100);
+drawCircle('#CE091D', options.lineWidth, options.percent / 100);
