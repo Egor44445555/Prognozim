@@ -2028,39 +2028,39 @@
             font-size: 64px;
             line-height: 140%;
         }
+    }
+}
 
-        .advantages {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 15px 0 0 -20px;
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0 0 -20px;
 
-            &--item {
-                display: flex;
-                align-items: center;
-                flex: 100%;
-                max-width: 216px;
-                margin: 20px 0 0 20px;
-                padding: 16px;
-                background: $blueLighterOther;
-                border-radius: 5px;
-            }
+    &--item {
+        display: flex;
+        align-items: center;
+        flex: 100%;
+        max-width: 216px;
+        margin: 20px 0 0 20px;
+        padding: 16px;
+        background: $blueLighterOther;
+        border-radius: 5px;
+    }
 
-            .icon {
-                margin-right: 10px;
-                font-size: 18px;
-                
-                &::before {
-                    color: $red;
-                }
-            }
-
-            .text {
-                font-family: $textFontBold;
-                font-size: 14px;
-                line-height: 110%;
-                font-feature-settings: 'pnum' on, 'lnum' on;
-            }
+    .icon {
+        margin-right: 10px;
+        font-size: 18px;
+        
+        &::before {
+            color: $red;
         }
+    }
+
+    .text {
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 110%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
     }
 }
 

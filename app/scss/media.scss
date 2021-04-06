@@ -936,13 +936,10 @@
         .card {
             margin: 0 -15px;
         }
+    }
 
-        .person-card-info {
-
-            .advantages {
-                justify-content: center;
-            }
-        }
+    .advantages {
+        justify-content: center;
     }
 
     .statistics-list {
@@ -1481,25 +1478,22 @@
         .card {
             margin: 0 -15px;
         }
+    }
+    
+    .advantages {
+        margin: 10px 0 0;
 
-        .person-card-info {
+        &--item {
+            max-width: 100%;
+            justify-content: center;
+            margin: 10px 0 0;
 
-            .advantages {
-                margin: 10px 0 0;
-
-                &--item {
-                    max-width: 100%;
-                    justify-content: center;
-                    margin: 10px 0 0;
-
-                    &:first-child {
-                        margin-top: 0;
-                    }
-                }
+            &:first-child {
+                margin-top: 0;
             }
         }
     }
-
+    
     .statistics-list {
         margin: 20px 0 0 -10px;
 
