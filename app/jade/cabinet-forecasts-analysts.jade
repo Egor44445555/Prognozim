@@ -1,0 +1,55 @@
+html
+    title Прогнозы моих аналитиков
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-18.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-18.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                img(src="../images/assets/avatar-6.jpg", alt="")
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        .title-wrap
+                            h1.text-center-t Прогнозы
+                            .h1.sub-title моих аналитиков
+
+                        form.sort
+                            .radio-group
+                                label.radio(for="radio")
+                                    input(type="radio" name="radio" id="radio")
+                                    .label Все
+                                label.radio(for="radio-2")
+                                    input(type="radio" name="radio" id="radio-2")
+                                    .label Платные
+                                label.radio(for="radio-3")
+                                    input(type="radio" name="radio" id="radio-3")
+                                    .label Бесплатные
+
+                        .column-wrap.mt-30.mt-t-10
+                            .column.wide
+                                include ./blocks/product-list.jade
+
+                            .column.narrow
+                                include ./blocks/filters.jade
+                        
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

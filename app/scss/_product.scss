@@ -204,24 +204,32 @@
         }
     }
 
+    .person-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0 0 -10px;
+    }
+
     .person {
         display: flex;
         align-items: center;
-        margin-top: 20px;
-
+        margin: 10px 0 0 10px;
+        
         .image {
             position: relative;
             display: flex;
             width: 40px;
             height: 40px;
             margin-right: 15px;
-
+    
             img {
                 margin: auto;
                 border-radius: 50%;
             }
         }
-
+    
         .num { 
             position: absolute;
             right: 0;
@@ -235,7 +243,7 @@
             color: $white;
             border-radius: 50%;
         }
-
+    
         .name {
             flex: 1;
             padding-right: 10px;
@@ -249,17 +257,33 @@
                 border-bottom: 1px dashed;
             }
         }
+    }
 
-        .parameters {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 0 0 -10px;
+    .parameters {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0 0;
 
-            &--item {
-                margin: 10px 0 10px 10px;
-                font-size: 20px;
+        &.gray {
+
+            .parameters--item::before {
+                color: $borderColor;
             }
         }
+
+        &--item {
+            margin: 10px 0 10px 10px;
+            font-size: 20px;
+        }
+    }
+
+    .author-predictions {
+        margin: 10px 0 0 10px;
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 120%;
+        color: $blueLight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
     }
 
     .bottom-panel {
@@ -526,8 +550,8 @@
             padding: 15px 15px 15px;
         }
 
-        .person {
-            margin: 15px -15px 0;
+        .person-wrap {
+            margin: 15px -15px 0 -25px;
             padding: 15px 15px 0;
             border-top: 1px solid $blueLighterOther;
         }
@@ -741,6 +765,10 @@
                 padding-left: 10px;
                 font-size: 12px;
             }
+        }
+
+        .person-wrap {
+            justify-content: center;
         }
     }
 

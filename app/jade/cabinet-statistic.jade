@@ -22,55 +22,7 @@ html
                             .name Петр Петров
                             .rank Ранг 2
 
-                        .cabinet-menu
-                            .cabinet-menu--row
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-plus-red
-                                    span.text Мой прогноз
-                            .cabinet-menu--row
-                                a(href="/cabinet-statistic.html").cabinet-menu--item.active
-                                    span.icon.icon-pie-chart
-                                    span.text Статистика
-                                a(href="/cabinet-actual-forecasts.html").cabinet-menu--item
-                                    span.icon.icon-soccer-ball
-                                    span.text Актуальные прогнозы
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-analysts
-                                    span.text Мои аналитики
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-cup
-                                    span.text Прогнозы моих аналитиков
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-cart-empty
-                                    span.text Мои покупки
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-arms
-                                    span.text Партнёрам
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-bonus
-                                    span.text Бонусы (3000)
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-comment-empty
-                                    span.text Чат с администрацией
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-stars-group
-                                    span.text Ранг
-                            .cabinet-menu--row
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-gear-empty
-                                    span.text Настройки
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-history-list
-                                    span.text История пополнений
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-bell-empty
-                                    span.text Оповещения
-                                a(href="#").cabinet-menu--item
-                                    span.icon.icon-coin-hand
-                                    span.text Вывод средств
-                            
-                            .button-wrap
-                                a(href="/login.html").btn.btn-red.logout Выйти
+                        include ./blocks/cabinet-menu.jade
 
                     .cabinet-info
                         h1.text-center-t Моя статистика

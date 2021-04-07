@@ -93,9 +93,48 @@
 
 
 .cabinet-info {
+
+    .sort {
+        margin: 50px 0 0;
+
+        .radio {
+            flex: none;
+            max-width: none;
+        }
+
+        .label {
+            padding-left: 27px;
+            padding-right: 27px;
+            font-family: $textFontSemibold;
+            color: $themeColor;
+        }
+    }
+
+    .column-wrap {
+
+        .narrow {
+            margin-left: 86px;
+        }
+    }
     
     .statistics-list {
         margin-top: 20px;
+    }
+
+    .statistic-table {
+
+        td {
+    
+            &:first-child {
+                width: 13%;
+            }
+    
+            &:nth-of-type(2),
+            &:nth-of-type(3),
+            &:nth-of-type(11) {
+                width: 5%;
+            }
+        }
     }
 }
 
@@ -221,6 +260,13 @@
 
     .cabinet-info {
 
+        .column-wrap {
+        
+            .narrow {
+                margin-left: 20px;
+            }
+        }
+
         .stattable {
             padding: 40px;
         }
@@ -239,6 +285,13 @@
 }
 
 @media (max-width: 1441px) {
+
+    .cabinet-block-wrap {
+
+        .cabinet-info {
+            padding-left: 40px;
+        }
+    }
 
     .cabinet-info {
 
@@ -263,6 +316,23 @@
                 margin-top: 20px;
             }
         }
+
+        .statistic-table {
+            display: none;
+        }
+
+        .statistic-table-mobile {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 40px -15px 0 -25px;
+            padding: 0 15px 25px;
+
+            &--item {
+                flex: 100%;
+                max-width: calc(33.333% - 10px);
+                margin: 10px 0 0 10px;
+            }
+        }
     }
 
     .forecasts-table {
@@ -280,9 +350,15 @@
         .sidebar {
             max-width: 200px;
         }
+    }
 
-        .cabinet-info {
-            padding-left: 40px;
+    .cabinet-info {
+        
+        .statistic-table-mobile {
+
+            &--item {
+                max-width: calc(50% - 10px);
+            }
         }
     }
 }
@@ -299,11 +375,22 @@
             padding-left: 0;
         }
     }
-}
-
-@media (max-width: 1025px) {
 
     .cabinet-info {
+
+        .column-wrap {
+            flex-direction: column-reverse;
+            margin: 0;
+
+            .column {
+                margin: 0;
+            }
+
+            .narrow {
+                margin: 0;
+                padding: 0 0 10px;
+            }
+        }
 
         .statistics-list {
             margin-top: 180px;
@@ -332,7 +419,19 @@
 
 @media (max-width: 561px) {
 
+    .cabinet-block-wrap {
+        padding-top: 30px;
+    }
+
     .cabinet-info {
+
+        .sort {
+            margin-top: 185px;
+
+            .radio {
+                flex: 100%;
+            }
+        }
 
         .stattable {
             padding: 0;
@@ -348,6 +447,13 @@
 
             .btn {
                 width: 100%;
+            }
+        }
+
+        .statistic-table-mobile {
+    
+            &--item {
+                max-width: calc(100% - 10px);
             }
         }
     }
