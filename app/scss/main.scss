@@ -85,6 +85,10 @@ body {
     margin-top: 60px !important;
 }
 
+.mt-70 {
+    margin-top: 70px !important;
+}
+
 .mt-90 {
     margin-top: 90px !important;
 }
@@ -523,11 +527,18 @@ a {
     font-feature-settings: 'pnum' on, 'lnum' on;
     border-radius: 10px;
     border: 1px solid $borderColor;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &.error {
         border-color: $red;
     }
+
+    &:disabled {
+        background: $blueLighterOther;
+    }
 }
+
 .input,
 .select {
     max-width: 425px;

@@ -1,0 +1,188 @@
+html
+    title Мои покупки
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-19.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-19.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                img(src="../images/assets/avatar-6.jpg", alt="")
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        .title-wrap.text-center-t
+                            h1 Мои покупки
+
+                        table.statistic-table.mt-120
+                            tr
+                                th Подписка на эксперта
+                                th Сумма
+                                th Период подписки
+                                th Дата покупки
+                                th Дата завершения
+                            tr
+                                td 
+                                    .person
+                                        .image
+                                            img(src="../images/assets/avatar-4.png", alt="")
+                                        .name Петр
+                                td 1000 ₽
+                                td 30 дней
+                                td 21/10/21 - 13:08
+                                td 21/11/21 - 13:08
+                            tr
+                                td 
+                                    .person
+                                        .image
+                                            img(src="../images/assets/avatar-4.png", alt="")
+                                        .name Петр
+                                td 1000 ₽
+                                td 30 дней
+                                td 21/10/21 - 13:08
+                                td 21/11/21 - 13:08
+                            tr
+                                td 
+                                    .person
+                                        .image
+                                            img(src="../images/assets/avatar-4.png", alt="")
+                                        .name Петр
+                                td 1000 ₽
+                                td 30 дней
+                                td 21/10/21 - 13:08
+                                td 21/11/21 - 13:08
+                            tr
+                                td 
+                                    .person
+                                        .image
+                                            img(src="../images/assets/avatar-4.png", alt="")
+                                        .name Петр
+                                td 1000 ₽
+                                td 30 дней
+                                td 21/10/21 - 13:08
+                                td 21/11/21 - 13:08
+                            tr
+                                td 
+                                    .person
+                                        .image
+                                            img(src="../images/assets/avatar-4.png", alt="")
+                                        .name Петр
+                                td 1000 ₽
+                                td 30 дней
+                                td 21/10/21 - 13:08
+                                td 21/11/21 - 13:08
+                        
+                        .statistic-table-mobile.mt-t-200
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Эксперт
+                                        .value Иван Иванов
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Период подписки
+                                        .value 30 дней
+                                    .row
+                                        .label Дата покупки
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Дата завершения
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Эксперт
+                                        .value Иван Иванов
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Период подписки
+                                        .value 30 дней
+                                    .row
+                                        .label Дата покупки
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Дата завершения
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Эксперт
+                                        .value Иван Иванов
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Период подписки
+                                        .value 30 дней
+                                    .row
+                                        .label Дата покупки
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Дата завершения
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Эксперт
+                                        .value Иван Иванов
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Период подписки
+                                        .value 30 дней
+                                    .row
+                                        .label Дата покупки
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Дата завершения
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Эксперт
+                                        .value Иван Иванов
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Период подписки
+                                        .value 30 дней
+                                    .row
+                                        .label Дата покупки
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Дата завершения
+                                        .value 21/11/21 - 13:08
+
+                        .pagination
+                            a(href="#").pagination--item.prev
+                            a(href="#").pagination--item.active 1
+                            a(href="#").pagination--item 2
+                            a(href="#").pagination--item 3
+                            .pagination--item ...
+                            a(href="#").pagination--item 25
+                            a(href="#").pagination--item.next
+                            
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

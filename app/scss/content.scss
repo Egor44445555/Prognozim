@@ -1566,12 +1566,16 @@
                 }
             }
         }
+
+        &:nth-of-type(2) {
+            text-align: left;
+        }
     }
 
     td {
         width: 5%;
         padding: 15px 10px;
-        font-family: $textFontBold;
+        font-family: $textFontSemibold;
         font-size: 15px;
         line-height: 140%;
         text-transform: capitalize;
@@ -1624,6 +1628,7 @@
 
         .image {
             min-height: 40px;
+            margin-right: 15px;
 
             img {
                 width: 40px;
@@ -1634,7 +1639,6 @@
         }
 
         .name {
-            padding-left: 15px;
             color: $linkColor;
             font-size: 15px;
             line-height: 140%;
@@ -1708,10 +1712,14 @@
 
     .list {
         margin-top: 20px;
-        font-family: $textFontBold;
+        font-family: $textFontSemibold;
         font-size: 12px;
         text-transform: capitalize;
         font-feature-settings: 'pnum' on, 'lnum' on;
+
+        &:first-child {
+            margin-top: 0;
+        }
 
         .row {
             display: flex;
@@ -2171,6 +2179,104 @@
         }
     }
 }
+
+
+/***/
+
+.partners-link-wrap {
+    margin-top: 40px;
+
+    .label {
+        font-family: $textFontBold;
+        font-size: 18px;
+        line-height: 140%;
+
+        .link {
+            display: none;
+        }
+    }
+
+    .partners-link {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: 20px;
+    }
+
+    .input-wrap {
+        width: 100%;
+        
+        .icon {
+            position: absolute;
+            top: 50%;
+            right: 18px;
+            transform: translateY(-50%);
+            font-size: 24px;
+        }
+
+        .input {
+            padding-left: 20px;
+            padding-right: 50px;
+        }
+    }
+
+    .link {
+        margin-left: 25px;
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $red;
+        cursor: pointer;
+    }
+}
+
+
+/***/
+
+.information-block {
+    display: flex;
+    max-width: 800px;
+    margin-top: 80px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .icon {
+        margin-right: 30px;
+        font-size: 28px;
+        color: $red;
+
+        span {
+            font-family: $textFontBold;
+            font-size: 48px;
+            line-height: 140%;
+        }
+    }
+
+    .title,
+    p {
+        color: $linkColor;
+    }
+
+    .title {
+        font-family: $textFontBold;
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    p {
+        margin: 5px 0 0;
+        font-family: $RalewayMedium;
+        font-size: 18px;
+        line-height: 33px;
+    }
+
+    a {
+        color: $red;
+    }
+}
+
 
 @import '_product.scss',
         '_blog.scss',
