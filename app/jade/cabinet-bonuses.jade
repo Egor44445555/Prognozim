@@ -1,0 +1,139 @@
+html
+    title Бонусы
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-21.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-21.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                img(src="../images/assets/avatar-6.jpg", alt="")
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        .title-wrap.text-center-t
+                            h1 Бонусы
+
+                        .bonuse-block
+                            .bonuse-block--item.current-balanse
+                                .info
+                                    .title.h3 Текущий баланс
+                                    .cost 50 000
+                                    a(href="#").link.color-red
+                                        span.dashed Правила зачисления бонусов
+                                .icon
+                                    img(src="../images/icons/star-circle.svg", alt="")
+
+                            .bonuse-block--item
+                                .info
+                                    .title.h3 Обмен бонусов
+                                    a(href="#").btn.btn-red Обменять
+                                .icon
+                                    img(src="../images/icons/star-circle-coin.svg", alt="")
+
+
+                        h2.mt-40.text-center-t История получения
+
+                        table.statistic-table.first-col-wide.mt-30
+                            tr
+                                th Событие
+                                th Бонус
+                                th Дата события
+                            tr
+                                td Бонус за прогноз
+                                td 100
+                                td 21/11/21 - 13:08
+                            tr
+                                td Бонус за прогноз
+                                td 100
+                                td 21/11/21 - 13:08
+                            tr
+                                td Бонус за прогноз
+                                td 100
+                                td 21/11/21 - 13:08
+                            tr
+                                td Бонус за прогноз
+                                td 100
+                                td 21/11/21 - 13:08
+                            tr
+                                td Бонус за прогноз
+                                td 100
+                                td 21/11/21 - 13:08
+                        
+                        .statistic-table-mobile.mt-t-20
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Событие
+                                        .value Бонус за прогноз
+                                    .row
+                                        .label Бонус
+                                        .value 100
+                                    .row
+                                        .label Дата события
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Событие
+                                        .value Бонус за прогноз
+                                    .row
+                                        .label Бонус
+                                        .value 100
+                                    .row
+                                        .label Дата события
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Событие
+                                        .value Бонус за прогноз
+                                    .row
+                                        .label Бонус
+                                        .value 100
+                                    .row
+                                        .label Дата события
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Событие
+                                        .value Бонус за прогноз
+                                    .row
+                                        .label Бонус
+                                        .value 100
+                                    .row
+                                        .label Дата события
+                                        .value 21/11/21 - 13:08
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Событие
+                                        .value Бонус за прогноз
+                                    .row
+                                        .label Бонус
+                                        .value 100
+                                    .row
+                                        .label Дата события
+                                        .value 21/11/21 - 13:08
+                                    
+                            
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

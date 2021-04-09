@@ -1524,6 +1524,10 @@
     border-radius: 10px;
     overflow: hidden;
 
+    .blue {
+        color: $themeColor;
+    }
+
     tr {
 
         &:nth-child(odd) td,
@@ -1535,7 +1539,9 @@
             background: $themeColor;
             color: $white;
 
-            .person .name {
+            .person .name,
+            .label,
+            .blue {
                 color: $white;
             }
         }
@@ -1642,6 +1648,27 @@
             color: $linkColor;
             font-size: 15px;
             line-height: 140%;
+        }
+    }
+
+    .label {
+        display: flex;
+        font-family: $textFontBold;
+        font-size: 15px;
+        color: $themeColor;
+        text-transform: none;
+
+        .count {
+            display: flex;
+            align-items: center;
+            height: 20px;
+            margin-left: 10px;
+            padding: 0 7px;
+            background: $red;
+            font-size: 12px;
+            color: $white;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            border-radius: 5px;
         }
     }
 }
@@ -2181,7 +2208,7 @@
 }
 
 
-/***/
+/*** Partners page ***/
 
 .partners-link-wrap {
     margin-top: 40px;
@@ -2230,9 +2257,6 @@
     }
 }
 
-
-/***/
-
 .information-block {
     display: flex;
     max-width: 800px;
@@ -2245,6 +2269,7 @@
     .icon {
         margin-right: 30px;
         font-size: 28px;
+        line-height: 70px;
         color: $red;
 
         span {
@@ -2274,6 +2299,76 @@
 
     a {
         color: $red;
+    }
+}
+
+
+/*** Bonuse page ***/
+
+.bonuse-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px 0 0 -20px;
+
+    &--item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 100%;
+        max-width: calc(50% - 20px);
+        margin: 20px 0 0 20px;
+        padding: 60px 50px 60px 70px;
+        background: $white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .info {
+        padding-right: 20px;
+    }
+
+    .cost {
+        margin-top: 25px;
+        font-family: $titleFont;
+        font-size: 42px;
+        line-height: 42px;
+    }
+
+    .link {
+        display: block;
+        margin-top: 20px;
+        font-family: $textFontBold;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 230px;
+        margin-top: 25px;
+    }
+}
+
+
+/*** Chat page ***/
+
+.chat-controls {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+        min-height: 50px;
+        margin-left: 10px;
+        font-family: $textFontSemibold;
+        font-size: 18px;
+        line-height: 37px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &-shadow {
+            font-family: $textFontBold;
+            font-size: 16px
+        }
     }
 }
 

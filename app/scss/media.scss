@@ -67,6 +67,13 @@
             margin-top: 20px;
         }
     }
+
+
+    /*** 1440 ***/
+
+    .bonuse-block--item {
+        padding: 40px 40px 30px;
+    }
 }
 
 /******************************************************************/
@@ -219,6 +226,13 @@
         table {
             margin-top: 12px;
         }
+    }
+
+
+    /*** 1280 ***/
+
+    .bonuse-block--item {
+        max-width: calc(100% - 20px);
     }
 }
 
@@ -1631,6 +1645,61 @@
                 margin-left: 15px;
                 font-size: 14px;
             }
+        }
+    }
+
+
+    /*** 560 ***/
+
+    .bonuse-block {
+        margin-top: 210px;
+        
+        &--item {
+            flex-direction: column-reverse;
+            margin-top: 10px;
+            padding: 40px 30px 30px;
+        }
+
+        .current-balanse {
+            
+            .info {
+                padding: 15px 0 0;
+            }
+
+            .title {
+                font-size: 14px;
+            }
+        }
+
+        .icon {
+            width: 90px;
+            height: 90px;
+        }
+
+        .info {
+            width: 100%;
+            padding: 20px 0 0;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .cost {
+            margin-top: 5px;
+            font-size: 36px;
+            line-height: 36px;
+        }
+
+        .link {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 20px;
         }
     }
 }

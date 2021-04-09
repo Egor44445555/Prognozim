@@ -87,6 +87,15 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 
+    
+    /***/
+
+    $('.partners-link-wrap .link').on("click", function() {
+        var copyText = document.getElementById("partnersLink");
+        window.navigator.clipboard.writeText(copyText.value);
+        alert('Ссылка скопирована в буфер!');
+    });
+
 
     $.datepicker.regional['ru'] = {
         closeText: 'Закрыть',

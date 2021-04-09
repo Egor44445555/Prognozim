@@ -34,4 +34,28 @@
                                     span.path2
                             a(href="#" target="_blank").social-list--item.icon-facebook-circle
 
+.modal-wrap(id="newChat")
+    .overflow
 
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Новый чат
+                .close
+
+            form.form
+                .row 
+                    .col.wide 
+                        .input-wrap 
+                            input(type="text" placeholder="Введите тему обращения*" require).input
+                            .label 
+                                span Тема обращения*
+                .row 
+                    .col.wide 
+                        .input-wrap
+                            textarea(type="text" placeholder="Введите ваше сообщение*").textarea
+                            .label
+                                span Ваше сообщение*
+                .row
+                    .col.wide
+                        button(type="submit").btn.btn-red.btn-shadow Создать

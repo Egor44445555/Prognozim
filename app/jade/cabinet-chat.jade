@@ -1,0 +1,116 @@
+html
+    title Чат с администрацией
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-22.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-22.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                img(src="../images/assets/avatar-6.jpg", alt="")
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        .title-wrap.text-center-t
+                            h1 Чат с администрацией
+
+                        .information-block
+                            .icon.icon-question
+                            .text
+                                .title Возникли трудности?
+                                p Задайте его службе поддержки создав новый чат или продолжив общение в ранее созданном чате.
+
+                        .chat-controls.mt-70
+                            .left-block
+                                a(href="#newChat").modal-btn.btn.btn-red.btn-shadow Создать новый чат
+                            .right-block
+                                a(href="#").btn Открытые чаты
+                                a(href="#").btn.btn-gray Закрытые чаты
+
+                        table.statistic-table.first-col-wide.mt-40
+                            tr
+                                th Тема
+                                th Статус
+                                th Дата создания
+                            tr
+                                td 
+                                    .label
+                                        span Проблемы с выводом
+                                        .count 1
+                                td 
+                                    .blue Открыт
+                                td 21/10/21 - 13:08
+                            tr
+                                td 
+                                    .label
+                                        span Не могу создать прогноз
+                                td 
+                                    .blue Открыт
+                                td 21/10/21 - 13:08
+                            tr
+                                td 
+                                    .label
+                                        span Не выводится список прогнозов
+                                td 
+                                    .blue Открыт
+                                td 21/10/21 - 13:08
+                            tr
+                                td 
+                                    .label
+                                        span Отрицательный баланс
+                                td 
+                                    .blue Открыт
+                                td 21/10/21 - 13:08
+                            tr
+                                td 
+                                    .label
+                                        span Где мои реферальные бонусы?
+                                td
+                                    .blue Открыт
+                                td 21/10/21 - 13:08
+                            tr
+                                td
+                                    .label
+                                        span Как создать платный прогноз
+                                td 
+                                    .blue Открыт
+                                td 21/10/21 - 13:08
+                            
+                        
+                        .statistic-table-mobile.mt-t-20
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Эксперт
+                                        .value Иван Иванов
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Период подписки
+                                        .value 30 дней
+                                    .row
+                                        .label Дата покупки
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Дата завершения
+                                        .value 21/11/21 - 13:08
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade
