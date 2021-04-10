@@ -737,6 +737,7 @@ $linkColor: #154d80;
 $linkColorHover: #7ba1c5;
 $textColor: $black;
 $textGray: #acacac;
+$textGrayDark: #88939E;
 $checkboxBg: #F3F4F7;
 $bulletBg: #CDD3D9;
 $inputPlaceholder: #b8c9d9;
@@ -760,4 +761,8 @@ $themeColor: #154d80;
 
 .color-blue-dark {
 	color: $themeColor;
+}
+
+.color-gray {
+	color: $textGrayDark;
 }

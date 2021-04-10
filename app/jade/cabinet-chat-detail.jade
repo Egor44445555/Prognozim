@@ -1,0 +1,126 @@
+html
+    title Чат с администрацией
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-22.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-22.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                img(src="../images/assets/avatar-6.jpg", alt="")
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        a(href="/cabinet-chat.html").back-link.icon-arrow-back
+                        .title-wrap.text-center-t.mt-0
+                            h1 Не работает подписка
+
+                        .chat-detail-block.mt-50.mt-t-30
+                            .column
+                                .comments-block-wrap
+                                    .comments-list.mt-0
+                                        .comments-list--item.comment
+                                            .wrap
+                                                .image
+                                                    img(src="../images/assets/avatar-2.jpg", alt="")
+                                                .info 
+                                                    .top-panel 
+                                                        .name Администратор Сергей
+                                                        .date 14:40  16 ноября 2020
+                                                    .text 
+                                                        p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт
+                                        .comments-list--item.answer
+                                            .wrap
+                                                .image
+                                                    img(src="../images/assets/avatar-3.jpg", alt="")
+                                                .info 
+                                                    .top-panel 
+                                                        .name Вы
+                                                        .date 14:51  15 ноября 2020
+                                                    .text 
+                                                        p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт
+                                        .comments-list--item.comment
+                                            .wrap
+                                                .image
+                                                    img(src="../images/assets/avatar-2.jpg", alt="")
+                                                .info 
+                                                    .top-panel 
+                                                        .name Администратор Сергей
+                                                        .date 14:40  16 ноября 2020
+                                                    .text 
+                                                        p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт
+
+                                        .comments-list--item.comment
+                                            .wrap
+                                                .image
+                                                    img(src="../images/assets/avatar-2.jpg", alt="")
+                                                .info 
+                                                    .top-panel 
+                                                        .name Администратор Сергей
+                                                        .date 14:40  16 ноября 2020
+                                                    .text 
+                                                        p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт
+
+                                        .comments-list--item.comment
+                                            .wrap
+                                                .image
+                                                    img(src="../images/assets/avatar-2.jpg", alt="")
+                                                .info 
+                                                    .top-panel 
+                                                        .name Администратор Сергей
+                                                        .date 14:40  16 ноября 2020
+                                                    .text 
+                                                        p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт
+
+                                        .comments-list--item.comment
+                                            .wrap
+                                                .image
+                                                    img(src="../images/assets/avatar-2.jpg", alt="")
+                                                .info 
+                                                    .top-panel 
+                                                        .name Администратор Сергей
+                                                        .date 14:40  16 ноября 2020
+                                                    .text 
+                                                        p Многие клиенты букмекерских контор изучают бесплатные прогнозы на спорт
+
+                                        .more-btn Показать предыдущие комментарии (
+                                            span.count 10
+                                            | )
+                                    
+                                    .comment-form
+                                        form.form 
+                                            .row 
+                                                .col.wide
+                                                    .input-wrap
+                                                        textarea(placeholder="Ваш комментарий*").textarea
+                                                        .label
+                                                            span Ваш комментарий*
+                                            .row 
+                                                .col.wide
+                                                    button(type="submit").btn.btn-red.btn-shadow Написать
+                            .column.narrow
+                                .ticket-block
+                                    .title Активный тикет
+                                    span Дата обращения 21/10/21 - 13:08
+                                    span Номер тикета 5662369
+                                    span До автоматического закрытия: 5 дней 12 часов
+                                    p Тикет закрывается автоматически через 7 дней в случае отсутствия активности. Если вы не хотите закрывать тикет просто отправьте сообщение до истечения срока автоматического закрытия.
+                                    a(href="#").color-red
+                                        span.dashed Закрыть тикет (Проблема решена)
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

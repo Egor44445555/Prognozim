@@ -1253,6 +1253,7 @@
 
     .top-panel {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         font-family: $textFontBold;
         color: $linkColor;
@@ -1540,7 +1541,7 @@
             color: $white;
 
             .person .name,
-            .label,
+            .title,
             .blue {
                 color: $white;
             }
@@ -1651,21 +1652,25 @@
         }
     }
 
-    .label {
-        display: flex;
+    .title {
         font-family: $textFontBold;
         font-size: 15px;
         color: $themeColor;
         text-transform: none;
 
+        span {
+            padding-right: 6px;
+            vertical-align: middle;
+        }
+
         .count {
-            display: flex;
-            align-items: center;
+            display: inline-block;
+            vertical-align: middle;
             height: 20px;
-            margin-left: 10px;
             padding: 0 7px;
             background: $red;
             font-size: 12px;
+            line-height: 20px;
             color: $white;
             font-feature-settings: 'pnum' on, 'lnum' on;
             border-radius: 5px;
@@ -1680,7 +1685,7 @@
     overflow: hidden;
 
     &--item {
-        padding: 30px 30px 36px;
+        padding: 30px 30px 20px;
         background: $white;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
@@ -1739,6 +1744,7 @@
 
     .list {
         margin-top: 20px;
+        padding-bottom: 10px;
         font-family: $textFontSemibold;
         font-size: 12px;
         text-transform: capitalize;
@@ -1768,6 +1774,48 @@
         }
     }
 
+    .status {
+        font-family: $textFontBold;
+        font-size: 12px;
+        line-height: 140%;
+        color: $themeColor;
+    }
+
+    .title {
+        margin-top: 8px;
+        font-family: $textFontBold;
+        font-size: 15px;
+        color: $themeColor;
+        text-transform: none;
+
+        span {
+            padding-right: 6px;
+            vertical-align: middle;
+        }
+
+        .count {
+            display: inline-block;
+            vertical-align: middle;
+            height: 20px;
+            padding: 0 7px;
+            background: $red;
+            font-size: 12px;
+            line-height: 20px;
+            color: $white;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            border-radius: 5px;
+        }
+    }
+
+    .date {
+        margin-top: 15px;
+        font-family: $textFontSemibold;
+        font-size: 12px;
+        line-height: 140%;
+        color: $blueDark;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+
     .pagination {
         position: relative;
         width: auto;
@@ -1788,6 +1836,13 @@
         .swiper-pagination-bullet-active {
             background: $red;
         }
+    }
+}
+
+.chat-list {
+
+    .statistic-table-mobile--item {
+        padding: 20px;
     }
 }
 
@@ -2354,6 +2409,13 @@
     display: flex;
     justify-content: space-between;
 
+    .left-block {
+        
+        .btn {
+            padding: 6px 45px;
+        }
+    }
+
     .btn {
         min-height: 50px;
         margin-left: 10px;
@@ -2368,6 +2430,57 @@
         &-shadow {
             font-family: $textFontBold;
             font-size: 16px
+        }
+    }
+}
+
+.chat-detail-block {
+    display: flex;
+
+    .column {
+        flex: 1;
+
+        &.narrow {
+            max-width: 430px;
+            margin-left: 50px;
+        }
+    }
+}
+
+.ticket-block {
+    padding: 40px 45px 45px;
+    background: $blueLighterOther;
+    font-family: $textFontSemibold;
+    font-size: 14px;
+    line-height: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    border-radius: 4px;
+
+    .title {
+        font-family: $titleFont;
+        font-size: 18px;
+        line-height: 22px;
+        color: $themeColor;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+
+    span {
+        display: block;
+        padding-top: 20px;
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 135%;
+    }
+
+    a {
+        display: block;
+        padding-top: 20px;
+
+        span {
+            display: inline;
         }
     }
 }

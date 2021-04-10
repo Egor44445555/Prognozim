@@ -53,6 +53,12 @@ body {
     padding: 0 40px;
 }
 
+
+.desktop-hide {
+    display: none;
+}
+
+
 .max-550 {
     max-width: 550px;
 }
@@ -474,7 +480,6 @@ a {
 
 .input-wrap {
     position: relative;
-    max-width: 425px;
 
     .label {
         position: absolute;
@@ -524,7 +529,6 @@ a {
 .select,
 .textarea {
     width: 100%;
-    max-width: 100%;
     height: 60px;
     padding: 15px 20px;
     font-family: $textFont;

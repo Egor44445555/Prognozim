@@ -291,6 +291,44 @@ $(document).ready(function() {
             passwordCheck();
         }
     });
+
+
+    /*** Modal ***/
+
+    var idModal = null;
+
+    $('.modal-btn').on("click", function() {
+        idModal = $(this).attr('href');
+        idModal = idModal.slice(1, idModal.length);
+
+        $('.modal-wrap').each(function () {
+
+            if(idModal === $(this).attr('id')) {
+                $(this).addClass('open');
+            }
+        });
+
+        $('body').css('padding-right', (window.innerWidth - document.documentElement.clientWidth));
+        $('body').addClass('noscroll');
+    });
+
+    $('.modal-wrap .overflow').css('left', -(window.innerWidth - document.documentElement.clientWidth));
+
+    $('.modal-wrap .overflow, .modal-wrap .close').on("click", function() {
+        $('body').removeClass('noscroll').css('padding-right', 0);
+        $('.modal-wrap').removeClass('open');
+        idModal = null;
+    });
+
+    $('.menu-btn').on("click", function() {
+        $('.modal-menu-wrap').toggleClass('open');
+        $('.modal-menu-overflow').toggleClass('active');
+    });
+
+    $('.modal-menu-wrap .close, .modal-menu-overflow').on("click", function() {
+        $('.modal-menu-wrap').removeClass('open');
+        $('.modal-menu-overflow').removeClass('active');
+    });
 });
 
 

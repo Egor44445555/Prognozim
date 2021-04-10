@@ -28,87 +28,100 @@ html
                         .title-wrap.text-center-t
                             h1 Чат с администрацией
 
-                        .information-block
-                            .icon.icon-question
-                            .text
-                                .title Возникли трудности?
-                                p Задайте его службе поддержки создав новый чат или продолжив общение в ранее созданном чате.
+                        .mobile-hide.mt-70
+                            .information-block
+                                .icon.icon-question
+                                .text
+                                    .title Возникли трудности?
+                                    p Задайте его службе поддержки создав новый чат или продолжив общение в ранее созданном чате.
 
-                        .chat-controls.mt-70
+                        .chat-controls.mt-70.mt-t-180
                             .left-block
                                 a(href="#newChat").modal-btn.btn.btn-red.btn-shadow Создать новый чат
                             .right-block
                                 a(href="#").btn Открытые чаты
                                 a(href="#").btn.btn-gray Закрытые чаты
 
+                        .desktop-hide
+                            .information-block.mt-30
+                                .icon.icon-question
+                                .text
+                                    .title Возникли трудности?
+                                    p Задайте его службе поддержки создав новый чат или продолжив общение в ранее созданном чате.
+
                         table.statistic-table.first-col-wide.mt-40
                             tr
                                 th Тема
                                 th Статус
                                 th Дата создания
-                            tr
+                            tr(onclick="document.location = '/cabinet-chat-detail.html';")
                                 td 
-                                    .label
+                                    .title
                                         span Проблемы с выводом
                                         .count 1
                                 td 
                                     .blue Открыт
                                 td 21/10/21 - 13:08
-                            tr
+                            tr(onclick="document.location = '/cabinet-chat-detail.html';")
                                 td 
-                                    .label
+                                    .title
                                         span Не могу создать прогноз
                                 td 
                                     .blue Открыт
                                 td 21/10/21 - 13:08
-                            tr
+                            tr(onclick="document.location = '/cabinet-chat-detail.html';")
                                 td 
-                                    .label
+                                    .title
                                         span Не выводится список прогнозов
                                 td 
                                     .blue Открыт
                                 td 21/10/21 - 13:08
-                            tr
+                            tr(onclick="document.location = '/cabinet-chat-detail.html';")
                                 td 
-                                    .label
+                                    .title
                                         span Отрицательный баланс
                                 td 
                                     .blue Открыт
                                 td 21/10/21 - 13:08
-                            tr
+                            tr(onclick="document.location = '/cabinet-chat-detail.html';")
                                 td 
-                                    .label
+                                    .title
                                         span Где мои реферальные бонусы?
                                 td
                                     .blue Открыт
                                 td 21/10/21 - 13:08
-                            tr
+                            tr(onclick="document.location = '/cabinet-chat-detail.html';")
                                 td
-                                    .label
+                                    .title
                                         span Как создать платный прогноз
                                 td 
                                     .blue Открыт
                                 td 21/10/21 - 13:08
                             
                         
-                        .statistic-table-mobile.mt-t-20
-                            .statistic-table-mobile--item
-                                .list
-                                    .row
-                                        .label Эксперт
-                                        .value Иван Иванов
-                                    .row
-                                        .label Сумма
-                                        .value 1000 ₽
-                                    .row
-                                        .label Период подписки
-                                        .value 30 дней
-                                    .row
-                                        .label Дата покупки
-                                        .value 21/10/21 - 13:08
-                                    .row
-                                        .label Дата завершения
-                                        .value 21/11/21 - 13:08
+                        .statistic-table-mobile.chat-list.mt-t-20
+                            a(href="/cabinet-chat-detail.html").statistic-table-mobile--item
+                                .status Статус: Открыт
+                                .title
+                                    span Проблемы с выводом
+                                    .count 1
+                                .date 21/10/21 - 13:08
+                            a(href="/cabinet-chat-detail.html").statistic-table-mobile--item
+                                .status Статус: Открыт
+                                .title
+                                    span Проблемы с выводом lorem ipsum dolor
+                                    .count 1
+                                .date 21/10/21 - 13:08
+                            a(href="/cabinet-chat-detail.html").statistic-table-mobile--item
+                                .status Статус: Открыт
+                                .title
+                                    span Проблемы с выводом
+                                .date 21/10/21 - 13:08
+                            a(href="/cabinet-chat-detail.html").statistic-table-mobile--item
+                                .status Статус: Открыт
+                                .title
+                                    span Проблемы с выводом
+                                .date 21/10/21 - 13:08
 
             .mt-t-60
 

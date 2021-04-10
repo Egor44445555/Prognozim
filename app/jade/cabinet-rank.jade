@@ -1,0 +1,59 @@
+html
+    title Ранг
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-23.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-23.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                img(src="../images/assets/avatar-6.jpg", alt="")
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        .title-wrap.text-center-t.mt-0
+                            h1 Ранг
+
+                        .rank-list-wrap
+                            .rank-list
+                                .rank-list--item
+                                    .rank-block
+                                        .chart.rank-big(data-percent="40" data-rotate="-90" data-size="200" data-line="20")
+                                        .count 
+                                            span 2
+                                        .label Ваш ранг
+                                .rank-list--item
+                                    .list
+                                        .list--item
+                                            .icon.icon-check-circle
+                                            .text Создание прогнозов
+                                        .list--item
+                                            .icon.icon-check-circle
+                                            .text Продажа прогнозов
+                                        .list--item
+                                            .icon.icon-cross-circle
+                                            .text.color-gray Прогнозы без описания
+                                        .list--item
+                                            .icon.icon-cross-circle
+                                            .text.color-gray Цена подписки на мои прогнозы 
+                                                a(href="#").color-red
+                                                    span.dashed 500 ₽ Изменить
+
+            .mt-t-80
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

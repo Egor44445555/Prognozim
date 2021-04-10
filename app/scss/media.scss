@@ -74,6 +74,24 @@
     .bonuse-block--item {
         padding: 40px 40px 30px;
     }
+
+
+    /*** 1440 ***/
+
+    .chat-detail-block {
+    
+        .column {
+    
+            &.narrow {
+                max-width: 300px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .ticket-block {
+        padding: 30px;
+    }
 }
 
 /******************************************************************/
@@ -233,6 +251,23 @@
 
     .bonuse-block--item {
         max-width: calc(100% - 20px);
+    }
+
+
+    /*** 1280 ***/
+
+    .chat-controls {
+
+        .left-block {
+            
+            .btn {
+                padding: 6px 20px;
+            }
+        }
+
+        .btn {
+            font-size: 14px;
+        }
     }
 }
 
@@ -444,6 +479,15 @@
             }
         }
     }
+
+
+    /*** 1024 ***/
+
+    .cabinet-info .back-link {
+        display: block;
+        margin: 0 0 17px;
+        font-size: 17px;
+    }
 }
 
 /******************************************************************/
@@ -453,6 +497,15 @@
     body {
         font-size: 14px;
     }
+
+    .mobile-hide {
+        display: none;
+    }
+
+    .desktop-hide {
+        display: block;
+    }
+
 
     .mt-t-0 {
         margin-top: 0 !important;
@@ -1053,6 +1106,53 @@
             line-height: 160%;
         }
     }
+
+
+    /*** 768 ***/
+
+    .chat-controls {
+        flex-wrap: wrap;
+
+        .left-block {
+            flex: 100%;
+            
+            .btn {
+                width: 100%;
+                padding: 6px 20px;
+            }
+        }
+
+        .right-block {
+            display: flex;
+            flex: 100%;
+            padding-top: 10px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 6px 10px;
+            font-size: 14px;
+        }
+    }
+
+
+    /*** 768 ***/
+
+    .chat-detail-block {
+        display: block;
+    
+        .column {
+    
+            &.narrow {
+                max-width: none;
+                margin: 40px -15px 0;
+            }
+        }
+    }
+
+    .cabinet-info .back-link {
+        text-align: center;
+    }
 }
 
 /******************************************************************/
@@ -1145,6 +1245,7 @@
     .input-wrap {
 
         .label {
+            left: 10px;
             font-size: 12px;
 
             &::before {
@@ -1156,14 +1257,42 @@
     .input, 
     .select {
         height: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
         font-size: 14px;
     }
 
     .textarea {
         height: 280px;
+        padding-left: 15px;
+        padding-right: 15px;
         font-size: 14px;
     }
 
+
+    /*** Modal ***/
+
+    .modal {
+        padding: 20px;
+
+        .close {
+            margin-top: 4px;
+        }
+
+        h1, 
+        .h1, 
+        h2, 
+        .h2 {
+            font-size: 20px;
+        }
+
+        .form {
+            margin-top: 30px;
+        }
+    }
+
+
+    /***/
 
     .wrapper {
         padding-bottom: 0;
