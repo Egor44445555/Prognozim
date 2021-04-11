@@ -476,6 +476,12 @@ a {
             color: $blueDark;
         }
     }
+
+    .info-text {
+        margin: 13px 0 0 20px;
+        color: $blueLight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
 }
 
 .input-wrap {
@@ -1270,7 +1276,7 @@ a.ui-button:active, .ui-button:active,
         }
 
         .btn {
-            min-height: 60px;
+            min-height: 50px;
             margin-top: 0;
         }
     }

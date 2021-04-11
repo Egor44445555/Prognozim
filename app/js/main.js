@@ -33,7 +33,7 @@ $(document).ready(function() {
         }
 
         if( $(e.target).closest('.menu-btn').length ) {
-            modalMenuWrap.toggleClass('open');
+            modalMenuWrap.addClass('open');
             
             $('.menu-btn').toggleClass('active');
 

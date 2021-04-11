@@ -59,3 +59,24 @@
                 .row
                     .col.wide
                         button(type="submit").btn.btn-red.btn-shadow Создать
+
+.modal-wrap(id="subscriptionPrice")
+    .overflow
+
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Цена подписки
+                .close
+
+            form.form
+                .row 
+                    .col.wide 
+                        .input-wrap 
+                            input(type="text" placeholder="Стоимость подписки" value="500 ₽" require).input
+                            .label 
+                                span Стоимость подписки*
+                        .info-text *Укажите сумму не более 1000 ₽
+                .row
+                    .col.wide
+                        button(type="submit").btn.btn-red.btn-shadow Создать
