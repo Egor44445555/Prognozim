@@ -80,3 +80,55 @@
                 .row
                     .col.wide
                         button(type="submit").btn.btn-red.btn-shadow Создать
+
+.modal-wrap(id="withdrawFunds")
+    .overflow
+
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Вывод средств
+                .close
+
+            form.form
+                .row 
+                    .col.wide
+                        .input-wrap
+                            .custom-select-wrap
+                                select(placeholder="Банковская карта").custom-select
+                                    option(value="Банковская карта") Банковская карта
+                                    option(value="Банковская карта 2") Банковская карта 2
+                                    option(value="Банковская карта 3") Банковская карта 3
+                            .label 
+                                span Способ вывода
+                .row 
+                    .col.wide
+                        .input-wrap
+                            input(type="text" placeholder="0 ₽").input
+                            .label 
+                                span Сумма вывода*
+                .row 
+                    .col.wide
+                        .title Введите номер карты/кошелька
+                .row 
+                    .col.wide
+                        .input-wrap.mt-10
+                            input(type="text").input
+                            .label 
+                                span Номер карты/кошелька
+                .row 
+                    .col.wide
+                        .input-wrap 
+                            input(type="text").input
+                            .label 
+                                span Имя владельца карты/кошелька
+                .row 
+                    .col.wide
+                        .input-wrap 
+                            input(type="text").input
+                            .label 
+                                span Комментарий
+                
+                .row
+                    .col.wide
+                        button(type="submit").btn.btn-red.btn-shadow Вывести

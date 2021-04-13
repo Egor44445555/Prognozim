@@ -1,0 +1,51 @@
+html
+    title Мой прогноз
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-25.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-25.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                .icon.icon-avatar
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        h1.text-center-t Мой прогноз
+
+                        .projections-list
+                            .projections-list--item
+                                .info-block
+                                    .title Бавария - Атлетико Мадрид 
+                                    .row
+                                        span футбол - Групповой этап
+                                        span 24/01 01:30
+                                    .description Меньше 9.2/Тотал. Основное время КФ:4
+                                
+                                .bottom-block
+                                    .id ID:5959000
+                                    .controls
+                                        .controls--item
+                                            .icon.icon-pen
+                                        .controls--item
+                                            .icon.icon-basket
+                            
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

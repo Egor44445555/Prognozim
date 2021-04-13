@@ -2486,6 +2486,50 @@
 }
 
 
+/*** Alert list ***/
+
+.alert-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px 0 0 -20px;
+
+    &--item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 100%;
+        max-width: calc(25% - 20px);
+        margin: 20px 0 0 20px;
+        padding: 30px;
+        background: $white;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .title {
+        font-family: $textFontBold;
+        font-size: 16px;
+        line-height: 150%;
+        color: $themeColor;
+    }
+
+    p {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .date {
+        margin-top: 140px;
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 150%;
+        color: $themeColor;
+    }
+}
+
+
 @import '_product.scss',
         '_blog.scss',
         '_cabinet.scss';

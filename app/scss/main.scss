@@ -71,6 +71,10 @@ body {
     margin-top: 0 !important;
 }
 
+.mt-10 {
+    margin-top: 10px !important;
+}
+
 .mt-20 {
     margin-top: 20px !important;
 }
@@ -539,6 +543,7 @@ a {
         line-height: 180%;
         color: $blueDark;
         transform: translateY(-50%);
+        z-index: 9;
 
         &::before {
             content: '';
@@ -795,6 +800,116 @@ input[type="password"] {
         right: 10px;
         transform: translateY(-50%);
         pointer-events: none;
+    }
+}
+
+
+/*** Custom Select ***/
+
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    user-select: none;
+
+    select {
+        display: none;
+    }
+}
+
+.custom-select-trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 0 40px 0 20px;
+    background: $white;
+    color: $blueDark;
+    font-size: 16px;
+    line-height: 60px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    z-index: 9;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &.error {
+        border-color: $red;
+    }
+
+    &:before {
+        content: "\e904";
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        font-family: "icomoon" !important;
+        font-size: 8px;
+        color: $red;
+        pointer-events: none;
+    }
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: none;
+    border: 0;
+    padding: 0;
+
+    .custom-options {
+        position: absolute;
+        top: calc(100% - 5px);
+        left: 0;
+        right: 0;
+        min-width: 100%;
+        max-height: 400px;
+        padding: 10px 0;
+        background: $white;
+        border: 1px solid $borderColor;
+        opacity: 0;
+        visibility: hidden;
+        overflow: auto;
+        pointer-events: none;
+        border-radius: 0 0 10px 10px;
+        z-index: 99;
+    }
+
+    &.opened {
+
+        .custom-options {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    .custom-option {
+        position: relative;
+        display: block;
+        min-width: 100px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: normal;
+        color: $textColor;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        cursor: pointer;
+        z-index: 9;
+
+        &.selection,
+        &:hover {
+            color: $red;
+        }
     }
 }
 
@@ -1317,6 +1432,18 @@ a.ui-button:active, .ui-button:active,
 
         &:first-child {
             margin-top: 0;
+        }
+
+        .title {
+            font-family: $titleFont;
+            font-size: 18px;
+            line-height: 140%;
+            color: $blueDark;
+        }
+
+        .input, 
+        .select {
+            max-width: 100%;
         }
 
         .btn {

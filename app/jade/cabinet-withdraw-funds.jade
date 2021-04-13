@@ -1,0 +1,144 @@
+html
+    title Вывод средств
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-25.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-25.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                .icon.icon-avatar
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        h1.text-center-t Вывод средств
+
+                        .bonuse-block.mt-50.mt-t-140
+                            .bonuse-block--item.current-balanse
+                                .info
+                                    .title.h3 Текущий баланс
+                                    .cost 800 000₽
+                                .icon
+                                    img(src="../images/icons/bag.svg", alt="")
+
+                            .bonuse-block--item
+                                .info
+                                    .title.h3 Вывод средств
+                                    a(href="#withdrawFunds").btn.btn-red.modal-btn Вывести
+                                .icon
+                                    img(src="../images/icons/coin-hand-2.svg", alt="")
+
+                        .title-wrap
+                            h2 История вывода
+
+                        table.statistic-table.mt-40
+                            tr
+                                th Дата вывода
+                                th Сумма
+                                th Статус
+                            tr
+                                td 21/10/21 - 13:08
+                                td 1000 ₽
+                                td Обработка
+                            tr
+                                td 21/10/21 - 13:08
+                                td 1000 ₽
+                                td Обработка
+                            tr
+                                td 21/10/21 - 13:08
+                                td 1000 ₽
+                                td Обработка
+                            tr
+                                td 21/10/21 - 13:08
+                                td 1000 ₽
+                                td Обработка
+                            tr
+                                td 21/10/21 - 13:08
+                                td 1000 ₽
+                                td Выполнен
+
+                        .statistic-table-mobile.mt-t-20
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Дата вывода
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Статус
+                                        .value Обработка
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Дата вывода
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Статус
+                                        .value Обработка
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Дата вывода
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Статус
+                                        .value Обработка
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Дата вывода
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Статус
+                                        .value Обработка
+                            .statistic-table-mobile--item
+                                .list
+                                    .row
+                                        .label Дата вывода
+                                        .value 21/10/21 - 13:08
+                                    .row
+                                        .label Сумма
+                                        .value 1000 ₽
+                                    .row
+                                        .label Статус
+                                        .value Выполнен
+
+                        .pagination.mt-t-0
+                            a(href="#").pagination--item.prev
+                            a(href="#").pagination--item.active 1
+                            a(href="#").pagination--item 2
+                            a(href="#").pagination--item 3
+                            .pagination--item ...
+                            a(href="#").pagination--item 25
+                            a(href="#").pagination--item.next
+                            
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade
