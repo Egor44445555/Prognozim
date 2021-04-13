@@ -1,0 +1,99 @@
+html
+    title Настройки
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-24.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-24.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                .icon.icon-avatar
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        h1.text-center-t Настройки
+
+                        .mt-40.mt-t-240
+                            h2.text-center-t Редактирование профиля
+
+                            form.form
+                                .info-group
+                                    .item
+                                        .row
+                                            .col.wide
+                                                .input-wrap
+                                                    input(type="text" placeholder="Петр Петров").input
+                                                    .label
+                                                        span Имя пользователя
+                                        .row
+                                            .col.wide
+                                                .input-wrap
+                                                    input(type="text" placeholder="petrov@gmail.com").input
+                                                    .label
+                                                        span Адрес электронной почты*
+                                    .item
+                                        .uploader-avatar
+                                            .icon.icon-avatar
+                                            label(for="upload").link.color-red
+                                                span.dashed Загрузить аватар
+                                            input(type="file" id="upload")
+
+                                .row
+                                    .col.wide
+                                        .checkbox.confidentiality-wrap.center-t
+                                            label(for="check-17").checkbox
+                                                input(type="checkbox" id="check-17").confidentiality
+                                                .icon
+                                                    .icon-check
+                                                .label Получать рассылки и уведомления
+
+                                button(type="submit").btn.btn-red.btn-shadow.center-t Сохранить
+
+
+                            h2.mt-70.text-center-t Сменить пароль
+
+                            form.form
+                                .row
+                                    .col.wide
+                                        .input-wrap.password-wrap.center-t
+                                            input(type="password" placeholder="Ваш старый пароль" required).input.password
+                                            .label 
+                                                span Старый пароль*
+                                            .eye.icon-eye
+                                .row
+                                    .col.wide
+                                        .input-wrap.password-wrap.center-t
+                                            input(type="password" placeholder="Ваш новый пароль" required).input.password
+                                            .label 
+                                                span Новый пароль*
+                                            .eye.icon-eye
+
+                                .row
+                                    .col.wide
+                                        .input-wrap.password-wrap.center-t
+                                            input(type="password" placeholder="Повторите ваш новый пароль" required).input.password-confirm
+                                            .label 
+                                                span Повторите новый пароль*
+                                            .eye.icon-eye
+
+                                        button(type="submit").btn.btn-red.btn-shadow.center-t Изменить пароль
+                                                
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade

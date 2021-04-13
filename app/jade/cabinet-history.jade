@@ -1,0 +1,119 @@
+html
+    title История пополнений
+    include ./blocks/head.jade
+
+    body
+        include ./blocks/header.jade
+
+        include ./blocks/left-panel.jade
+        
+        .wrapper
+            .first-image-bg
+                img(src="../images/hero-image-25.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-25.jpg", alt="").mobile
+
+            .container-block
+                .cabinet-block-wrap
+                    .sidebar
+                        .person
+                            .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
+                            .image
+                                .icon.icon-avatar
+                            .name Петр Петров
+                            .rank Ранг 2
+
+                        include ./blocks/cabinet-menu.jade
+
+                    .cabinet-info
+                        h1.text-center-t История пополнений
+
+                        .mt-120
+                            table.statistic-table.first-col-wide
+                                tr
+                                    th Дата события
+                                    th Сумма
+                                    th Источник
+                                    th Статус
+                                tr
+                                    td 21/10/21 - 13:08
+                                    td 1000 ₽
+                                    td Банковская карта
+                                    td Обработка
+                                tr
+                                    td 21/10/21 - 13:08
+                                    td 1000 ₽
+                                    td Банковская карта
+                                    td Обработка
+                                tr
+                                    td 21/10/21 - 13:08
+                                    td 1000 ₽
+                                    td Банковская карта
+                                    td Обработка
+                                tr
+                                    td 21/10/21 - 13:08
+                                    td 1000 ₽
+                                    td Банковская карта
+                                    td Обработка
+
+                            .statistic-table-mobile.chat-list.mt-t-20
+                                .statistic-table-mobile--item
+                                    .list
+                                        .row
+                                            .label Дата события
+                                            .value 21/10/21 - 13:08
+                                        .row
+                                            .label Сумма
+                                            .value 1000 ₽
+                                        .row
+                                            .label Источник
+                                            .value Банковская карта
+                                        .row
+                                            .label Статус
+                                            .value Обработка
+                                 .statistic-table-mobile--item
+                                    .list
+                                        .row
+                                            .label Дата события
+                                            .value 21/10/21 - 13:08
+                                        .row
+                                            .label Сумма
+                                            .value 1000 ₽
+                                        .row
+                                            .label Источник
+                                            .value Банковская карта
+                                        .row
+                                            .label Статус
+                                            .value Обработка
+                                 .statistic-table-mobile--item
+                                    .list
+                                        .row
+                                            .label Дата события
+                                            .value 21/10/21 - 13:08
+                                        .row
+                                            .label Сумма
+                                            .value 1000 ₽
+                                        .row
+                                            .label Источник
+                                            .value Банковская карта
+                                        .row
+                                            .label Статус
+                                            .value Обработка
+                                 .statistic-table-mobile--item
+                                    .list
+                                        .row
+                                            .label Дата события
+                                            .value 21/10/21 - 13:08
+                                        .row
+                                            .label Сумма
+                                            .value 1000 ₽
+                                        .row
+                                            .label Источник
+                                            .value Банковская карта
+                                        .row
+                                            .label Статус
+                                            .value Обработка
+
+            .mt-t-60
+
+        include ./blocks/footer.jade
+        include ./blocks/scripts.jade
