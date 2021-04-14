@@ -86,6 +86,10 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 
+    $('.projections-list--item .delete').on("click", function() {
+        $(this).parents('.projections-list--item').remove();
+    });
+
     
     /*** Copy link ***/
 
@@ -304,11 +308,11 @@ $(document).ready(function() {
 
             if(idModal === $(this).attr('id')) {
                 $(this).addClass('open');
+
+                $('body').css('padding-right', (window.innerWidth - document.documentElement.clientWidth));
+                $('body').addClass('noscroll');
             }
         });
-
-        $('body').css('padding-right', (window.innerWidth - document.documentElement.clientWidth));
-        $('body').addClass('noscroll');
     });
 
     $('.modal-wrap .overflow').css('left', -(window.innerWidth - document.documentElement.clientWidth));

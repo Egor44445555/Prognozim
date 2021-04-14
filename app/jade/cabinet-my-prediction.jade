@@ -9,8 +9,8 @@ html
         
         .wrapper
             .first-image-bg
-                img(src="../images/hero-image-25.jpg", alt="").desktop
-                img(src="../images/hero-image-mobile-25.jpg", alt="").mobile
+                img(src="../images/hero-image-27.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-27.jpg", alt="").mobile
 
             .container-block
                 .cabinet-block-wrap
@@ -18,7 +18,7 @@ html
                         .person
                             .chart#rank(data-percent="40" data-rotate="-90" data-size="200" data-line="7")
                             .image
-                                .icon.icon-avatar
+                                img(src="../images/assets/avatar-6.jpg", alt="")
                             .name Петр Петров
                             .rank Ранг 2
 
@@ -41,9 +41,37 @@ html
                                     .controls
                                         .controls--item
                                             .icon.icon-pen
+                                        .controls--item.delete
+                                            .icon.icon-basket
+
+                            .projections-list--item
+                                .info-block
+                                    .title Краснодар - Спартак Москва
+                                    .row
+                                        span футбол - Премьер-лига
+                                        span 24/01 01:30
+                                    .description Меньше 1.74/Команда 2 - индивидуальный тотал. Основное время КФ:4.5
+                                
+                                .bottom-block
+                                    .id ID:5959111
+                                    .controls
                                         .controls--item
+                                            .icon.icon-pen
+                                        .controls--item.delete
                                             .icon.icon-basket
                             
+                            a(href="#addEvent").projections-list--item.add-event.modal-btn
+                                .icon.icon-plus-red.text-center
+                                .link.text-center
+                                    span.dashed.color-red Добавить событие
+                            .projections-list--item.add-forecast
+                                .total-forecast
+                                    .label Общий КФ:
+                                    .total 8.50
+                                a(href="#addForecast").btn.btn-red.modal-btn Создать прогноз
+                            .projections-list--item.add-forecast
+                                .title Добавьте хотя бы одно событие
+                                a(href="#addForecast").btn.btn-purple.modal-btn Создать прогноз
 
             .mt-t-60
 

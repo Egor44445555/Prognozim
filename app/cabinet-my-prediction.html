@@ -91,15 +91,13 @@
       </div>
     </div>
     <div class="wrapper">
-      <div class="first-image-bg"><img src="../images/hero-image-25.jpg" alt="" class="desktop"/><img src="../images/hero-image-mobile-25.jpg" alt="" class="mobile"/></div>
+      <div class="first-image-bg"><img src="../images/hero-image-27.jpg" alt="" class="desktop"/><img src="../images/hero-image-mobile-27.jpg" alt="" class="mobile"/></div>
       <div class="container-block">
         <div class="cabinet-block-wrap">
           <div class="sidebar">
             <div class="person">
               <div id="rank" data-percent="40" data-rotate="-90" data-size="200" data-line="7" class="chart"></div>
-              <div class="image">
-                <div class="icon icon-avatar"></div>
-              </div>
+              <div class="image"><img src="../images/assets/avatar-6.jpg" alt=""/></div>
               <div class="name">Петр Петров</div>
               <div class="rank">Ранг 2</div>
             </div>
@@ -125,11 +123,40 @@
                     <div class="controls--item">
                       <div class="icon icon-pen"></div>
                     </div>
-                    <div class="controls--item">
+                    <div class="controls--item delete">
                       <div class="icon icon-basket"></div>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="projections-list--item">
+                <div class="info-block">
+                  <div class="title">Краснодар - Спартак Москва</div>
+                  <div class="row"><span>футбол - Премьер-лига</span><span>24/01 01:30</span></div>
+                  <div class="description">Меньше 1.74/Команда 2 - индивидуальный тотал. Основное время КФ:4.5</div>
+                </div>
+                <div class="bottom-block">
+                  <div class="id">ID:5959111</div>
+                  <div class="controls">
+                    <div class="controls--item">
+                      <div class="icon icon-pen"></div>
+                    </div>
+                    <div class="controls--item delete">
+                      <div class="icon icon-basket"></div>
+                    </div>
+                  </div>
+                </div>
+              </div><a href="#addEvent" class="projections-list--item add-event modal-btn">
+                <div class="icon icon-plus-red text-center"></div>
+                <div class="link text-center"><span class="dashed color-red">Добавить событие</span></div></a>
+              <div class="projections-list--item add-forecast">
+                <div class="total-forecast">
+                  <div class="label">Общий КФ:</div>
+                  <div class="total">8.50</div>
+                </div><a href="#addForecast" class="btn btn-red modal-btn">Создать прогноз</a>
+              </div>
+              <div class="projections-list--item add-forecast">
+                <div class="title">Добавьте хотя бы одно событие</div><a href="#addForecast" class="btn btn-purple modal-btn">Создать прогноз</a>
               </div>
             </div>
           </div>
@@ -287,6 +314,94 @@
               </div>
             </div>
           </form>
+        </div>
+      </div>
+    </div>
+    <div id="addEvent" class="modal-wrap open">
+      <div class="overflow"> </div>
+      <div class="modal">
+        <div class="wrap">
+          <div class="title-wrap">
+            <h2 class="title">Добавить событие</h2>
+            <div class="close"></div>
+          </div>
+          <div class="event-create">
+            <div class="list-selected">
+              <div class="list-selected--item">Спорт</div>
+            </div>
+            <form action="" id="eventCreateForm">
+              <div class="event-create-tab active">
+                <div onclick="nextPrev(1)" class="checkbox-group">
+                  <label for="sport" class="checkbox">
+                    <input type="radio" name="sport" id="sport"/>
+                    <div class="label">Футбол</div>
+                  </label>
+                  <label for="sport-2" class="checkbox">
+                    <input type="radio" name="sport" id="sport-2"/>
+                    <div class="label">Киберспорт</div>
+                  </label>
+                  <label for="sport-3" class="checkbox">
+                    <input type="radio" name="sport" id="sport-3"/>
+                    <div class="label">Хоккей</div>
+                  </label>
+                  <label for="sport-4" class="checkbox">
+                    <input type="radio" name="sport" id="sport-4"/>
+                    <div class="label">Теннис</div>
+                  </label>
+                  <label for="sport-5" class="checkbox">
+                    <input type="radio" name="sport" id="sport-5"/>
+                    <div class="label">UFC</div>
+                  </label>
+                  <label for="sport-6" class="checkbox">
+                    <input type="radio" name="sport" id="sport-6"/>
+                    <div class="label">Баскетбол </div>
+                  </label>
+                  <label for="sport-7" class="checkbox">
+                    <input type="radio" name="sport" id="sport-7"/>
+                    <div class="label">Волейбол</div>
+                  </label>
+                  <label for="sport-8" class="checkbox">
+                    <input type="radio" name="sport" id="sport-8"/>
+                    <div class="label">Бадминтон</div>
+                  </label>
+                  <label for="sport-9" class="checkbox">
+                    <input type="radio" name="sport" id="sport-9"/>
+                    <div class="label">Гандбол</div>
+                  </label>
+                  <label for="sport-10" class="checkbox">
+                    <input type="radio" name="sport" id="sport-10"/>
+                    <div class="label">Настольный тенис</div>
+                  </label>
+                  <label for="sport-11" class="checkbox">
+                    <input type="radio" name="sport" id="sport-11"/>
+                    <div class="label">Бокс</div>
+                  </label>
+                  <label for="sport-12" class="checkbox">
+                    <input type="radio" name="sport" id="sport-12"/>
+                    <div class="label">ММА </div>
+                  </label>
+                  <label for="sport-13" class="checkbox">
+                    <input type="radio" name="sport" id="sport-13"/>
+                    <div class="label">Американский футбол</div>
+                  </label>
+                  <label for="sport-14" class="checkbox">
+                    <input type="radio" name="sport" id="sport-14"/>
+                    <div class="label">Бейсбол</div>
+                  </label>
+                </div>
+              </div>
+              <div class="event-create-tab">2</div>
+              <div class="event-create-tab">3</div>
+              <div class="event-create-tab">4</div>
+              <div class="button-wrap">
+                <div id="prevEventCreateBtn" class="prev">
+                  <div class="icon icon-arrow-back"></div>
+                  <div class="count"><span>0</span>/<span>6</span></div>
+                </div>
+                <button type="submit" class="btn btn-red btn-shadow">Добавить</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>

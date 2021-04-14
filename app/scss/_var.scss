@@ -724,6 +724,7 @@ $gray: #cdcdcd;
 $grayDark: #bababa;
 $grayLight: #f4f4f4;
 $red: #ce091d;
+$purple: #6E2E58;
 $blue: #0D5394;
 $blueDark: #11263c;
 $blueLight: #5a6673;
@@ -748,7 +749,7 @@ $themeColor: #154d80;
 
 
 .color-red {
-	color: $red;
+	color: $red !important;
 }
 
 .color-white {

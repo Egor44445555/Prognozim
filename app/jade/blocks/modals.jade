@@ -1,0 +1,175 @@
+.modal-wrap(id="newChat")
+    .overflow
+
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Новый чат
+                .close
+
+            form.form
+                .row 
+                    .col.wide 
+                        .input-wrap 
+                            input(type="text" placeholder="Введите тему обращения*" require).input
+                            .label 
+                                span Тема обращения*
+                .row 
+                    .col.wide 
+                        .input-wrap
+                            textarea(type="text" placeholder="Введите ваше сообщение*").textarea
+                            .label
+                                span Ваше сообщение*
+                .row
+                    .col.wide
+                        button(type="submit").btn.btn-red.btn-shadow Создать
+
+.modal-wrap(id="subscriptionPrice")
+    .overflow
+
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Цена подписки
+                .close
+
+            form.form
+                .row 
+                    .col.wide 
+                        .input-wrap 
+                            input(type="text" placeholder="Стоимость подписки" value="500 ₽" require).input
+                            .label 
+                                span Стоимость подписки*
+                        .info-text *Укажите сумму не более 1000 ₽
+                .row
+                    .col.wide
+                        button(type="submit").btn.btn-red.btn-shadow Создать
+
+.modal-wrap(id="withdrawFunds")
+
+    .overflow
+
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Вывод средств
+                .close
+
+            form.form
+                .row 
+                    .col.wide
+                        .input-wrap
+                            .custom-select-wrap
+                                select(placeholder="Банковская карта").custom-select
+                                    option(value="Банковская карта") Банковская карта
+                                    option(value="Банковская карта 2") Банковская карта 2
+                                    option(value="Банковская карта 3") Банковская карта 3
+                            .label 
+                                span Способ вывода
+                .row 
+                    .col.wide
+                        .input-wrap
+                            input(type="text" placeholder="0 ₽").input
+                            .label 
+                                span Сумма вывода*
+                .row 
+                    .col.wide
+                        .title Введите номер карты/кошелька
+                .row 
+                    .col.wide
+                        .input-wrap.mt-10
+                            input(type="text").input
+                            .label 
+                                span Номер карты/кошелька
+                .row 
+                    .col.wide
+                        .input-wrap 
+                            input(type="text").input
+                            .label 
+                                span Имя владельца карты/кошелька
+                .row 
+                    .col.wide
+                        .input-wrap 
+                            input(type="text").input
+                            .label 
+                                span Комментарий
+                
+                .row
+                    .col.wide
+                        button(type="submit").btn.btn-red.btn-shadow Вывести
+
+.modal-wrap(id="addEvent").open
+    .overflow 
+
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Добавить событие
+                .close
+
+            .event-create
+                .list-selected
+                    .list-selected--item Спорт
+
+                form(action="" id="eventCreateForm")
+                    .event-create-tab.active
+                        .checkbox-group(onclick="nextPrev(1)")
+                            label.checkbox(for="sport")
+                                input(type="radio" name="sport" id="sport")
+                                .label Футбол
+                            label.checkbox(for="sport-2")
+                                input(type="radio" name="sport" id="sport-2")
+                                .label Киберспорт
+                            label.checkbox(for="sport-3")
+                                input(type="radio" name="sport" id="sport-3")
+                                .label Хоккей
+                            label.checkbox(for="sport-4")
+                                input(type="radio" name="sport" id="sport-4")
+                                .label Теннис
+                            label.checkbox(for="sport-5")
+                                input(type="radio" name="sport" id="sport-5")
+                                .label UFC
+                            label.checkbox(for="sport-6")
+                                input(type="radio" name="sport" id="sport-6")
+                                .label Баскетбол 
+                            label.checkbox(for="sport-7")
+                                input(type="radio" name="sport" id="sport-7")
+                                .label Волейбол
+                            label.checkbox(for="sport-8")
+                                input(type="radio" name="sport" id="sport-8")
+                                .label Бадминтон
+                            label.checkbox(for="sport-9")
+                                input(type="radio" name="sport" id="sport-9")
+                                .label Гандбол
+                            label.checkbox(for="sport-10")
+                                input(type="radio" name="sport" id="sport-10")
+                                .label Настольный тенис
+                            label.checkbox(for="sport-11")
+                                input(type="radio" name="sport" id="sport-11")
+                                .label Бокс
+                            label.checkbox(for="sport-12")
+                                input(type="radio" name="sport" id="sport-12")
+                                .label ММА 
+                            label.checkbox(for="sport-13")
+                                input(type="radio" name="sport" id="sport-13")
+                                .label Американский футбол
+                            label.checkbox(for="sport-14")
+                                input(type="radio" name="sport" id="sport-14")
+                                .label Бейсбол
+                    
+                    .event-create-tab 2
+                    .event-create-tab 3
+                    .event-create-tab 4
+
+                    .button-wrap
+                        .prev(id="prevEventCreateBtn")
+                            .icon.icon-arrow-back
+                            .count
+                                span 0
+                                | /
+                                span 6
+                        button(type="submit").btn.btn-red.btn-shadow Добавить
+
+
+
+

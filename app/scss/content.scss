@@ -2530,6 +2530,221 @@
 }
 
 
+/*** Projections list ***/
+
+.projections-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0 0 -20px;
+
+    &--item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 100%;
+        max-width: calc(25% - 20px);
+        min-height: 340px;
+        margin: 20px 0 0 20px;
+        padding: 40px;
+        background: $white;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        &.add-event {
+            cursor: pointer;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 230px;
+                font-size: 34px;
+            }
+
+            .link {
+                justify-self: flex-end;
+            }
+        }
+
+        &.add-forecast {
+            background: $blue;
+            color: $white;
+
+            .title {
+                font-family: $titleFont;
+                color: $white;
+            }
+        }
+    }
+
+    .title {
+        font-family: $textFontBold;
+        font-size: 24px;
+        line-height: 140%;
+        text-transform: capitalize;
+        color: $blue;
+    }
+
+    .row {
+        margin-top: 10px;
+
+        span {
+            display: block;
+        }
+    }
+
+    span {
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 140%;
+        color: $blueLight;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        text-transform: capitalize;
+    }
+
+    .description {
+        margin-top: 30px;
+        font-family: $textFontBold;
+        font-size: 14px;
+        line-height: 140%;
+        color: $blueLight;
+        text-transform: capitalize;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+
+    .bottom-block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .id {
+        font-family: $textFontSemibold;
+        font-size: 14px;
+        line-height: 140%;
+        text-transform: capitalize;
+        color: $blue;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -20px 0 0 -20px;
+
+        &--item {
+            margin: 20px 0 0 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+
+    .total-forecast {
+        
+        .label {
+            font-family: $titleFont;
+            font-size: 32px;
+            line-height: 100%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+
+        .total {
+            margin-top: 5px;
+            font-family: $titleFont;
+            font-size: 64px;
+            line-height: 100%;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+    }
+
+    .btn {
+        padding: 6px 10px;
+    }
+}
+
+
+/*** Event create modal ***/
+
+.event-create {
+
+    .list-selected {
+        margin: 20px 0 0;
+        font-family: $textFontSemibold;
+        font-size: 18px;
+        line-height: 140%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: $blueLight;
+
+        &--item {
+            position: relative;
+            margin-left: 5px;
+
+            &::before {
+                content: "\\";
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+
+            &:first-child {
+                margin-left: 0;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    form {
+        margin-top: 25px;
+    }
+
+    .event-create-tab {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .checkbox-group {
+    
+        .checkbox {
+    
+            input:checked + .label {
+                background: $blue;
+                color: $white;
+            }
+        }
+    }
+
+    .button-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+
+    .prev {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .icon {
+            font-size: 18px;
+        }
+
+        .count {
+            margin-left: 20px;
+            font-family: $textFontSemibold;
+            font-size: 18px;
+            line-height: 140%;
+            color: $blueLight;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+    }
+}
+
+
 @import '_product.scss',
         '_blog.scss',
         '_cabinet.scss';

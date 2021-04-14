@@ -28,6 +28,16 @@
             }
         }
     }
+
+
+    /*** 1600 ***/
+
+    .projections-list {
+    
+        &--item {
+            max-width: calc(33.333% - 20px);
+        }
+    }
 }
 
 /******************************************************************/
@@ -277,6 +287,16 @@
     
         &--item {
             max-width: calc(33.333% - 20px);
+        }
+    }
+
+
+    /*** 1280 ***/
+
+    .projections-list {
+    
+        &--item {
+            max-width: calc(50% - 20px);
         }
     }
 }
@@ -1209,6 +1229,43 @@
             max-width: calc(50% - 20px);
         }
     }
+
+
+    /*** 768 ***/
+
+    .projections-list {
+    
+        &--item {
+            padding: 30px;
+
+            &.add-forecast {
+                min-height: 200px;
+            }
+        }
+
+        .row,
+        .description {
+            margin-top: 20px;
+        }
+
+        .title {
+            font-size: 18px;
+            line-height: 140%;
+        }
+
+        .total-forecast {
+
+            .label {
+                font-size: 24px;
+                line-height: 100%;
+            }
+
+            .total {
+                font-size: 42px;
+                line-height: 100%;
+            }
+        }
+    }
 }
 
 /******************************************************************/
@@ -1385,7 +1442,7 @@
     }
 
 
-    /***/
+    /*** 560 ***/
 
     .wrapper {
         padding-bottom: 0;
@@ -1938,6 +1995,18 @@
 
         .date {
             margin-top: 100px;
+        }
+    }
+
+
+    /*** 560 ***/
+
+    .projections-list {
+        margin: 20px 0 0 -10px;
+    
+        &--item {
+            max-width: calc(100% - 10px);
+            margin: 10px 0 0 10px;
         }
     }
 }
