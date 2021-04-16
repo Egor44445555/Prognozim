@@ -98,7 +98,7 @@
                     .col.wide
                         button(type="submit").btn.btn-red.btn-shadow Вывести
 
-.modal-wrap(id="addEvent").open
+.modal-wrap(id="addEvent")
     .overflow 
 
     .modal
@@ -109,67 +109,150 @@
 
             .event-create
                 .list-selected
-                    .list-selected--item Спорт
+                    span.list-selected--item Спорт
 
                 form(action="" id="eventCreateForm")
-                    .event-create-tab.active
-                        .checkbox-group(onclick="nextPrev(1)")
-                            label.checkbox(for="sport")
-                                input(type="radio" name="sport" id="sport")
+                    .event-create-tab
+                        .checkbox-group
+                            label.checkbox.next-event-create-tab(for="sport")
+                                input(type="radio" name="sport" value="Футбол" id="sport")
                                 .label Футбол
-                            label.checkbox(for="sport-2")
-                                input(type="radio" name="sport" id="sport-2")
+                            label.checkbox.next-event-create-tab(for="sport-2")
+                                input(type="radio" name="sport" value="Киберспорт" id="sport-2")
                                 .label Киберспорт
-                            label.checkbox(for="sport-3")
-                                input(type="radio" name="sport" id="sport-3")
+                            label.checkbox.next-event-create-tab(for="sport-3")
+                                input(type="radio" name="sport" value="Хоккей" id="sport-3")
                                 .label Хоккей
-                            label.checkbox(for="sport-4")
-                                input(type="radio" name="sport" id="sport-4")
+                            label.checkbox.next-event-create-tab(for="sport-4")
+                                input(type="radio" name="sport" value="Теннис" id="sport-4")
                                 .label Теннис
-                            label.checkbox(for="sport-5")
-                                input(type="radio" name="sport" id="sport-5")
+                            label.checkbox.next-event-create-tab(for="sport-5")
+                                input(type="radio" name="sport" value="UFC" id="sport-5")
                                 .label UFC
-                            label.checkbox(for="sport-6")
-                                input(type="radio" name="sport" id="sport-6")
+                            label.checkbox.next-event-create-tab(for="sport-6")
+                                input(type="radio" name="sport" value="Баскетбол" id="sport-6")
                                 .label Баскетбол 
-                            label.checkbox(for="sport-7")
-                                input(type="radio" name="sport" id="sport-7")
+                            label.checkbox.next-event-create-tab(for="sport-7")
+                                input(type="radio" name="sport" value="Волейбол" id="sport-7")
                                 .label Волейбол
-                            label.checkbox(for="sport-8")
-                                input(type="radio" name="sport" id="sport-8")
+                            label.checkbox.next-event-create-tab(for="sport-8")
+                                input(type="radio" name="sport" value="Бадминтон" id="sport-8")
                                 .label Бадминтон
-                            label.checkbox(for="sport-9")
-                                input(type="radio" name="sport" id="sport-9")
+                            label.checkbox.next-event-create-tab(for="sport-9")
+                                input(type="radio" name="sport" value="Гандбол" id="sport-9")
                                 .label Гандбол
-                            label.checkbox(for="sport-10")
-                                input(type="radio" name="sport" id="sport-10")
+                            label.checkbox.next-event-create-tab(for="sport-10")
+                                input(type="radio" name="sport" value="Настольный тенис" id="sport-10")
                                 .label Настольный тенис
-                            label.checkbox(for="sport-11")
-                                input(type="radio" name="sport" id="sport-11")
+                            label.checkbox.next-event-create-tab(for="sport-11")
+                                input(type="radio" name="sport" value="Бокс" id="sport-11")
                                 .label Бокс
-                            label.checkbox(for="sport-12")
-                                input(type="radio" name="sport" id="sport-12")
+                            label.checkbox.next-event-create-tab(for="sport-12")
+                                input(type="radio" name="sport" value="ММА" id="sport-12")
                                 .label ММА 
-                            label.checkbox(for="sport-13")
-                                input(type="radio" name="sport" id="sport-13")
+                            label.checkbox.next-event-create-tab(for="sport-13")
+                                input(type="radio" name="sport" value="Американский футбол" id="sport-13")
                                 .label Американский футбол
-                            label.checkbox(for="sport-14")
-                                input(type="radio" name="sport" id="sport-14")
+                            label.checkbox.next-event-create-tab(for="sport-14")
+                                input(type="radio" name="sport" value="Бейсбол" id="sport-14")
                                 .label Бейсбол
                     
-                    .event-create-tab 2
-                    .event-create-tab 3
-                    .event-create-tab 4
+                    .event-create-tab
+                        .checkbox-group
+                            label.checkbox.next-event-create-tab(for="country")
+                                input(type="radio" name="country" value="Россия" id="country")
+                                .label Россия
+                            label.checkbox.next-event-create-tab(for="country-2")
+                                input(type="radio" name="country" value="Германия" id="country-2")
+                                .label Германия
+                    .event-create-tab
+                        .checkbox-group
+                            label.checkbox.next-event-create-tab(for="league")
+                                input(type="radio" name="league" value="ВХЛ" id="league")
+                                .label ВХЛ
+                            label.checkbox.next-event-create-tab(for="league-2")
+                                input(type="radio" name="league" value="Париматч-МХЛ" id="league-2")
+                                .label Париматч-МХЛ
+                    .event-create-tab
+                        .checkbox-group
+                            label.checkbox.next-event-create-tab.wide(for="date")
+                                input(type="radio" name="date" value="Лада - Югра 23/01 12:00" id="date")
+                                .label
+                                    .left-block Лада - Югра
+                                    .right-block 23/01 12:00
+                            label.checkbox.next-event-create-tab.wide(for="date-2")
+                                input(type="radio" name="date" value="Ижсталь - Химик 23/01 12:00" id="date-2")
+                                .label
+                                    .left-block Ижсталь - Химик
+                                    .right-block 23/01 12:00
+                            label.checkbox.next-event-create-tab.wide(for="date-3")
+                                input(type="radio" name="date" value="Торос - Динамо СПБ 23/01 12:00" id="date-3")
+                                .label
+                                    .left-block Торос - Динамо СПБ
+                                    .right-block 23/01 12:00
+                    .event-create-tab
+                        .checkbox-group
+                            label.checkbox.next-event-create-tab.wide(for="total")
+                                input(type="radio" name="total" value="Победитель с уч. буллитов. Полное время" id="total")
+                                .label
+                                    .left-block Победитель с уч. буллитов. Полное время
+                            label.checkbox.next-event-create-tab.wide(for="total-2")
+                                input(type="radio" name="total" value="Победитель. Основное время" id="total-2")
+                                .label
+                                    .left-block Победитель. Основное время
+                    .event-create-tab
+                        .checkbox-group
+                            label.checkbox.next-event-create-tab.big(for="num")
+                                input(type="radio" name="num" value="П1 (3.75)" id="num")
+                                .label П1 (3.75)
+                            label.checkbox.next-event-create-tab.big(for="num-2")
+                                input(type="radio" name="num" value="П2 (1.83)" id="num-2")
+                                .label П2 (1.83)
 
                     .button-wrap
-                        .prev(id="prevEventCreateBtn")
+                        .prev-event-create-tab
                             .icon.icon-arrow-back
                             .count
-                                span 0
+                                span.current 0
                                 | /
-                                span 6
+                                span.total 0
+                        
                         button(type="submit").btn.btn-red.btn-shadow Добавить
 
+.modal-wrap(id="addForecast").open
+    .overflow 
 
+    .modal
+        .wrap
+            .title-wrap
+                h2.title Создать прогноз
+                .close
+
+            .forecast-create
+                form.form(action="")
+                    .row
+                        .col.wide
+                            .input-wrap
+                                textarea(name="rationale-forecast" require).textarea
+                                .label 
+                                    span Обоснование прогноза*
+
+                    .bet-amount
+                        .title Сумма ставки
+                        .sub-title (не более 10% от банка)
+
+                        .total 15 564 ₽
+
+                        .range
+                            input.js-range-slider(type="text")
+
+                    .button-wrap
+                        label.checkbox(for="paid-forecast")
+                            input(type="checkbox" id="paid-forecast")
+                            .icon
+                                .icon-check
+                            .label Платный прогноз
+
+                        button(type="submit").btn.btn-red.btn-shadow Создать
 
 

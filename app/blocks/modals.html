@@ -129,7 +129,7 @@
     </div>
   </div>
 </div>
-<div id="addEvent" class="modal-wrap open">
+<div id="addEvent" class="modal-wrap">
   <div class="overflow"> </div>
   <div class="modal">
     <div class="wrap">
@@ -138,79 +138,192 @@
         <div class="close"></div>
       </div>
       <div class="event-create">
-        <div class="list-selected">
-          <div class="list-selected--item">Спорт</div>
-        </div>
+        <div class="list-selected"><span class="list-selected--item">Спорт</span></div>
         <form action="" id="eventCreateForm">
-          <div class="event-create-tab active">
-            <div onclick="nextPrev(1)" class="checkbox-group">
-              <label for="sport" class="checkbox">
-                <input type="radio" name="sport" id="sport"/>
+          <div class="event-create-tab">
+            <div class="checkbox-group">
+              <label for="sport" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Футбол" id="sport"/>
                 <div class="label">Футбол</div>
               </label>
-              <label for="sport-2" class="checkbox">
-                <input type="radio" name="sport" id="sport-2"/>
+              <label for="sport-2" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Киберспорт" id="sport-2"/>
                 <div class="label">Киберспорт</div>
               </label>
-              <label for="sport-3" class="checkbox">
-                <input type="radio" name="sport" id="sport-3"/>
+              <label for="sport-3" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Хоккей" id="sport-3"/>
                 <div class="label">Хоккей</div>
               </label>
-              <label for="sport-4" class="checkbox">
-                <input type="radio" name="sport" id="sport-4"/>
+              <label for="sport-4" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Теннис" id="sport-4"/>
                 <div class="label">Теннис</div>
               </label>
-              <label for="sport-5" class="checkbox">
-                <input type="radio" name="sport" id="sport-5"/>
+              <label for="sport-5" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="UFC" id="sport-5"/>
                 <div class="label">UFC</div>
               </label>
-              <label for="sport-6" class="checkbox">
-                <input type="radio" name="sport" id="sport-6"/>
+              <label for="sport-6" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Баскетбол" id="sport-6"/>
                 <div class="label">Баскетбол </div>
               </label>
-              <label for="sport-7" class="checkbox">
-                <input type="radio" name="sport" id="sport-7"/>
+              <label for="sport-7" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Волейбол" id="sport-7"/>
                 <div class="label">Волейбол</div>
               </label>
-              <label for="sport-8" class="checkbox">
-                <input type="radio" name="sport" id="sport-8"/>
+              <label for="sport-8" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Бадминтон" id="sport-8"/>
                 <div class="label">Бадминтон</div>
               </label>
-              <label for="sport-9" class="checkbox">
-                <input type="radio" name="sport" id="sport-9"/>
+              <label for="sport-9" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Гандбол" id="sport-9"/>
                 <div class="label">Гандбол</div>
               </label>
-              <label for="sport-10" class="checkbox">
-                <input type="radio" name="sport" id="sport-10"/>
+              <label for="sport-10" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Настольный тенис" id="sport-10"/>
                 <div class="label">Настольный тенис</div>
               </label>
-              <label for="sport-11" class="checkbox">
-                <input type="radio" name="sport" id="sport-11"/>
+              <label for="sport-11" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Бокс" id="sport-11"/>
                 <div class="label">Бокс</div>
               </label>
-              <label for="sport-12" class="checkbox">
-                <input type="radio" name="sport" id="sport-12"/>
+              <label for="sport-12" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="ММА" id="sport-12"/>
                 <div class="label">ММА </div>
               </label>
-              <label for="sport-13" class="checkbox">
-                <input type="radio" name="sport" id="sport-13"/>
+              <label for="sport-13" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Американский футбол" id="sport-13"/>
                 <div class="label">Американский футбол</div>
               </label>
-              <label for="sport-14" class="checkbox">
-                <input type="radio" name="sport" id="sport-14"/>
+              <label for="sport-14" class="checkbox next-event-create-tab">
+                <input type="radio" name="sport" value="Бейсбол" id="sport-14"/>
                 <div class="label">Бейсбол</div>
               </label>
             </div>
           </div>
-          <div class="event-create-tab">2</div>
-          <div class="event-create-tab">3</div>
-          <div class="event-create-tab">4</div>
+          <div class="event-create-tab">
+            <div class="checkbox-group">
+              <label for="country" class="checkbox next-event-create-tab">
+                <input type="radio" name="country" value="Россия" id="country"/>
+                <div class="label">Россия</div>
+              </label>
+              <label for="country-2" class="checkbox next-event-create-tab">
+                <input type="radio" name="country" value="Германия" id="country-2"/>
+                <div class="label">Германия</div>
+              </label>
+            </div>
+          </div>
+          <div class="event-create-tab">
+            <div class="checkbox-group">
+              <label for="league" class="checkbox next-event-create-tab">
+                <input type="radio" name="league" value="ВХЛ" id="league"/>
+                <div class="label">ВХЛ</div>
+              </label>
+              <label for="league-2" class="checkbox next-event-create-tab">
+                <input type="radio" name="league" value="Париматч-МХЛ" id="league-2"/>
+                <div class="label">Париматч-МХЛ</div>
+              </label>
+            </div>
+          </div>
+          <div class="event-create-tab">
+            <div class="checkbox-group">
+              <label for="date" class="checkbox next-event-create-tab wide">
+                <input type="radio" name="date" value="Лада - Югра 23/01 12:00" id="date"/>
+                <div class="label">
+                  <div class="left-block">Лада - Югра</div>
+                  <div class="right-block">23/01 12:00</div>
+                </div>
+              </label>
+              <label for="date-2" class="checkbox next-event-create-tab wide">
+                <input type="radio" name="date" value="Ижсталь - Химик 23/01 12:00" id="date-2"/>
+                <div class="label">
+                  <div class="left-block">Ижсталь - Химик</div>
+                  <div class="right-block">23/01 12:00</div>
+                </div>
+              </label>
+              <label for="date-3" class="checkbox next-event-create-tab wide">
+                <input type="radio" name="date" value="Торос - Динамо СПБ 23/01 12:00" id="date-3"/>
+                <div class="label">
+                  <div class="left-block">Торос - Динамо СПБ</div>
+                  <div class="right-block">23/01 12:00</div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="event-create-tab">
+            <div class="checkbox-group">
+              <label for="total" class="checkbox next-event-create-tab wide">
+                <input type="radio" name="total" value="Победитель с уч. буллитов. Полное время" id="total"/>
+                <div class="label">
+                  <div class="left-block">Победитель с уч. буллитов. Полное время</div>
+                </div>
+              </label>
+              <label for="total-2" class="checkbox next-event-create-tab wide">
+                <input type="radio" name="total" value="Победитель. Основное время" id="total-2"/>
+                <div class="label">
+                  <div class="left-block">Победитель. Основное время</div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="event-create-tab">
+            <div class="checkbox-group">
+              <label for="num" class="checkbox next-event-create-tab big">
+                <input type="radio" name="num" value="П1 (3.75)" id="num"/>
+                <div class="label">П1 (3.75)</div>
+              </label>
+              <label for="num-2" class="checkbox next-event-create-tab big">
+                <input type="radio" name="num" value="П2 (1.83)" id="num-2"/>
+                <div class="label">П2 (1.83)</div>
+              </label>
+            </div>
+          </div>
           <div class="button-wrap">
-            <div id="prevEventCreateBtn" class="prev">
+            <div class="prev-event-create-tab">
               <div class="icon icon-arrow-back"></div>
-              <div class="count"><span>0</span>/<span>6</span></div>
+              <div class="count"><span class="current">0</span>/<span class="total">0</span></div>
             </div>
             <button type="submit" class="btn btn-red btn-shadow">Добавить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="addForecast" class="modal-wrap open">
+  <div class="overflow"> </div>
+  <div class="modal">
+    <div class="wrap">
+      <div class="title-wrap">
+        <h2 class="title">Создать прогноз</h2>
+        <div class="close"></div>
+      </div>
+      <div class="forecast-create">
+        <form action="" class="form">
+          <div class="row">
+            <div class="col wide">
+              <div class="input-wrap">
+                <textarea name="rationale-forecast" require="require" class="textarea"></textarea>
+                <div class="label"> <span>Обоснование прогноза*</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="bet-amount">
+            <div class="title">Сумма ставки</div>
+            <div class="sub-title">(не более 10% от банка)</div>
+            <div class="total">15 564 ₽</div>
+            <div class="range">
+              <input type="text" class="js-range-slider"/>
+            </div>
+          </div>
+          <div class="button-wrap">
+            <label for="paid-forecast" class="checkbox">
+              <input type="checkbox" id="paid-forecast"/>
+              <div class="icon">
+                <div class="icon-check"></div>
+              </div>
+              <div class="label">Платный прогноз</div>
+            </label>
+            <button type="submit" class="btn btn-red btn-shadow">Создать</button>
           </div>
         </form>
       </div>

@@ -2696,7 +2696,21 @@
     }
 
     form {
-        margin-top: 25px;
+        margin: 25px 0 0;
+
+        &.first-tab {
+
+            .button-wrap {
+                display: none;
+            }
+        }
+
+        &.last-tab {
+            
+            .btn {
+                display: inline-block;
+            }
+        }
     }
 
     .event-create-tab {
@@ -2724,7 +2738,7 @@
         margin-top: 50px;
     }
 
-    .prev {
+    .prev-event-create-tab {
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -2740,6 +2754,74 @@
             line-height: 140%;
             color: $blueLight;
             font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+    }
+
+    .btn {
+        display: none;
+        width: 100%;
+        max-width: 238px;
+    }
+}
+
+
+/*** Forecast create modal ***/
+
+.forecast-create {
+    margin: 50px 0 0;
+
+    textarea {
+        height: 330px;
+    }
+
+    .bet-amount {
+        margin: 30px 0 0;
+        text-align: center;
+
+        .title {
+            font-size: 24px;
+            line-height: 140%;
+        }
+
+        .sub-title {
+            font-family: $textFontMedium;
+            font-size: 18px;
+            line-height: 140%;
+            color: $blueLight;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+
+        .total {
+            margin-top: 20px;
+            font-family: $titleFont;
+            font-size: 36px;
+            line-height: 140%;
+        }
+
+        .range {
+            margin-top: 20px;
+        }
+    }
+
+    .button-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .checkbox {
+
+            .icon {
+                border-color: $borderColor;
+            }
+
+            input:checked + .icon {
+                border-color: $red;
+            }
+            
+            .label {
+                color: $blueDark;
+            }
         }
     }
 }

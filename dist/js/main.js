@@ -404,6 +404,78 @@ $(document).ready(function() {
             .text($(this).text())
             .addClass('added')
     });
+
+
+    /*** Step form ***/
+
+    var currentTab = 0;
+    showTab(currentTab);
+
+    function showTab(n) {
+        var x = document.getElementsByClassName("event-create-tab");
+
+        x[n].style.display = "block";
+
+        if (n == 0) {
+            document.getElementById("eventCreateForm").classList.add('first-tab');
+        } else {
+            document.getElementById("eventCreateForm").classList.remove('first-tab');
+        }
+    
+        fixStepIndicator(n);
+    }
+
+    function nextPrev(n) {
+        var x = document.getElementsByClassName("event-create-tab");
+
+        console.log('qwe')
+
+        if (n == 1 && !validateForm()) return false;
+
+        x[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+
+        if (currentTab >= x.length) {
+            document.getElementById("eventCreateForm").submit();
+            return false;
+        }
+
+        showTab(currentTab);
+    }
+
+    $(document).on('click', '.next-event-create-tab', function() {
+        let step = $(this);
+        console.log(step.data('data-tab'))
+    })
+
+    function validateForm() {
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("event-create-tab");
+        y = x[currentTab].getElementsByTagName("input");
+
+        for (i = 0; i < y.length; i++) {
+            if (y[i].value == "") {
+            y[i].className += " invalid";
+            valid = false;
+            }
+        }
+        
+        if (valid) {
+            console.log('finish')
+        }
+
+        return valid;
+    }
+
+    function fixStepIndicator(n) {
+        var i, x = document.getElementsByClassName("event-create-tab");
+
+        for (i = 0; i < x.length; i++) {
+            x[i].className = x[i].className.replace(" active", "");
+        }
+        
+        x[n].className += " active";
+    }
 });
 
 

@@ -334,6 +334,20 @@ $(document).ready(function() {
     });
 
 
+    /*** Range ***/
+
+    $(".js-range-slider").ionRangeSlider({
+        grid: true,
+        values: [1 + '%', 2 + '%', 3 + '%', 4 + '%', 5 + '%', 6 + '%', 7 + '%', 8 + '%', 9 + '%', 10 + '%'],
+        onStart: function(data) {
+            $(".bet-amount-value").text(data.from + 1 + '%');
+        },
+        onChange: function(data) {
+            $(".bet-amount-value").text(data.from + 1 + '%');
+        }
+    });
+
+
     /*** Custom select ***/
 
     $('.custom-select-wrap').find('select').val('');
@@ -406,7 +420,6 @@ $(document).ready(function() {
     });
 
 
-
     /*** Step form ***/
 
     var currentTab = 0;
@@ -415,61 +428,73 @@ $(document).ready(function() {
     function showTab(n) {
         var x = document.getElementsByClassName("event-create-tab");
 
-        x[n].style.display = "block";
+        if (currentTab !== x.length) {
+            x[n].classList.add('active');
+        }
 
         if (n == 0) {
             document.getElementById("eventCreateForm").classList.add('first-tab');
         } else {
             document.getElementById("eventCreateForm").classList.remove('first-tab');
         }
-    
-        fixStepIndicator(n);
+
+        if (n == x.length - 1) {
+            document.getElementById("eventCreateForm").classList.add('last-tab');
+        } else {
+            document.getElementById("eventCreateForm").classList.remove('last-tab');
+        }
+
+        $('.event-create .current').text(n + 1);
+        $('.event-create .total').text(x.length);
     }
 
     function nextPrev(n) {
         var x = document.getElementsByClassName("event-create-tab");
 
-        if (n == 1 && !validateForm()) return false;
+        if (x[currentTab]) {
+            x[currentTab].classList.remove('active');
+        }
 
-        x[currentTab].style.display = "none";
-        currentTab = currentTab + n;
-
+        if(n == 1) {
+            currentTab = currentTab + Number(n);
+        } else {
+            currentTab = currentTab -1;
+        }
+        
         if (currentTab >= x.length) {
-            document.getElementById("eventCreateForm").submit();
             return false;
         }
 
         showTab(currentTab);
     }
 
-    function validateForm() {
-        var x, y, i, valid = true;
-        x = document.getElementsByClassName("event-create-tab");
-        y = x[currentTab].getElementsByTagName("input");
+    $('.next-event-create-tab input').on('click', function() {
+        var template,
+            text = $(this).val(),
+            selectedItems = document.getElementsByClassName("list-selected--item"),
+            x = document.getElementsByClassName("event-create-tab");
 
-        for (i = 0; i < y.length; i++) {
-            if (y[i].value == "") {
-            y[i].className += " invalid";
-            valid = false;
-            }
-        }
-        
-        if (valid) {
-            console.log('finish')
+        if(currentTab + 1 == selectedItems.length) {
+
+            $('.event-create .list-selected--item').each(function () {
+                template = '<span class="list-selected--item">' + text + '</span>';
+            });
         }
 
-        return valid;
-    }
-
-    function fixStepIndicator(n) {
-        var i, x = document.getElementsByClassName("event-create-tab");
-
-        for (i = 0; i < x.length; i++) {
-            x[i].className = x[i].className.replace(" active", "");
+        if(selectedItems[currentTab + 1]) {
+            selectedItems[currentTab + 1].innerHTML = text;
         }
-        
-        x[n].className += " active";
-    }
+
+        $('.event-create .list-selected').append(template);
+
+        if (currentTab !== x.length - 1) {
+            nextPrev(1);
+        }        
+    })
+
+    $('.prev-event-create-tab').on('click', function() {
+        nextPrev(-1);
+    })
 });
 
 

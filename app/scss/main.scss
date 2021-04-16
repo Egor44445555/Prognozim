@@ -350,7 +350,7 @@ a {
     }
 
     &-shadow {
-        min-height: 54px;
+        min-height: 50px;
         box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
     }
 
@@ -629,6 +629,22 @@ input[type="password"] {
         margin-top: 0;
     }
 
+    &.wide {
+        
+        .label {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &.big {
+        
+        .label {
+            height: 90px;
+            line-height: 75px;
+        }
+    }
+
     label {
         min-width: 34px;
         cursor: pointer;
@@ -681,6 +697,7 @@ input[type="password"] {
     .label {
         font-family: $textFontBold;
         font-size: 13px;
+        line-height: 25px;
         color: $white;
     }
 }
@@ -698,6 +715,10 @@ input[type="password"] {
         flex: 100%;
         max-width: calc(50% - 10px);
         margin: 10px 0 0 10px;
+
+        &.wide {
+            max-width: calc(100% - 10px);
+        }
 
         input:checked + .label {
             color: $red;
@@ -1457,6 +1478,55 @@ a.ui-button:active, .ui-button:active,
             margin-top: 0;
         }
     }
+}
+
+/*** Range ***/
+
+.irs--flat {
+
+    .irs-min,
+    .irs-max {
+        display: none;
+    }
+
+    .irs-bar {
+        display: none;
+    }
+
+    .irs-line {
+        top: 11px;
+        height: 8px;
+        background-color: $blueLighterOther;
+        border-radius: 10px;
+    }
+
+    .irs-handle {
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+    }
+
+    .irs-handle>i:first-child {
+        width: 100%;
+        height: 100%;
+        transform: translateX(-50%);
+        background-color: $red;
+        border-radius: 5px;
+        box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .irs-grid-pol {
+        display: none;
+    }
+}
+
+.irs-grid-text {
+    font-size: 18px;
+    line-height: 140%;
+    padding: 0;
+    color: $blueLight;
+    font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 
