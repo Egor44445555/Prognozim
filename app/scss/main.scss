@@ -1548,5 +1548,34 @@ a.ui-button:active, .ui-button:active,
 }
 
 
+
+/*** Scrollbar ***/
+
+.mCSB_scrollTools {
+
+    .mCSB_draggerRail {
+        background-color: $blueLighterBorder;
+    }
+    
+    .mCSB_dragger {
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.mCSB_dragger_onDrag {
+
+            .mCSB_dragger_bar {
+                background: $themeColor;
+            }
+        }
+
+        .mCSB_dragger_bar {
+            width: 2px;
+            background: $themeColor;
+        }
+    }
+}
+
+
 @import '_header.scss',
         '_footer.scss';

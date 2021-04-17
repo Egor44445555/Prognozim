@@ -5,6 +5,8 @@ $(document).ready(function() {
         searchFormInput = $(".search-form input[type='text']"),
         searchFormClear = $(".search-form .remove");
 
+    $(".left-panel .wrap").mCustomScrollbar();
+
     window.onresize = function() {
         if ($('.product-list').height() < 3900) {
             $('.product-list-wrap').addClass('medium-content');
