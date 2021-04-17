@@ -326,6 +326,7 @@
     
     .btn {
         width: 100%;
+        font-size: 14px;
     }
 }
 
@@ -656,6 +657,7 @@
         input[type=text] {
             padding: 10px 46px;
             background: $white;
+            color: $blueDark;
         }
 
         .remove {

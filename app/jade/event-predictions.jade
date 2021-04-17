@@ -1,5 +1,5 @@
 html
-    title Прогноз #265 от Иван Иванов 21 октября 13:08 2020 
+    title Прогнозы на событие Бавария - Атлетико Мадрид
     include ./blocks/head.jade
 
     body
@@ -8,7 +8,7 @@ html
         include ./blocks/left-panel.jade
         
         .wrapper
-            .first-image-bg.mt-n-m-40
+            .first-image-bg
                 img(src="../images/hero-image-13.jpg", alt="").desktop
                 img(src="../images/hero-image-mobile-13.jpg", alt="").mobile
 
@@ -16,12 +16,12 @@ html
                 .container-block
                     .wrap
                         a(href="/blog.html").back-link.icon-arrow-back
-                        .title-wrap
+                        .title-wrap.mt-t-30
                             .max-550
                                 h1.title Прогнозы на событие Бавария - Атлетико Мадрид
 
                         .mt-m-200.text-center-t
-                            a(href="#").btn.btn-red Добавить прогноз 
+                            a(href="#addForecast").btn.btn-red.btn-small.modal-btn Добавить прогноз
 
             .container-block
                 .mt-190.mt-t-0

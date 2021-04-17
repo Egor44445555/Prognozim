@@ -561,6 +561,10 @@
         margin-top: 40px !important;
     }
 
+    .mt-t-50 {
+        margin-top: 50px !important;
+    }
+
     .mt-t-60 {
         margin-top: 60px !important;
     }
@@ -659,6 +663,10 @@
     .left-panel + .wrapper .first-image-bg {
         left: 0;
         max-width: 100%;
+    }
+
+    .first-image-bg.desktop {
+        display: none;
     }
 
 
@@ -1196,7 +1204,7 @@
 
         .btn {
             flex: 1;
-            padding: 6px 10px;
+            padding: 0 10px;
             font-size: 14px;
         }
     }
@@ -1264,6 +1272,35 @@
                 font-size: 42px;
                 line-height: 100%;
             }
+        }
+    }
+
+
+    /*** 768 ***/
+
+    .event-create {
+
+        .list-selected {
+            font-size: 14px;
+
+            &--item {
+                display: inline-block;
+            }
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .prev-event-create-tab {
+            flex: 1;
+            max-width: 116px;
+            padding-right: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 6px 10px;
         }
     }
 }
@@ -1364,6 +1401,10 @@
                 margin-top: 0;
             }
         }
+
+        .btn {
+            max-width: 320px;
+        }
     }
 
     .uploader-avatar {
@@ -1420,7 +1461,7 @@
     }
 
 
-    /*** Modal ***/
+    /*** 560 Modal ***/
 
     .modal {
         padding: 20px;
@@ -1472,6 +1513,13 @@
     .first-image-bg {
         top: 0;
         overflow: hidden;
+
+        &.mobile-fill {
+
+            img {
+                margin-right: -80px;
+            }
+        }
 
         &.right-mobile {
             top: 40px;
@@ -1612,6 +1660,7 @@
         table {
 
             .info {
+                padding: 10px;
                 font-size: 12px;
             }
         }
@@ -1849,7 +1898,7 @@
     }
     
     .advantages {
-        margin: 10px 0 0;
+        margin: 25px 0 0;
 
         &--item {
             max-width: 100%;
@@ -2008,5 +2057,62 @@
             max-width: calc(100% - 10px);
             margin: 10px 0 0 10px;
         }
+    }
+
+
+    /*** 560 ***/
+
+    .event-create {
+
+        .checkbox-group .checkbox {
+            max-width: calc(100% - 10px);
+        }
+    }
+
+
+    /*** 560 ***/
+
+    .forecast-create {
+        margin-top: 30px;
+
+        textarea {
+            height: 200px;
+        }
+        
+        .form {
+
+            .btn {
+                max-width: 100%;
+                margin-top: 20px;
+            }      
+        }
+
+        .bet-amount {
+
+            .title {
+                font-size: 20px;
+            }
+
+            .sub-title {
+                font-size: 14px;
+            }
+
+            .total {
+                font-size: 28px;
+            }
+        }
+
+        .button-wrap {
+            flex-direction: column;
+            align-items: center;
+        }  
+    }
+
+    .irs--flat.irs-with-grid {
+        height: 50px;
+    }
+
+    .irs-grid-text {
+        font-size: 12px;
     }
 }

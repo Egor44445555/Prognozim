@@ -74,6 +74,7 @@
     }
 
     .copyright {
+        font-family: $textFontSemibold;
         font-size: 16px;
         line-height: 264%;
         text-align: right;
@@ -104,7 +105,6 @@
 
         .btn {
             width: auto;
-            max-width: 186px;
             margin-top: 84px;
         }
     }
@@ -283,9 +283,15 @@
 
             .description {
                 text-align: center;
+
+                p {
+                    font-size: 16px;
+                    line-height: 160%;
+                }
             }
 
             .btn {
+                display: block;
                 max-width: 290px;
                 margin-left: auto;
                 margin-right: auto;
@@ -305,7 +311,7 @@
 @media (max-width: 561px) {
 
     .footer-wrap {
-        margin-top: 200px;
+        margin-top: 120px;
         padding-top: 70px;
     }
 

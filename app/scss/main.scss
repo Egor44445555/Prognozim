@@ -71,6 +71,10 @@ body {
     margin-top: 0 !important;
 }
 
+.mt-5 {
+    margin-top: 5px !important;
+}
+
 .mt-10 {
     margin-top: 10px !important;
 }
@@ -323,12 +327,12 @@ a {
     justify-content: center;
     min-height: 40px;
     width: auto;
-    padding: 6px 36px;
+    padding: 0 36px;
     background: $themeColor;
     color: $white;
     font-family: $textFontBold;
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 40px;
     font-feature-settings: 'pnum' on, 'lnum' on;
     text-align: center;
     border: 0;
@@ -352,6 +356,12 @@ a {
     &-shadow {
         min-height: 50px;
         box-shadow: 10px 20px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &-small {
+        font-family: $textFontSemibold;
+        padding: 0 17px;
+        font-size: 14px;
     }
 
     &-medium {
@@ -479,8 +489,9 @@ a {
         }
 
         .label {
+            // padding-top: 5px;
             font-size: 12px;
-            line-height: 25px;
+            line-height: 140%;
             color: $blueDark;
         }
     }
@@ -715,23 +726,30 @@ input[type="password"] {
         flex: 100%;
         max-width: calc(50% - 10px);
         margin: 10px 0 0 10px;
+        text-align: center;
 
         &.wide {
             max-width: calc(100% - 10px);
         }
 
         input:checked + .label {
-            color: $red;
+            background: $red;
+            color: $white;
         }
 
         .label {
             width: 100%;
+            justify-content: center;
             padding: 8px 15px;
             background: $checkboxBg;
             color: $blueLight;
             font-feature-settings: 'pnum' on, 'lnum' on;
             border-radius: 5px;
             cursor: pointer;
+        }
+        
+        .label:hover {
+            color: $red;
         }
     }
 

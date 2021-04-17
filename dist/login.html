@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./css/jquery-ui.css"/>
+    <link rel="stylesheet" href="./css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" href="./css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/main.css"/>
     <link rel="stylesheet" href="./css/content.css"/>
@@ -27,10 +29,10 @@
               </div>
             </form>
           </div><a href="/" class="logo"><img src="images/logo.svg"/></a>
-          <div class="menu-header"><a href="/forecasts.html" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="/top-rates.html" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="/experts.html" class="menu-header--item"><span class="text">Эксперты</span></a><a href="#" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a></div>
+          <div class="menu-header"><a href="/forecasts.html" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="/top-rates.html" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="/experts.html" class="menu-header--item"><span class="text">Эксперты</span></a><a href="/how-make-money.html" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a></div>
         </div>
         <div class="right-block">
-          <div class="icon-list"><a href="#" class="icon-list--item"><span class="icon icon-plus"></span><span class="text">Мой Прогноз</span></a></div>
+          <div class="icon-list"><a href="/cabinet-my-prediction.html" class="icon-list--item"><span class="icon icon-plus-red"></span><span class="text">Мой Прогноз</span></a></div>
           <div class="btn-wrap"><a href="/login.html" class="btn btn-red">Вход</a><a href="/registration.html" class="btn">Регистрация</a></div>
           <div class="menu-btn"><span></span><span></span><span></span></div>
         </div>
@@ -56,7 +58,7 @@
       <div class="close"></div>
       <div class="modal-menu">
         <div class="menu-header-wrap">
-          <div class="menu-header"><a href="/forecasts.html" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="/top-rates.html" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="/experts.html" class="menu-header--item"><span class="text">Эксперты</span></a><a href="#" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a><a href="#" class="menu-header--item"><span class="btn btn-red">Мой прогноз</span></a></div>
+          <div class="menu-header"><a href="/forecasts.html" class="menu-header--item active"><span class="text">Прогнозы</span></a><a href="/top-rates.html" class="menu-header--item"><span class="text">Топ Ставок</span></a><a href="/experts.html" class="menu-header--item"><span class="text">Эксперты</span></a><a href="/how-make-money.html" class="menu-header--item"><span class="text">Заработок</span></a><a href="/faq.html" class="menu-header--item"><span class="text">FAQ</span></a><a href="/blog.html" class="menu-header--item"><span class="text">Блог</span></a><a href="/cabinet-my-prediction.html" class="menu-header--item"><span class="btn btn-red">Мой прогноз</span></a></div>
         </div>
       </div>
     </div>
@@ -79,7 +81,7 @@
                 <div class="h1 sub-title">личный кабинет</div>
               </div>
             </div>
-            <form action="#" class="form">
+            <form action="/success-form.html" class="form">
               <div class="row"> 
                 <div class="col wide"> 
                   <div class="input-wrap"> 
@@ -90,19 +92,19 @@
               </div>
               <div class="row"> 
                 <div class="col wide">
-                  <div class="input-wrap">
+                  <div class="input-wrap password-wrap">
                     <input type="password" placeholder="Ваш пароль" class="input"/>
                     <div class="label"> <span>Пароль</span></div>
                     <div class="eye icon-eye"></div>
                   </div>
-                  <label for="check-17" class="checkbox">
+                  <label for="check-17" class="checkbox remember">
                     <input type="checkbox" id="check-17"/>
                     <div class="icon">
                       <div class="icon-check"></div>
                     </div>
                     <div class="label">Запомнить меня</div>
                   </label>
-                  <button type="submit" class="btn btn-red btn-shadow">Вход</button><a href="/password-recovery.html" class="link"><span>Забыли пароль?</span></a>
+                  <button type="submit" class="btn btn-red btn-shadow mt-20">Вход</button>
                 </div>
               </div>
             </form>
@@ -111,7 +113,15 @@
       </div>
     </div>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
     <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="js/core.js"></script>
+    <script type="text/javascript" src="js/charts.js"></script>
+    <script type="text/javascript" src="js/animated.js"></script>
+    <script type="text/javascript" src="js/ru.js"></script>
+    <script type="text/javascript" src="js/dataloader.min.js"></script>
+    <script type="text/javascript" src="js/graph.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

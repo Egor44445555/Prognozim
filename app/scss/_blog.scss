@@ -24,13 +24,6 @@
 
 .blog-detail-page {
 
-    .first-image-bg {
-        
-        img {
-            min-height: 0;
-        }
-    }
-
     .hero-block {
 
         .wrap {
@@ -215,7 +208,7 @@
                 max-width: 600px;
                 min-height: 0;
                 float: right;
-                margin: 30px -150px 0 0;
+                margin-right: -150px;
             }
         }
 
@@ -273,6 +266,10 @@
 
         .first-image-bg {
             top: 0;
+
+            img {
+                margin-right: 0;
+            }
         }
     }
 

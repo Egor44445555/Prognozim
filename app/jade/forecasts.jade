@@ -9,7 +9,8 @@ html
         
         .wrapper
             .first-image-bg
-                img(src="../images/hero-image-10.jpg", alt="")
+                img(src="../images/hero-image-10.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-10.jpg", alt="").mobile
 
             .hero-block
                 .container-block
@@ -17,7 +18,7 @@ html
                         .title-wrap
                             h1.title.big-title Прогнозы
 
-                            a(href="#").btn.btn-red Добавить прогноз
+                            a(href="#addForecast").btn.btn-red.modal-btn Добавить прогноз
 
             .container-block
                 .mt-160.mt-t-0

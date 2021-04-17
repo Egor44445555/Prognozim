@@ -8,7 +8,7 @@ html
         include ./blocks/left-panel.jade
         
         .wrapper
-            .first-image-bg.mt-n-m-40
+            .first-image-bg
                 img(src="../images/hero-image-11.jpg", alt="").desktop
                 img(src="../images/hero-image-mobile-11.jpg", alt="").mobile
 
@@ -25,7 +25,7 @@ html
                     .column-wrap
                         .column.wide
                             .forcast-block
-                                table
+                                table.desktop
                                     tr
                                         th Спорт
                                         th.text-center Игра
@@ -75,6 +75,10 @@ html
                                     
                                     .category футбол \ Групповой этап
                                     .title Краснодар - Спартак Москва
+
+                                    .bottom-block
+                                        span.rate ставка 1.45
+                                        span.coefficient КФ 1.45
                                     
                                     .total
                                         .label Общий КФ 1.45

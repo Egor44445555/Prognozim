@@ -8,8 +8,9 @@ html
         include ./blocks/left-panel.jade
         
         .wrapper
-            .first-image-bg.right-mobile
-                img(src="../images/hero-image-10.jpg", alt="")
+            .first-image-bg
+                img(src="../images/hero-image-10.jpg", alt="").desktop
+                img(src="../images/hero-image-mobile-10.jpg", alt="").mobile
 
             .hero-block
                 .container-block

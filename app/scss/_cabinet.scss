@@ -209,6 +209,9 @@
         max-width: 100px;
         min-height: 35px;
         padding: 3px 12px;
+        font-family: $textFontSemibold;
+        font-size: 15px;
+        text-transform: capitalize;
         border-radius: 10px;
     }
 }
@@ -263,7 +266,12 @@
     .btn {
         width: 100%;
         max-width: 260px;
+        min-height: 30px;
         margin: 20px auto 0;
+        font-family: $textFontSemibold;
+        font-size: 12px;
+        line-height: 30px;
+        text-transform: capitalize;
         border-radius: 10px;
     }
 }
