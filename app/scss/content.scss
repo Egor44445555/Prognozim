@@ -307,6 +307,14 @@
         max-width: 1480px;
         margin: 0 auto;
         padding-top: 90px;
+
+        &.wide {
+            max-width: 100%;
+
+            .title-wrap {
+                max-width: 100%;
+            }
+        }
     }
 
     .back-link {
@@ -409,6 +417,17 @@
         }
     }
     
+}
+
+
+/***/
+
+.success-block {
+
+    .btn {
+        min-height: 54px;
+        line-height: 54px;
+    }
 }
 
 
@@ -2227,6 +2246,10 @@
         height: 556px;
         margin-top: 50px;
     }
+
+    .amcharts-scrollbar-chart-div {
+        display: none;
+    }
 }
 
 .latest-predictions {
@@ -2684,7 +2707,8 @@
     }
 
     .btn {
-        padding: 6px 10px;
+        padding: 0 10px;
+        font-size: 14px;
     }
 }
 
