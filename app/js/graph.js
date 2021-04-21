@@ -4,26 +4,21 @@ var chart = am4core.create("chartdiv", am4charts.XYChart);
 chart.paddingRight = 20;
 
 var data = [
-	{ "date": "2021-01-26 10:13", "value": 2000 },
-	{ "date": "2021-01-28 14:35", "value": 5047 },
-	{ "date": "2021-02-05 13:20", "value": 10009 },
-	{ "date": "2021-02-27 10:43", "value": 11716 },
-	{ "date": "2021-02-27 10:43", "value": 11816 },
-	{ "date": "2021-02-27 10:43", "value": 11916 },
-	{ "date": "2021-02-27 10:43", "value": 12016 },
-	{ "date": "2021-03-06 10:21", "value": 12507 },
-	{ "date": "2021-03-06 10:21", "value": 13452 },
-	{ "date": "2021-03-07 12:09", "value": 15144 },
-	{ "date": "2021-03-17 16:02", "value": 12634 },
-	{ "date": "2021-03-17 16:02", "value": 14193 },
-	{ "date": "2021-03-20 09:48", "value": 17890 },
-	{ "date": "2021-03-21 10:46", "value": 19480 },
-	{ "date": "2021-03-25 13:42", "value": 18385 },
+	{ "date": "01-01-2021", "value": 20100},
+	{ "date": "05-02-2022", "value": 20200},
+	{ "date": "10-03-2023", "value": 20300},
+	{ "date": "17-12-2032", "value": 20400},
+	{ "date": "20-03-2033", "value": 20500},
+	{ "date": "21-13-2034", "value": 20600},
+	{ "date": "25-14-2035", "value": 20700},
 ];
 
 chart.data = data;
 
-chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+chart.dateFormatter.inputDateFormat = "dd/mm/yyyy";
+
+chart.zoomOutButton.disabled = true;
+
 
 // Create axes
 var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
@@ -38,19 +33,20 @@ series.strokeWidth = 2;
 series.minBulletDistance = 15;
 
 // Drop-shaped tooltips
-series.tooltip.background.cornerRadius = 20;
+series.tooltip.background.cornerRadius = 10;
 series.tooltip.background.strokeOpacity = 0;
+series.tooltip.background.fillOpacity = 1;
 series.tooltip.pointerOrientation = "horizontal";
-series.tooltip.label.minWidth = 40;
-series.tooltip.label.minHeight = 40;
-series.tooltip.label.textAlign = "middle";
+series.tooltip.label.minWidth = 157;
+series.tooltip.label.minHeight = 80;
 series.tooltip.label.textValign = "middle";
-series.tooltipText = "{valueY}";
+series.tooltipText = "{dateX} \n[b]{valueY}[/]";
+series.tooltip.label.fill = am4core.color("#ffffff");
+series.tooltip.label.fontSize = 24;
+
 series.orientation = "horizontal";
-series.tooltip.background.fillOpacity = 0.5;
 series.minBulletDistance = 20;
 series.dataFields.dateX = "date";
-series.tooltipText = "{dateX}: [b]{valueY}[/]";
 series.strokeWidth = 14;
 series.stroke = '#CE091D';
 
@@ -69,41 +65,81 @@ chart.cursor.behavior = "panXY";
 chart.cursor.xAxis = dateAxis;
 chart.cursor.snapToSeries = series;
 
-// Create vertical scrollbar and place it before the value axis
-chart.scrollbarY = new am4core.Scrollbar();
-chart.scrollbarY.parent = chart.leftAxesContainer;
-chart.scrollbarY.toBack();
-
-// Create a horizontal scrollbar with previe and place it underneath the date axis
-// chart.scrollbarX = new am4charts.XYChartScrollbar();
-// chart.scrollbarX.series.push(series);
-// chart.scrollbarX.parent = chart.bottomAxesContainer;
-
-dateAxis.start = 0.79;
-dateAxis.keepSelection = true;
-
 // Add range selector
 var selector = new am4plugins_rangeSelector.DateAxisRangeSelector();
 selector.container = document.getElementById("controls");
 selector.axis = dateAxis;
-selector.inputDateFormat = "dd-MM-yyyy";
+selector.inputDateFormat = "dd/mm/yyyy";
 
 // Add DatePicker
 selector.events.on("drawn", function(ev) {
-  $(".datepicker").datepicker({
-    changeMonth: true,
-    changeYear: true,
-    //yearRange: '1920:2010',
-    dateFormat : 'yy-mm-dd',
-    //defaultDate: new Date(moment($(this).val()).format('YYYY, M, D')),
-    onSelect: function() {
-      var date = $(this).val();
-      $(this).val('').val(date);
-      selector.updateZoom();
-    }
-  });
-}); 
 
+	var dateFormat = "dd/mm/yyyy",
+	from = $(".amcharts-range-selector-from-input").datepicker({
+		defaultDate: "+1w",
+		changeMonth: true,
+		changeYear: true,
+		numberOfMonths: 1,
+		closeText: 'Закрыть',
+		prevText: 'Предыдущий',
+		nextText: 'Следующий',
+		currentText: 'Сегодня',
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		weekHeader: 'Не',
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: '',
+		onSelect: function() {
+			selector.updateZoom();
+		}
+	}).on( "change", function() {
+		to.datepicker( "option", "minDate", getDate( this ) );
+	}),
+	to = $(".amcharts-range-selector-to-input").datepicker({
+		defaultDate: "+1w",
+		changeMonth: true,
+		changeYear: true,
+		numberOfMonths: 1,
+		closeText: 'Закрыть',
+		prevText: 'Предыдущий',
+		nextText: 'Следующий',
+		currentText: 'Сегодня',
+		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+		weekHeader: 'Не',
+		firstDay: 1,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: '',
+		onSelect: function() {
+			selector.updateZoom();
+		}
+	}).on( "select", function() {
+		from.datepicker( "option", "maxDate", getDate( this ) );
+	});
+
+	function getDate( element ) {
+		var date;
+		try {
+			date = $.datepicker.parseDate( dateFormat, element.value );
+			selector.updateZoom();
+
+			console.log(date)
+		} catch( error ) {
+			date = null;
+		}
+
+		return date;
+	}
+});
 
 
 // /***/

@@ -163,23 +163,7 @@
             <div class="graph-block">
               <div class="top-panel">
                 <div class="title">График <span>прибыли</span></div>
-                <div class="controls">
-                  <div class="controls--item">
-                    <div class="datepicker-wrap">
-                      <input type="text" id="from" placeholder="01/01/20" class="datepicker"/>
-                      <div class="icon icon-calendar"></div>
-                    </div>
-                  </div>
-                  <div class="controls--item">
-                    <div class="datepicker-wrap">
-                      <input type="text" id="to" placeholder="31/12/20" class="datepicker"/>
-                      <div class="icon icon-calendar"></div>
-                    </div>
-                  </div>
-                  <div class="controls--item">
-                    <div class="btn">За все время</div>
-                  </div>
-                </div>
+                <div id="controls" class="controls"></div>
               </div>
               <div id="chartdiv"></div>
             </div>
@@ -1220,6 +1204,7 @@
     <script type="text/javascript" src="js/core.js"></script>
     <script type="text/javascript" src="js/charts.js"></script>
     <script type="text/javascript" src="js/animated.js"></script>
+    <script type="text/javascript" src="js/rangeSelector.js"></script>
     <script type="text/javascript" src="js/graph.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
