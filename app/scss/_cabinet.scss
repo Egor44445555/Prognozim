@@ -435,6 +435,13 @@
             .title {
                 padding: 0 0 20px;
             }
+
+            .controls {
+
+                .amcharts-range-selector-wrapper {
+                    justify-content: flex-start;
+                }
+            }
         }
 
         .statistic-table {

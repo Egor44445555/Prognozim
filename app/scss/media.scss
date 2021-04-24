@@ -102,6 +102,28 @@
     .ticket-block {
         padding: 30px;
     }
+
+    
+    /***/
+
+    .graph-block {
+
+        .top-panel {
+            flex-direction: column;
+
+            .title {
+                padding: 0;
+            }
+
+            .controls {                
+                margin-top: 20px;
+
+                .amcharts-range-selector-wrapper {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
 }
 
 /******************************************************************/
@@ -1944,9 +1966,31 @@
         .controls {
             flex-wrap: wrap;
 
-            &--item {
-                flex: calc(50% - 10px);
-                text-align: center;
+            .amcharts-range-selector-wrapper {
+                flex-wrap: wrap;
+                width: 100%;
+            }
+
+            .amcharts-range-selector-range-wrapper {
+                width: 100%;
+
+                 input {
+                     max-width: 100%;
+                 }
+            }
+
+            .amcharts-range-selector-bottom .amcharts-range-selector-period-wrapper {
+                flex: 100%;
+            }
+
+            .amcharts-range-selector-period-button {
+                width: 100%;
+                margin: 10px 0 0;
+            }
+
+            .graph-block .controls input {
+                width: 100%;
+                max-width: 50%;
             }
         }
 
