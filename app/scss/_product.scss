@@ -302,6 +302,41 @@
         line-height: 135%;        
     }
 
+    .paid-forecast-table {
+        flex: 1;
+        padding-right: 20px;
+        text-align: left;
+
+        .title {
+            font-size: 12px;
+            line-height: 140%;
+            font-family: $textFontBold;
+            color: $blueDark;
+            text-transform: capitalize;
+        }
+
+        .list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 14px 0 0 -10px;
+
+            .item {
+                flex: 100%;
+                max-width: 25%;
+                padding: 7px 10px 7px 24px;
+                font-family: $textFontBold;
+                font-size: 12px;
+                line-height: 130%;
+                border-right: 1px solid $bulletBg;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+
     .button-wrap {
         flex: 1;
         max-width: 186px;
@@ -533,6 +568,19 @@
     .events-wrap {
         padding: 30px;
     }
+
+    .product-list--item {
+
+        .paid-forecast-table {
+
+            .list {
+
+                .item {
+                    padding: 7px 10px; 
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1441px) {
@@ -561,6 +609,23 @@
 
         .bottom-panel {
             padding: 20px;
+        }
+
+        .paid-forecast-table {
+
+            .list {
+                margin-left: -24px;
+
+                .item {
+                    max-width: 50%;
+                    margin-top: 10px;
+                    padding: 0 24px;
+
+                    &:last-child {
+                        border-right: 1px solid $bulletBg;
+                    }
+                }
+            }
         }
     }
 }
@@ -622,6 +687,39 @@
 
         .cost {
             text-align: center;
+        }
+
+
+        .paid-forecast-table {
+            padding: 0 0 20px;
+            text-align: center;
+
+            .title {
+                font-size: 14px;
+                line-height: 140%;
+            }
+
+            .list {
+                margin: 15px 0 0;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    max-width: 100%;
+                    margin-top: 5px;
+                    padding: 0 10px;
+                    border: 0;
+
+                    &:last-child {
+                        border: 0;
+                    }
+                }
+
+                .value {
+                    text-align: right;
+                }
+            }
         }
     }
 
