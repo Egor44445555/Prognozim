@@ -725,6 +725,7 @@ $grayDark: #bababa;
 $grayLight: #f4f4f4;
 $red: #ce091d;
 $purple: #6E2E58;
+$violet: #8896C1;
 $blue: #0D5394;
 $blueDark: #11263c;
 $blueLight: #5a6673;
@@ -745,6 +746,7 @@ $inputPlaceholder: #b8c9d9;
 $borderColor: #CDD3D9;
 $borderBlueColor: #8AA6BF;
 $error: $red;
+$overflowModalBlue: #002242;
 $themeColor: #154d80;
 
 
@@ -758,6 +760,10 @@ $themeColor: #154d80;
 
 .color-blue {
 	color: $blue;
+}
+
+.color-violet {
+	color: $violet;
 }
 
 .color-blue-dark {

@@ -318,7 +318,7 @@
         .list {
             display: flex;
             flex-wrap: wrap;
-            margin: 14px 0 0 -10px;
+            margin: 14px 0 0 -24px;
 
             .item {
                 flex: 100%;
@@ -574,6 +574,7 @@
         .paid-forecast-table {
 
             .list {
+                margin-left: -10px;
 
                 .item {
                     padding: 7px 10px; 

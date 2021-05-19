@@ -1433,7 +1433,16 @@ a.ui-button:active, .ui-button:active,
         height: 100%;
         z-index: 1;
         cursor: pointer;
+
+        &.blue {
+            background: $overflowModalBlue;
+            opacity: 0.5;
+        }
     }
+}
+
+.modal-btn {
+    cursor: pointer;
 }
 
 .modal {
@@ -1501,6 +1510,7 @@ a.ui-button:active, .ui-button:active,
         }
     }
 }
+
 
 /*** Range ***/
 
