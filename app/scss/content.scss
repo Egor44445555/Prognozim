@@ -2956,6 +2956,9 @@
 /*** Shopping card wrap ***/
 
 .shopping-card-wrap {
+    position: fixed;
+    align-items: center;
+    justify-content: center;
 
     .modal {
         max-width: 920px;
@@ -2989,6 +2992,7 @@
 
     .statistic {
         flex: 1;
+        max-width: 370px;
         padding-right: 50px;
 
         &--item {
@@ -3041,6 +3045,22 @@
             height: 1px;
             background: $blue;
             opacity: 0.1;
+        }
+
+        .custom-scroll {
+            max-height: 40vh;
+
+            .mCSB_scrollTools {
+
+                .mCSB_draggerRail {
+                    width: 10px;
+                }
+
+                .mCSB_dragger .mCSB_dragger_bar {
+                    width: 10px;
+                    background: $blue;
+                }
+            }
         }
 
         table {
@@ -3100,6 +3120,33 @@
                     width: 20%;
                 }
             }
+        }
+    }
+
+    .shopping-card-table-mobile {
+        display: none;
+        margin-top: 30px;
+        text-align: center;
+
+        .item {
+            padding: 10px;
+
+            &:nth-child(even) {
+                background: $blueLighterOther;
+            }
+        }
+
+        span {
+            display: block;
+            font-family: $textFontSemibold;
+            font-size: 13px;
+            line-height: 140%;
+            text-transform: capitalize;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+        }
+
+        .total {
+            color: $blue;
         }
     }
 }

@@ -1,4 +1,5 @@
 var graph = document.getElementById("chartdiv");
+var graphCircle = document.getElementById("circle-graph");
 
 if (graph) {
 
@@ -125,7 +126,6 @@ if (graph) {
 	chart.cursor.lineY.strokeOpacity = 1;
 	chart.cursor.lineY.strokeDasharray = "";
 
-
 	var dropShadow = new am4core.DropShadowFilter();
 	dropShadow.dy = 1;
 	dropShadow.dx = 1;
@@ -190,4 +190,41 @@ if (graph) {
 				}
 			});
 	});
+}
+
+if (graphCircle) {
+
+	var chartCircle = am4core.create("circle-graph", am4charts.PieChart);
+
+	// Add data
+	chartCircle.data = [{
+		"label": "Победы",
+		"value": 18,
+		"color": "#0D5394"
+	}, {
+			"label": "Поражения",
+			"value": 3,
+			"color": "#CE091D"
+	},{
+		"label": "Возвраты",
+		"value": 3,
+		"color": "#8896C1"
+	}];
+
+	var pieSeries = chartCircle.series.push(new am4charts.PieSeries());
+	pieSeries.dataFields.value = "value";
+	pieSeries.dataFields.category = "label";
+	pieSeries.slices.template.propertyFields.fill = "color";
+	pieSeries.ticks.template.disabled = true;
+	pieSeries.labels.template.disabled = true;
+
+	chartCircle.legend = new am4charts.Legend();
+	chartCircle.legend.position = "right";
+	chartCircle.legend.useDefaultMarker = true;
+	chartCircle.legend.labels.template.text = "[bold, font-size:13px; {color}]{name} - {value}";
+
+	var marker = chartCircle.legend.markers.template.children.getIndex(0);
+	marker.cornerRadius(12, 12, 12, 12);
+	marker.width = 15;
+	marker.height = 15;
 }

@@ -305,8 +305,15 @@ $(document).ready(function() {
     var idModal = null;
 
     $('.modal-btn').on("click", function() {
-        idModal = $(this).attr('href');
-        idModal = idModal.slice(1, idModal.length);
+
+        if($(this).attr('href')) {
+            idModal = $(this).attr('href');
+            idModal = idModal.slice(1, idModal.length);
+        } else {
+            idModal = $(this).attr('data-url');
+        }
+
+        console.log(idModal)
 
         $('.modal-wrap').each(function () {
 
